@@ -4,3 +4,4 @@ realm/SwiftLint@0.39.1
 #SwiftGen/SwiftGen@6.2.1
 IBDecodable/IBLinter@0.4.25
 nicklockwood/SwiftFormat@0.47.5
+Carthage/Carthage@0.36.0
