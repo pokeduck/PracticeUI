@@ -10,8 +10,8 @@ The exercise about UIKit
 5. ``gem install bundle``
 6. ``bundle install``
 
-## Generate .xcodeproj & .xcworkspace
-1. ``carthage bootstrap``
+## Generate .xcworkspace
+1. ``carthage update --platform iOS``
 2. ``xcodegen``
 3.  ``pod install``
 4. Open ``PracticeUI.xcworkspace``
