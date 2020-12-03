@@ -1,0 +1,39 @@
+name: PracticeUI
+configs:
+  DEBUG: debug
+  STAGING: release
+  RELEASE: release
+configFiles:
+  DEBUG: PracticeUI/configs/debug.xcconfig
+  STAGING: PracticeUI/configs/staging.xcconfig
+  RELEASE: PracticeUI/configs/release.xcconfig
+settings:
+  CODE_SIGN_STYLE: Manual
+  CODE_SIGN_IDENTITY: sign.identity
+  DEVELOPMENT_TEAM: dev.team
+  #CODE_SIGN_ENTITLEMENTS: 
+options:
+  createIntermediateGroups: true
+  bundleIdPrefix: tw.idv.pokeduck
+  deploymentTarget:
+    iOS: 11.0
+targets:
+  PracticeUI:
+    type: application
+    platform: iOS
+    deploymentTarget: "11.0"
+    #configFiles:
+    #  DEBUG: PracticeUI/configs/debug.xcconfig
+    # STAGING: PracticeUI/configs/staging.xcconfig
+    #  RELEASE: PracticeUI/configs/release.xcconfig
+    settings:
+        configs:
+          DEBUG:
+            CUSTOM_BUILD_SETTING: debug.idv.pokeduck
+          STAGING:
+            CUSTOM_BUILD_SETTING: staging.idv.pokeduck
+          RELEASE:
+            CUSTOM_BUILD_SETTING: release.idv.pokeduck
+    sources: 
+      - path: PracticeUI
+
