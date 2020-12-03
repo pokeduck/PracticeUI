@@ -17,11 +17,14 @@ options:
   bundleIdPrefix: tw.idv.pokeduck
   deploymentTarget:
     iOS: 11.0
+  findCarthageFrameworks: true
 targets:
   PracticeUI:
     type: application
     platform: iOS
     deploymentTarget: "11.0"
+    dependencies:
+      - carthage: RxSwift
     #configFiles:
     #  DEBUG: PracticeUI/configs/debug.xcconfig
     # STAGING: PracticeUI/configs/staging.xcconfig
