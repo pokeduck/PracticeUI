@@ -1,0 +1,16 @@
+PODS:
+  - SwifterSwift/Foundation (5.2.0)
+
+DEPENDENCIES:
+  - SwifterSwift/Foundation
+
+SPEC REPOS:
+  trunk:
+    - SwifterSwift
+
+SPEC CHECKSUMS:
+  SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
+
+PODFILE CHECKSUM: f51273788f473003859093c8cab1a93d31dad4b5
+
+COCOAPODS: 1.9.3
