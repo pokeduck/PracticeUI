@@ -12,15 +12,19 @@
 		0A61FD7AEF799E111ED0F7A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C369AEAF53C1F377492A29 /* ViewController.swift */; };
 		1AFB2ABB7FB9399D84DF6BBA /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED337A6507E63E7C607BE222 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F1EDEE51AADD872F627331C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E66D74E286257E139E0ECB /* LaunchScreen.storyboard */; };
+		2177E00C06FCE701575F7F7C /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23790544C0D69BF2A937466A /* RxDataSources.framework */; };
 		27E5472930146DEB086582CE /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6093C4CEB15580972294B8DB /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A4B54746BC7F0620D67CFFA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D042278E788449D5038D08 /* RxSwift.framework */; };
 		50534037060F3E7AEE1B2413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C233B446B375E3CA4A890 /* AppDelegate.swift */; };
 		60148FA2C8CEE1D053A6AC7C /* RxTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C37C1E4FA749AD870E207AB /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		64C249FAFE05DBF55B5EE6E9 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6164CEC5A2E072E9643D9523 /* Differentiator.framework */; };
+		64E21EE8E23E007601F071AB /* RxDataSources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23790544C0D69BF2A937466A /* RxDataSources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6DD80CF73C96F06790CDA3D8 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6093C4CEB15580972294B8DB /* RxRelay.framework */; };
 		77DBC850964B6E7FF9EAFF99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384CD28F301A5DBD5EE631B /* SceneDelegate.swift */; };
 		B1D18FCE128C456E212931F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A7B1861F623DD3F51A1896 /* Main.storyboard */; };
 		B2F017A4B0DFE7E1E1ECE7E8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED337A6507E63E7C607BE222 /* RxCocoa.framework */; };
 		BC377ED4143480AF877036C4 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C37C1E4FA749AD870E207AB /* RxTest.framework */; };
+		D7820A830F73EC91733D7B69 /* Differentiator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6164CEC5A2E072E9643D9523 /* Differentiator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E0EFA32896A7A45D67630DE3 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6081092A5647627D8D37574 /* RxBlocking.framework */; };
 		FD031B60BDF59D3D93C7BAB9 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96D042278E788449D5038D08 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -37,6 +41,8 @@
 				0A4246C6665CF6A5ACA67322 /* RxBlocking.framework in Embed Frameworks */,
 				27E5472930146DEB086582CE /* RxRelay.framework in Embed Frameworks */,
 				60148FA2C8CEE1D053A6AC7C /* RxTest.framework in Embed Frameworks */,
+				D7820A830F73EC91733D7B69 /* Differentiator.framework in Embed Frameworks */,
+				64E21EE8E23E007601F071AB /* RxDataSources.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,10 +51,12 @@
 
 /* Begin PBXFileReference section */
 		13037A9929F0E86D11309591 /* PracticeUI.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PracticeUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23790544C0D69BF2A937466A /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Frameworks/RxDataSources.framework; sourceTree = "<group>"; };
 		24F2BD27B8A2BB8EB6FE8BEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C37C1E4FA749AD870E207AB /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Frameworks/RxTest.framework; sourceTree = "<group>"; };
 		5C79DC9BDC97945B69B218CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6093C4CEB15580972294B8DB /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Frameworks/RxRelay.framework; sourceTree = "<group>"; };
+		6164CEC5A2E072E9643D9523 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Frameworks/Differentiator.framework; sourceTree = "<group>"; };
 		7D8C98D66D96E1BAB978B116 /* staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = staging.xcconfig; sourceTree = "<group>"; };
 		96D042278E788449D5038D08 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Frameworks/RxSwift.framework; sourceTree = "<group>"; };
 		A6081092A5647627D8D37574 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Frameworks/RxBlocking.framework; sourceTree = "<group>"; };
@@ -72,6 +80,8 @@
 				E0EFA32896A7A45D67630DE3 /* RxBlocking.framework in Frameworks */,
 				6DD80CF73C96F06790CDA3D8 /* RxRelay.framework in Frameworks */,
 				BC377ED4143480AF877036C4 /* RxTest.framework in Frameworks */,
+				64C249FAFE05DBF55B5EE6E9 /* Differentiator.framework in Frameworks */,
+				2177E00C06FCE701575F7F7C /* RxDataSources.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,8 +91,10 @@
 		509F3C5F1FF7500D86B144A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6164CEC5A2E072E9643D9523 /* Differentiator.framework */,
 				A6081092A5647627D8D37574 /* RxBlocking.framework */,
 				ED337A6507E63E7C607BE222 /* RxCocoa.framework */,
+				23790544C0D69BF2A937466A /* RxDataSources.framework */,
 				6093C4CEB15580972294B8DB /* RxRelay.framework */,
 				96D042278E788449D5038D08 /* RxSwift.framework */,
 				5C37C1E4FA749AD870E207AB /* RxTest.framework */,

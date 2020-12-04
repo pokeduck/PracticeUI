@@ -35,6 +35,8 @@ targets:
       - framework: Frameworks/RxBlocking.framework
       - framework: Frameworks/RxRelay.framework
       - framework: Frameworks/RxTest.framework
+      - framework: Frameworks/Differentiator.framework
+      - framework: Frameworks/RxDataSources.framework
 
     #configFiles:
     #  DEBUG: PracticeUI/configs/debug.xcconfig
