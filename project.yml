@@ -34,9 +34,10 @@ targets:
       - framework: Frameworks/RxCocoa.framework
       - framework: Frameworks/RxBlocking.framework
       - framework: Frameworks/RxRelay.framework
-      - framework: Frameworks/RxTest.framework
+      # - framework: Frameworks/RxTest.framework
       - framework: Frameworks/Differentiator.framework
       - framework: Frameworks/RxDataSources.framework
+      - framework: Frameworks/SnapKit.framework
 
     #configFiles:
     #  DEBUG: PracticeUI/configs/debug.xcconfig
