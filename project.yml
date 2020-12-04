@@ -12,21 +12,30 @@ settings:
   CODE_SIGN_IDENTITY: sign.identity
   DEVELOPMENT_TEAM: dev.team
   #CODE_SIGN_ENTITLEMENTS: 
+  #FRAMEWORK_SEARCH_PATHS: Frameworks
 options:
   createIntermediateGroups: true
   bundleIdPrefix: tw.idv.pokeduck
   deploymentTarget:
     iOS: 11.0
-  findCarthageFrameworks: true
+  #findCarthageFrameworks: false
+  #carthageBuildPath: ../FrameworksA/
   #carthageExecutablePath: mint run Carthage/Carthage
-  #carthageBuildPath: PracticeUI/Frameworks/
+  #carthageBuildPath: Frameworks
 targets:
   PracticeUI:
     type: application
     platform: iOS
     deploymentTarget: "11.0"
     dependencies:
-      - carthage: RxSwift
+      #- carthage: RxSwift
+        #CARTHAGE_BUILD_PATH: Frameworks
+      - framework: Frameworks/RxSwift.framework
+      - framework: Frameworks/RxCocoa.framework
+      - framework: Frameworks/RxBlocking.framework
+      - framework: Frameworks/RxRelay.framework
+      - framework: Frameworks/RxTest.framework
+
     #configFiles:
     #  DEBUG: PracticeUI/configs/debug.xcconfig
     # STAGING: PracticeUI/configs/staging.xcconfig
