@@ -22,17 +22,20 @@ class HomeTableViewController: UIViewController {
             make.right.equalTo(self.view.safeArea.rightMargin)
             make.bottom.equalTo(self.view.safeArea.bottomMargin)
         }
-        v.register(nibWithCellClass: HomeTableCell.self)
+        v.register(cellWithClass: HomeTableCell.self)
+        //v.register(nibWithCellClass: HomeTableCell.self)
         return v
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        navigationController?.setNavigationBarHidden(true, animated: false)
         setupUI()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
+    }
     private func setupUI() {
         tv.rx.setDelegate(self).disposed(by: disposeBag)
 
@@ -51,9 +54,10 @@ class HomeTableViewController: UIViewController {
         
         let dataSource = RxTableViewSectionedReloadDataSource<PageSection>(configureCell: { (dataSource, tableView, indexPath, page) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withClass: HomeTableCell.self, for: indexPath)
-            cell.titleLabel.text = page.name
-            cell.bgView.applyGradient(colors: page.color)
-            
+            //cell.titleLabel.text = page.name
+            //cell.bgView.applyGradient(colors: page.color)
+            cell.nameLabel.text = page.name
+            cell.gradientView.applyGradient(colors: page.color)
             return cell
         }, titleForHeaderInSection: { (dataSource, index) -> String? in
             nil
@@ -71,7 +75,24 @@ class HomeTableViewController: UIViewController {
 
         data.bind(to: tv.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
-        
+        tv.rx.modelSelected(Page.self).subscribe(onNext: { [weak self] (page) in
+            switch page.type {
+                
+            case .line:
+                self?.navigationController?.pushViewController(LinePayHomeVC(), animated: true)
+                break
+            case .uber:
+                break
+            case .google:
+                break
+            case .pinkoi:
+                break
+            }
+        }, onError: { (error) in
+            print(error.localizedDescription)
+        }, onCompleted: {
+            print("complete")
+            }).disposed(by: disposeBag)
     }
 }
 

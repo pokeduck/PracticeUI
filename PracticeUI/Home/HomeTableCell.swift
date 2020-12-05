@@ -9,8 +9,39 @@ import UIKit
 
 class HomeTableCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var bgView: UIView!
+    lazy var nameLabel: UILabel = {
+        let l = UILabel()
+        l.font = UIFont(name: "PingFangTC-Regular", size: 30)
+        l.textColor = .white
+        contentView.addSubview(l)
+        l.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
+        return l
+    } ()
+    lazy var gradientView: UIView = {
+        let v = UIView()
+        contentView.addSubview(v)
+        v.snp.makeConstraints { (make) in
+            make.right.bottom.equalToSuperview().offset(-15)
+            make.top.left.equalToSuperview().offset(15)
+            make.height.equalTo(230)
+        }
+        v.cornerRadius = 10
+        v.clipsToBounds = true
+        return v
+    }()
+    lazy var shadowView: UIView = {
+        let v = UIView()
+        v.backgroundColor = .white
+        contentView.addSubview(v)
+        v.snp.makeConstraints { (make) in
+            make.top.left.right.bottom.equalTo(gradientView)
+        }
+        v.cornerRadius = 10
+        v.clipsToBounds = true
+        return v
+    } ()
     
     private var bgAnimator: UIViewPropertyAnimator
     private var originBgViewFrame: CGRect?
@@ -21,30 +52,33 @@ class HomeTableCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         self.bgAnimator = UIViewPropertyAnimator(duration: animatorDuration, curve: .linear, animations: nil)
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-
+        
+        selectionStyle = .none
+        separatorInset = UIEdgeInsets(inset: .infinity)
     }
     required init?(coder: NSCoder) {
         self.bgAnimator = UIViewPropertyAnimator(duration: animatorDuration, curve: .linear, animations: nil)
         super.init(coder: coder)
+        
+        selectionStyle = .none
+        separatorInset = UIEdgeInsets(inset: .infinity)
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        titleLabel.font = UIFont(name: "PingFangTC-Medium", size: 30)
-        titleLabel.textColor = .white
-        bgView.backgroundColor = .clear
-        selectionStyle = .none
-        separatorInset = UIEdgeInsets(inset: .infinity)
+        
+        
     }
     override func prepareForReuse() {
         super.prepareForReuse()
         originBgViewFrame = nil
     }
     override func draw(_ rect: CGRect) {
-        bgView.resizeGradient()
-        bgView.addShadow(ofColor: .black, radius: 5, offset: .zero, opacity: 0.5)
-        bgView.setBgGradientCornerRadius(radius: 10)
+        
 
-
+        shadowView.addShadow(ofColor: .black, radius: 8, offset: .zero, opacity: 0.5)
+        gradientView.resizeGradient()
+        contentView.bringSubviewToFront(gradientView)
+        contentView.bringSubviewToFront(nameLabel)
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -61,18 +95,19 @@ class HomeTableCell: UITableViewCell {
     
     private func reduceBgViewSize() {
         if originBgViewFrame == nil {
-            originBgViewFrame = bgView.frame
+            originBgViewFrame = gradientView.frame
         }
         guard let originBgFrame = originBgViewFrame else { return }
 
         if bgAnimator.isRunning {
             bgAnimator.reverseAndContinue()
         } else {
-            self.originBgViewFrame = self.bgView.frame
+            self.originBgViewFrame = self.gradientView.frame
             bgAnimator.addAnimations {
                 [weak self] in
                 guard let `self` = self else { return }
-                self.bgView.frame = originBgFrame.insetBy(dx: self.animatorMargin, dy: self.animatorMargin)
+                let newFrame = originBgFrame.insetBy(dx: self.animatorMargin, dy: self.animatorMargin)
+                self.changeContentsFrame(frame: newFrame)
             }
 
             bgAnimator.startAnimation()
@@ -88,10 +123,14 @@ class HomeTableCell: UITableViewCell {
             bgAnimator.addAnimations {
                 [weak self] in
                 guard let `self` = self else { return }
-                self.bgView.frame = originBgFrame
+                self.changeContentsFrame(frame: originBgFrame)
             }
             bgAnimator.startAnimation()
         }
+    }
+    private func changeContentsFrame(frame: CGRect) {
+        gradientView.frame = frame
+        shadowView.frame = frame
     }
     
 }
