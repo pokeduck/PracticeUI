@@ -1,8 +1,12 @@
 PODS:
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
   - SwifterSwift/Foundation (5.2.0)
   - SwifterSwift/UIKit (5.2.0)
 
 DEPENDENCIES:
+  - ChameleonFramework/Swift (from `https://github.com/wowansm/Chameleon`, branch `swift5`)
   - SwifterSwift/Foundation
   - SwifterSwift/UIKit
 
@@ -10,9 +14,20 @@ SPEC REPOS:
   trunk:
     - SwifterSwift
 
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :branch: swift5
+    :git: https://github.com/wowansm/Chameleon
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 96d52c36a45847fff60bcff7a58fec1e4bd7390b
+    :git: https://github.com/wowansm/Chameleon
+
 SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
 
-PODFILE CHECKSUM: 44771ad80b488f79a1cfad956d8ab2fc64dc1723
+PODFILE CHECKSUM: 691b7a69bb42ce03373680b85ad2c2fdb5c533f7
 
 COCOAPODS: 1.9.3
