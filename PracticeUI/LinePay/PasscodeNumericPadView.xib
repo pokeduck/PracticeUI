@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PasscodeNumericPadView" customModule="PracticeUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="540"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zs3-Ix-7JU" customClass="PasscodeNumericButton" customModule="PracticeUI" customModuleProvider="target">
+                    <rect key="frame" x="35" y="120" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="25j-y6-X8W"/>
+                        <constraint firstAttribute="width" constant="60" id="6Pv-oN-qgF"/>
+                    </constraints>
+                    <state key="normal" title="1"/>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r46-2Z-EQt" customClass="PasscodeNumericButton" customModule="PracticeUI" customModuleProvider="target">
+                    <rect key="frame" x="275" y="120" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="Gl4-ql-7hn"/>
+                        <constraint firstAttribute="height" constant="60" id="TnY-LF-zUS"/>
+                    </constraints>
+                    <state key="normal" title="3"/>
+                </button>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdy-Uj-RgK" customClass="PasscodeNumericButton" customModule="PracticeUI" customModuleProvider="target">
+                    <rect key="frame" x="35" y="200" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="FNQ-g8-0DV"/>
+                        <constraint firstAttribute="height" constant="60" id="ewA-M6-fET"/>
+                    </constraints>
+                    <state key="normal" title="4"/>
+                </button>
+                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSk-16-jzL" customClass="PasscodeNumericButton" customModule="PracticeUI" customModuleProvider="target">
+                    <rect key="frame" x="155" y="200" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="Jqz-mi-C4O"/>
+                        <constraint firstAttribute="height" constant="60" id="rUm-Nf-16Y"/>
+                    </constraints>
+                    <state key="normal" title="5"/>
+                </button>
+                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJX-qV-SwX" customClass="PasscodeNumericButton" customModule="PracticeUI" customModuleProvider="target">
+                    <rect key="frame" x="275" y="200" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="Hzy-2L-KKv"/>
+                        <constraint firstAttribute="height" constant="60" id="NcX-95-gle"/>
+                    </constraints>
+                    <state key="normal" title="6"/>
+                </button>
+                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF5-2M-ayd" customClass="PasscodeNumericButton" customModule="PracticeUI" customModuleProvider="target">
+                    <rect key="frame" x="35" y="280" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="idF-Ot-XAW"/>
+                        <constraint firstAttribute="width" constant="60" id="lC2-YV-KuF"/>
+                    </constraints>
+                    <state key="normal" title="7"/>
+                </button>
+                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JP-eL-PSR" customClass="PasscodeNumericButton" customModule="PracticeUI" customModuleProvider="target">
+                    <rect key="frame" x="155" y="280" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="ASm-pU-v2N"/>
+                        <constraint firstAttribute="width" constant="60" id="lVv-cT-cZ0"/>
+                    </constraints>
+                    <state key="normal" title="8"/>
+                </button>
+                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RI8-tQ-g9u" customClass="PasscodeNumericButton" customModule="PracticeUI" customModuleProvider="target">
+                    <rect key="frame" x="275" y="280" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="POT-aC-I6G"/>
+                        <constraint firstAttribute="width" constant="60" id="wFY-kY-2zx"/>
+                    </constraints>
+                    <state key="normal" title="9"/>
+                </button>
+                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yo-sh-B6X" customClass="PasscodeNumericButton" customModule="PracticeUI" customModuleProvider="target">
+                    <rect key="frame" x="35" y="360" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="bVh-Ig-W9O"/>
+                        <constraint firstAttribute="height" constant="60" id="x7Y-mr-zU1"/>
+                    </constraints>
+                    <state key="normal" title="Cancel"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31h-ay-pad" customClass="PasscodeNumericButton" customModule="PracticeUI" customModuleProvider="target">
+                    <rect key="frame" x="155" y="360" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="0l4-Zi-Lup"/>
+                        <constraint firstAttribute="width" constant="60" id="rGL-gk-xjX"/>
+                    </constraints>
+                    <state key="normal" title="0"/>
+                </button>
+                <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYh-6j-lpT" customClass="PasscodeNumericButton" customModule="PracticeUI" customModuleProvider="target">
+                    <rect key="frame" x="275" y="360" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="hqX-XQ-9t1"/>
+                        <constraint firstAttribute="width" constant="60" id="w87-eO-0iy"/>
+                    </constraints>
+                    <state key="normal" title="Delete"/>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RT1-ez-g0N" customClass="PasscodeNumericButton" customModule="PracticeUI" customModuleProvider="target">
+                    <rect key="frame" x="155" y="120" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Eta-Ih-kjp"/>
+                        <constraint firstAttribute="width" constant="60" id="laK-aA-zZB"/>
+                    </constraints>
+                    <state key="normal" title="2"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RI8-tQ-g9u" secondAttribute="trailing" constant="35" id="0na-bM-HGS"/>
+                <constraint firstItem="0JP-eL-PSR" firstAttribute="top" secondItem="jSk-16-jzL" secondAttribute="bottom" constant="20" id="1Vx-Vs-MXz"/>
+                <constraint firstItem="0JP-eL-PSR" firstAttribute="centerY" secondItem="aF5-2M-ayd" secondAttribute="centerY" id="4VL-VW-SEQ"/>
+                <constraint firstItem="jdy-Uj-RgK" firstAttribute="leading" secondItem="zs3-Ix-7JU" secondAttribute="leading" id="GH2-ac-Oex"/>
+                <constraint firstItem="YYh-6j-lpT" firstAttribute="trailing" secondItem="RI8-tQ-g9u" secondAttribute="trailing" id="Lhy-dn-ZvT"/>
+                <constraint firstItem="RI8-tQ-g9u" firstAttribute="centerY" secondItem="0JP-eL-PSR" secondAttribute="centerY" id="M0T-gb-bgg"/>
+                <constraint firstItem="0JP-eL-PSR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NDU-3E-B6l"/>
+                <constraint firstItem="31h-ay-pad" firstAttribute="top" secondItem="0JP-eL-PSR" secondAttribute="bottom" constant="20" id="Qsn-sg-Xkz"/>
+                <constraint firstItem="jSk-16-jzL" firstAttribute="bottom" secondItem="jdy-Uj-RgK" secondAttribute="bottom" id="TBq-7u-iCB"/>
+                <constraint firstItem="jSk-16-jzL" firstAttribute="top" secondItem="RT1-ez-g0N" secondAttribute="bottom" constant="20" id="XK7-0Y-Iv0"/>
+                <constraint firstItem="r46-2Z-EQt" firstAttribute="bottom" secondItem="RT1-ez-g0N" secondAttribute="bottom" id="Y8Z-t6-Jmf"/>
+                <constraint firstItem="7yo-sh-B6X" firstAttribute="leading" secondItem="aF5-2M-ayd" secondAttribute="leading" id="YEX-so-D9h"/>
+                <constraint firstItem="YYh-6j-lpT" firstAttribute="bottom" secondItem="7yo-sh-B6X" secondAttribute="bottom" id="aBc-b0-2hq"/>
+                <constraint firstItem="jSk-16-jzL" firstAttribute="centerX" secondItem="RT1-ez-g0N" secondAttribute="centerX" id="acW-5Z-XBE"/>
+                <constraint firstItem="aF5-2M-ayd" firstAttribute="leading" secondItem="zs3-Ix-7JU" secondAttribute="leading" id="dWs-9m-oEU"/>
+                <constraint firstItem="RT1-ez-g0N" firstAttribute="bottom" secondItem="zs3-Ix-7JU" secondAttribute="bottom" id="diz-3Q-9Qn"/>
+                <constraint firstItem="31h-ay-pad" firstAttribute="bottom" secondItem="7yo-sh-B6X" secondAttribute="bottom" id="h7E-Qg-Wiu"/>
+                <constraint firstItem="dJX-qV-SwX" firstAttribute="trailing" secondItem="r46-2Z-EQt" secondAttribute="trailing" id="kpk-WO-Rr6"/>
+                <constraint firstItem="aF5-2M-ayd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="35" id="oaC-80-vS0"/>
+                <constraint firstItem="0JP-eL-PSR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="10" id="uUD-Qi-mLM"/>
+                <constraint firstItem="31h-ay-pad" firstAttribute="centerX" secondItem="0JP-eL-PSR" secondAttribute="centerX" id="y0y-8G-9LY"/>
+                <constraint firstItem="dJX-qV-SwX" firstAttribute="bottom" secondItem="jSk-16-jzL" secondAttribute="bottom" id="zI3-Cm-ILB"/>
+                <constraint firstItem="0JP-eL-PSR" firstAttribute="centerX" secondItem="jSk-16-jzL" secondAttribute="centerX" id="zM4-WR-KhP"/>
+                <constraint firstItem="RI8-tQ-g9u" firstAttribute="trailing" secondItem="r46-2Z-EQt" secondAttribute="trailing" id="znt-cZ-wOF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outletCollection property="buttons" destination="RI8-tQ-g9u" collectionClass="NSMutableArray" id="Fcs-4K-hgL"/>
+                <outletCollection property="buttons" destination="zs3-Ix-7JU" collectionClass="NSMutableArray" id="Ra2-Yp-fX7"/>
+                <outletCollection property="buttons" destination="r46-2Z-EQt" collectionClass="NSMutableArray" id="4dm-7j-1DO"/>
+                <outletCollection property="buttons" destination="jdy-Uj-RgK" collectionClass="NSMutableArray" id="ezn-zo-76s"/>
+                <outletCollection property="buttons" destination="jSk-16-jzL" collectionClass="NSMutableArray" id="fnS-Gj-pfm"/>
+                <outletCollection property="buttons" destination="dJX-qV-SwX" collectionClass="NSMutableArray" id="Trj-rC-Oqv"/>
+                <outletCollection property="buttons" destination="aF5-2M-ayd" collectionClass="NSMutableArray" id="kyv-he-rFb"/>
+                <outletCollection property="buttons" destination="0JP-eL-PSR" collectionClass="NSMutableArray" id="W6r-hA-bOW"/>
+                <outletCollection property="buttons" destination="RI8-tQ-g9u" collectionClass="NSMutableArray" id="t1m-Jo-L6a"/>
+                <outletCollection property="buttons" destination="7yo-sh-B6X" collectionClass="NSMutableArray" id="iED-mM-QSL"/>
+                <outletCollection property="buttons" destination="31h-ay-pad" collectionClass="NSMutableArray" id="ufS-kz-qxx"/>
+                <outletCollection property="buttons" destination="YYh-6j-lpT" collectionClass="NSMutableArray" id="poW-0I-b9W"/>
+                <outletCollection property="buttons" destination="RT1-ez-g0N" collectionClass="NSMutableArray" id="jyv-ii-mpV"/>
+            </connections>
+            <point key="canvasLocation" x="-22.5" y="172.5"/>
+        </view>
+    </objects>
+</document>

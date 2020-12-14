@@ -29,6 +29,25 @@
 		D7820A830F73EC91733D7B69 /* Differentiator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6164CEC5A2E072E9643D9523 /* Differentiator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E0EFA32896A7A45D67630DE3 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6081092A5647627D8D37574 /* RxBlocking.framework */; };
 		E66E4B0866157DD9E4C0FC0E /* Pods_PracticeUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF927BC079496F4E925D830D /* Pods_PracticeUI.framework */; };
+		F1518B65257B7359008A8560 /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1518B63257B7359008A8560 /* HomeTableCell.swift */; };
+		F1518B68257BD4B6008A8560 /* SnapKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1518B67257BD4B6008A8560 /* SnapKitExtensions.swift */; };
+		F1518B6A257BD889008A8560 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1518B69257BD889008A8560 /* UIView+Gradient.swift */; };
+		F1518B6D257BE87D008A8560 /* LinePayHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1518B6C257BE87D008A8560 /* LinePayHomeVC.swift */; };
+		F1518B70257BE977008A8560 /* LinePayPasscodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1518B6F257BE977008A8560 /* LinePayPasscodeVC.swift */; };
+		F18AB11E25869BA20020EF79 /* PublishSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB11D25869BA20020EF79 /* PublishSignal.swift */; };
+		F18AB1202586A2650020EF79 /* PasscodeSignsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB11F2586A2650020EF79 /* PasscodeSignsView.swift */; };
+		F18AB12225873D600020EF79 /* BehaviorDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB12125873D600020EF79 /* BehaviorDriver.swift */; };
+		F18AB124258770510020EF79 /* PasscodeStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB123258770510020EF79 /* PasscodeStorageMock.swift */; };
+		F18AB126258773620020EF79 /* UserDefaults+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB125258773620020EF79 /* UserDefaults+Key.swift */; };
+		F18AB1282587B1CE0020EF79 /* Biometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB1272587B1CE0020EF79 /* Biometry.swift */; };
+		F18AB12A2587C19C0020EF79 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB1292587C19C0020EF79 /* UIViewController+Rx.swift */; };
+		F1C27EE9257E77BC003196E2 /* LineColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EE8257E77BC003196E2 /* LineColors.swift */; };
+		F1C27EEB257E8BF0003196E2 /* PasscodeNumericButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EEA257E8BF0003196E2 /* PasscodeNumericButton.swift */; };
+		F1C27EED257F8518003196E2 /* PasscodeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EEC257F8518003196E2 /* PasscodeConfiguration.swift */; };
+		F1C27EEF257FB6A2003196E2 /* PasscodeNumericPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EEE257FB6A2003196E2 /* PasscodeNumericPadView.swift */; };
+		F1C27EF1257FB6C3003196E2 /* PasscodeNumericPadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1C27EF0257FB6C3003196E2 /* PasscodeNumericPadView.xib */; };
+		F1C27EF3257FBA90003196E2 /* UINib+VIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EF2257FBA90003196E2 /* UINib+VIew.swift */; };
+		F1C27EF525827E82003196E2 /* PasscodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EF425827E81003196E2 /* PasscodeViewModel.swift */; };
 		FD031B60BDF59D3D93C7BAB9 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96D042278E788449D5038D08 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -53,7 +72,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		13037A9929F0E86D11309591 /* PracticeUI.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PracticeUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13037A9929F0E86D11309591 /* PracticeUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23790544C0D69BF2A937466A /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Frameworks/RxDataSources.framework; sourceTree = "<group>"; };
 		24F2BD27B8A2BB8EB6FE8BEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30D9812D98CC26C058E64654 /* BaseNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
@@ -76,6 +95,25 @@
 		E384CD28F301A5DBD5EE631B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E80D6BB9540A980E42A8AAC5 /* Pods-PracticeUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeUI.debug.xcconfig"; path = "Target Support Files/Pods-PracticeUI/Pods-PracticeUI.debug.xcconfig"; sourceTree = "<group>"; };
 		ED337A6507E63E7C607BE222 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Frameworks/RxCocoa.framework; sourceTree = "<group>"; };
+		F1518B63257B7359008A8560 /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
+		F1518B67257BD4B6008A8560 /* SnapKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapKitExtensions.swift; sourceTree = "<group>"; };
+		F1518B69257BD889008A8560 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		F1518B6C257BE87D008A8560 /* LinePayHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePayHomeVC.swift; sourceTree = "<group>"; };
+		F1518B6F257BE977008A8560 /* LinePayPasscodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePayPasscodeVC.swift; sourceTree = "<group>"; };
+		F18AB11D25869BA20020EF79 /* PublishSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishSignal.swift; sourceTree = "<group>"; };
+		F18AB11F2586A2650020EF79 /* PasscodeSignsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeSignsView.swift; sourceTree = "<group>"; };
+		F18AB12125873D600020EF79 /* BehaviorDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviorDriver.swift; sourceTree = "<group>"; };
+		F18AB123258770510020EF79 /* PasscodeStorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeStorageMock.swift; sourceTree = "<group>"; };
+		F18AB125258773620020EF79 /* UserDefaults+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Key.swift"; sourceTree = "<group>"; };
+		F18AB1272587B1CE0020EF79 /* Biometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometry.swift; sourceTree = "<group>"; };
+		F18AB1292587C19C0020EF79 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		F1C27EE8257E77BC003196E2 /* LineColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineColors.swift; sourceTree = "<group>"; };
+		F1C27EEA257E8BF0003196E2 /* PasscodeNumericButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeNumericButton.swift; sourceTree = "<group>"; };
+		F1C27EEC257F8518003196E2 /* PasscodeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeConfiguration.swift; sourceTree = "<group>"; };
+		F1C27EEE257FB6A2003196E2 /* PasscodeNumericPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeNumericPadView.swift; sourceTree = "<group>"; };
+		F1C27EF0257FB6C3003196E2 /* PasscodeNumericPadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasscodeNumericPadView.xib; sourceTree = "<group>"; };
+		F1C27EF2257FBA90003196E2 /* UINib+VIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+VIew.swift"; sourceTree = "<group>"; };
+		F1C27EF425827E81003196E2 /* PasscodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewModel.swift; sourceTree = "<group>"; };
 		FAD8BC920D212104E582F452 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +141,7 @@
 			children = (
 				30D9812D98CC26C058E64654 /* BaseNavController.swift */,
 				BBC4750323F774972FFBBA58 /* HomeTableViewController.swift */,
+				F1518B63257B7359008A8560 /* HomeTableCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -137,7 +176,6 @@
 				7E23894808593B075B171475 /* Pods-PracticeUI.release.xcconfig */,
 				BF60DF6298C7F8AF7D1ADE6C /* Pods-PracticeUI.staging.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -161,6 +199,38 @@
 			path = configs;
 			sourceTree = "<group>";
 		};
+		F1518B6B257BDE0F008A8560 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F1518B67257BD4B6008A8560 /* SnapKitExtensions.swift */,
+				F1518B69257BD889008A8560 /* UIView+Gradient.swift */,
+				F1C27EF2257FBA90003196E2 /* UINib+VIew.swift */,
+				F18AB125258773620020EF79 /* UserDefaults+Key.swift */,
+				F18AB1292587C19C0020EF79 /* UIViewController+Rx.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F1518B6E257BE947008A8560 /* LinePay */ = {
+			isa = PBXGroup;
+			children = (
+				F1518B6C257BE87D008A8560 /* LinePayHomeVC.swift */,
+				F1518B6F257BE977008A8560 /* LinePayPasscodeVC.swift */,
+				F18AB11F2586A2650020EF79 /* PasscodeSignsView.swift */,
+				F1C27EE8257E77BC003196E2 /* LineColors.swift */,
+				F1C27EEA257E8BF0003196E2 /* PasscodeNumericButton.swift */,
+				F1C27EEC257F8518003196E2 /* PasscodeConfiguration.swift */,
+				F1C27EEE257FB6A2003196E2 /* PasscodeNumericPadView.swift */,
+				F1C27EF425827E81003196E2 /* PasscodeViewModel.swift */,
+				F18AB1272587B1CE0020EF79 /* Biometry.swift */,
+				F18AB123258770510020EF79 /* PasscodeStorageMock.swift */,
+				F18AB11D25869BA20020EF79 /* PublishSignal.swift */,
+				F18AB12125873D600020EF79 /* BehaviorDriver.swift */,
+				F1C27EF0257FB6C3003196E2 /* PasscodeNumericPadView.xib */,
+			);
+			path = LinePay;
+			sourceTree = "<group>";
+		};
 		F79B1728F09B51AEA01FBE84 /* PracticeUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +241,8 @@
 				A8A7B1861F623DD3F51A1896 /* Main.storyboard */,
 				E384CD28F301A5DBD5EE631B /* SceneDelegate.swift */,
 				A8C369AEAF53C1F377492A29 /* ViewController.swift */,
+				F1518B6E257BE947008A8560 /* LinePay */,
+				F1518B6B257BDE0F008A8560 /* Extensions */,
 				B9CD62298AAAD69EF695078E /* configs */,
 				3DB79B4A198FDFACEC354F2F /* Home */,
 			);
@@ -207,6 +279,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = pokeduck;
 				TargetAttributes = {
 					AE94757D2A671652CE7A56EF = {
 						DevelopmentTeam = dev.team;
@@ -237,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C27EF1257FB6C3003196E2 /* PasscodeNumericPadView.xib in Resources */,
 				002683274E5D2D6E7D5DC77D /* Assets.xcassets in Resources */,
 				1F1EDEE51AADD872F627331C /* LaunchScreen.storyboard in Resources */,
 				B1D18FCE128C456E212931F9 /* Main.storyboard in Resources */,
@@ -292,11 +366,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C27EF3257FBA90003196E2 /* UINib+VIew.swift in Sources */,
+				F18AB1202586A2650020EF79 /* PasscodeSignsView.swift in Sources */,
+				F18AB1282587B1CE0020EF79 /* Biometry.swift in Sources */,
 				50534037060F3E7AEE1B2413 /* AppDelegate.swift in Sources */,
+				F1518B6D257BE87D008A8560 /* LinePayHomeVC.swift in Sources */,
 				AF4544305CC3AE38C1C89FCF /* BaseNavController.swift in Sources */,
+				F18AB12A2587C19C0020EF79 /* UIViewController+Rx.swift in Sources */,
+				F18AB11E25869BA20020EF79 /* PublishSignal.swift in Sources */,
+				F1518B6A257BD889008A8560 /* UIView+Gradient.swift in Sources */,
+				F1C27EF525827E82003196E2 /* PasscodeViewModel.swift in Sources */,
 				AD92E0C7F3BF02838A75B534 /* HomeTableViewController.swift in Sources */,
+				F18AB124258770510020EF79 /* PasscodeStorageMock.swift in Sources */,
+				F1518B70257BE977008A8560 /* LinePayPasscodeVC.swift in Sources */,
+				F18AB12225873D600020EF79 /* BehaviorDriver.swift in Sources */,
 				77DBC850964B6E7FF9EAFF99 /* SceneDelegate.swift in Sources */,
+				F1C27EE9257E77BC003196E2 /* LineColors.swift in Sources */,
 				0A61FD7AEF799E111ED0F7A2 /* ViewController.swift in Sources */,
+				F1C27EEB257E8BF0003196E2 /* PasscodeNumericButton.swift in Sources */,
+				F1518B65257B7359008A8560 /* HomeTableCell.swift in Sources */,
+				F1C27EED257F8518003196E2 /* PasscodeConfiguration.swift in Sources */,
+				F18AB126258773620020EF79 /* UserDefaults+Key.swift in Sources */,
+				F1C27EEF257FB6A2003196E2 /* PasscodeNumericPadView.swift in Sources */,
+				F1518B68257BD4B6008A8560 /* SnapKitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,8 +419,9 @@
 			baseConfigurationReference = E80D6BB9540A980E42A8AAC5 /* Pods-PracticeUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development: Ping-Wei Liao (672CU72RPV)";
 				CUSTOM_BUILD_SETTING = debug.idv.pokeduck;
+				DEVELOPMENT_TEAM = A5H9K77XGD;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"Frameworks\"",
@@ -339,7 +432,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.idv.pokeduck.PracticeUI;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.begonia.dev.fubon01;
+				PROVISIONING_PROFILE_SPECIFIER = FUBON_DEV;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -386,6 +480,7 @@
 				DEVELOPMENT_TEAM = dev.team;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/Frameworks;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -395,6 +490,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,7 +518,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.idv.pokeduck.PracticeUI;
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -469,6 +565,7 @@
 				DEVELOPMENT_TEAM = dev.team;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/Frameworks;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -484,6 +581,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -536,6 +634,7 @@
 				DEVELOPMENT_TEAM = dev.team;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/Frameworks;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -545,6 +644,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";

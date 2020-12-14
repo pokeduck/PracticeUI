@@ -23,7 +23,7 @@ class HomeTableViewController: UIViewController {
             make.bottom.equalTo(self.view.safeArea.bottomMargin)
         }
         v.register(cellWithClass: HomeTableCell.self)
-        //v.register(nibWithCellClass: HomeTableCell.self)
+        // v.register(nibWithCellClass: HomeTableCell.self)
         return v
     }()
 
@@ -32,30 +32,31 @@ class HomeTableViewController: UIViewController {
         view.backgroundColor = .white
         setupUI()
     }
+
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: true)
-        
     }
+
     private func setupUI() {
         tv.rx.setDelegate(self).disposed(by: disposeBag)
 
         let data = Observable.just([
             PageSection(name: "Section A", contents: [
-                Page(name: "Line Pay",type: .line,
-                     color: [.random,.random]),
-                Page(name: "Uber",type: .uber,
-                     color: [.random,.random]),
-                Page(name: "Pinkoi",type: .pinkoi,
-                     color: [.random,.random]),
-                Page(name: "Google Photo",type: .google,
-                     color: [.random,.random]),
+                Page(name: "Line Pay", type: .line,
+                     color: [.random, .random]),
+                Page(name: "Uber", type: .uber,
+                     color: [.random, .random]),
+                Page(name: "Pinkoi", type: .pinkoi,
+                     color: [.random, .random]),
+                Page(name: "Google Photo", type: .google,
+                     color: [.random, .random]),
             ]),
         ])
-        
+
         let dataSource = RxTableViewSectionedReloadDataSource<PageSection>(configureCell: { (dataSource, tableView, indexPath, page) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withClass: HomeTableCell.self, for: indexPath)
-            //cell.titleLabel.text = page.name
-            //cell.bgView.applyGradient(colors: page.color)
+            // cell.titleLabel.text = page.name
+            // cell.bgView.applyGradient(colors: page.color)
             cell.nameLabel.text = page.name
             cell.gradientView.applyGradient(colors: page.color)
             return cell
@@ -75,12 +76,10 @@ class HomeTableViewController: UIViewController {
 
         data.bind(to: tv.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
-        tv.rx.modelSelected(Page.self).subscribe(onNext: { [weak self] (page) in
+        tv.rx.modelSelected(Page.self).subscribe(onNext: { [weak self] page in
             switch page.type {
-                
             case .line:
                 self?.navigationController?.pushViewController(LinePayHomeVC(), animated: true)
-                break
             case .uber:
                 break
             case .google:
@@ -88,11 +87,11 @@ class HomeTableViewController: UIViewController {
             case .pinkoi:
                 break
             }
-        }, onError: { (error) in
+        }, onError: { error in
             print(error.localizedDescription)
         }, onCompleted: {
             print("complete")
-            }).disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
     }
 }
 
@@ -100,8 +99,9 @@ extension HomeTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
     }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        UITableView.automaticDimension
     }
 }
 
@@ -117,10 +117,10 @@ struct Page {
         case google
         case pinkoi
     }
+
     let name: String
     let type: Type
     let color: [UIColor]
-    
 }
 
 extension PageSection: SectionModelType {
