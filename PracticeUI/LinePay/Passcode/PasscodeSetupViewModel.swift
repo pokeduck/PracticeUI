@@ -10,7 +10,6 @@ import RxCocoa
 import RxSwift
 
 class PasscodeSetupViewModel: PasscodeViewModelType {
-    
     // Input
     let addNumber = PublishRelay<String>()
 
@@ -41,11 +40,12 @@ class PasscodeSetupViewModel: PasscodeViewModelType {
         case step1
         case step2
     }
+
     private var step = Step.step1
     private let maxLength = 6
     private var currentSigns: [String] = []
     private var newSigns: [String] = []
-    
+
     private var errorCount = 0
 
     private let mockStorage = PasscodeStorageMock()
@@ -83,14 +83,13 @@ class PasscodeSetupViewModel: PasscodeViewModelType {
             .delay(.seconds(1), scheduler: exectionQueue)
             .bind(to: didSucceed.publish)
             .disposed(by: disposeBag)
-        
+
         mockStorage.authSucceed
             .subscribe { [weak self] _ in
-            guard let self = self else { return }
+                guard let self = self else { return }
                 self.title.accept("設定完成")
                 self.isHUDShow.accept(false)
-        }.disposed(by: disposeBag)
-        
+            }.disposed(by: disposeBag)
     }
 
     private func addAuthenticationCodes(_ sign: String) {
@@ -127,4 +126,3 @@ class PasscodeSetupViewModel: PasscodeViewModelType {
         }
     }
 }
-

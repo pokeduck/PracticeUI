@@ -10,7 +10,6 @@ import RxCocoa
 import RxSwift
 
 class PasscodeAuthViewModel: PasscodeViewModelType {
-    
     // Input
     let addNumber = PublishRelay<String>()
 
@@ -37,7 +36,6 @@ class PasscodeAuthViewModel: PasscodeViewModelType {
     let biometryLocalizeText = BehaviorRelay<String>(value: "")
     let isBiometryHidden = BehaviorRelay<Bool>(value: true)
 
-    
     private let maxLength = 6
     private var currentSigns: [String] = []
     private var errorCount = 0

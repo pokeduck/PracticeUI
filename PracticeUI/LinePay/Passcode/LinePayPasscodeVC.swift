@@ -175,9 +175,8 @@ final class LinePayPasscodeVC: UIViewController {
             vm.isCancelHidden
                 .bind(to: numericPadView.cancelButton!.rx.isHidden)
                 .disposed(by: disposeBag)
-
         }
-        
+
         biometryBtn.rx.tap
             .bind(to: vm.useBiometry)
             .disposed(by: disposeBag)

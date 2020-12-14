@@ -17,7 +17,7 @@ class PasscodeNumericPadView: UIView {
     @IBOutlet var buttons: [PasscodeNumericButton] = []
 
     weak var cancelButton: PasscodeNumericButton?
-    
+
     private let _tapNumber = PublishRelay<String>()
     private let _tapDelete = PublishRelay<Void>()
     private let _tapCancel = PublishRelay<Void>()
@@ -50,12 +50,12 @@ class PasscodeNumericPadView: UIView {
 
     struct Config {
         static let lineTheme = Config(backgroundColor: .clear, buttonTextNormalColor: .white, buttonTextHighlightedColor: UIColor.FlatUI.asbestos, buttonBgNormalColor: UIColor.FlatUI.emerald, buttonBgHighlightedColor: UIColor.FlatUI.nephritis)
-        //var isShowCancel: Bool = false
-        let backgroundColor: UIColor// = UIColor.clear
-        let buttonTextNormalColor: UIColor// = UIColor.white
-        let buttonTextHighlightedColor: UIColor// = UIColor.FlatUI.asbestos
-        let buttonBgNormalColor: UIColor// = UIColor.FlatUI.emerald
-        let buttonBgHighlightedColor: UIColor //= UIColor.FlatUI.nephritis
+        // var isShowCancel: Bool = false
+        let backgroundColor: UIColor // = UIColor.clear
+        let buttonTextNormalColor: UIColor // = UIColor.white
+        let buttonTextHighlightedColor: UIColor // = UIColor.FlatUI.asbestos
+        let buttonBgNormalColor: UIColor // = UIColor.FlatUI.emerald
+        let buttonBgHighlightedColor: UIColor // = UIColor.FlatUI.nephritis
     }
 
     // private var config: Config = Config()
