@@ -11,7 +11,7 @@ import UIKit
 
 class LinePayHomeVC: UIViewController {
     private let disposeBag = DisposeBag()
-    private let vm = PasscodeViewModel(type: .auth(correctCode: ["7", "5", "3", "1", "7", "5"]))
+    private let vm = PasscodeAuthViewModel()
     lazy var testBtn: PasscodeNumericButton = {
         let btn = PasscodeNumericButton(type: .system)
         btn.setTitle("1", for: .normal)
@@ -49,13 +49,12 @@ class LinePayHomeVC: UIViewController {
 
         // _ = signsView
         testBtn.rx.tap.asSignal().emit(onNext: { [weak self] _ in
-            self?.present(LinePayPasscodeVC(), animated: true)
+            self?.present(LinePayPasscodeVC(style: .auth), animated: true)
         }).disposed(by: disposeBag)
-        present(LinePayPasscodeVC(), animated: false, completion: nil)
+        present(LinePayPasscodeVC(style: .setup), animated: false, completion: nil)
         return
 
-        let config = PasscodeNumericPadView.Config(isShowCancel: true)
-        let pad = PasscodeNumericPadView.instance(with: config)
+        let pad = PasscodeNumericPadView.instance(with: .lineTheme)
         view.addSubview(pad)
         pad.snp.makeConstraints { make in
             make.width.height.equalTo(370)

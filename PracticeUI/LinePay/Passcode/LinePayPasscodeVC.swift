@@ -13,9 +13,9 @@ final class LinePayPasscodeVC: UIViewController {
     private let disposeBag = DisposeBag()
 
     enum Style {
-        case auth(correctCode: [String])
-        case signUp
-        case change(oldCode: [String])
+        case auth
+        case setup
+        case change
     }
 
     lazy var titleLabel: UILabel = {
@@ -71,7 +71,7 @@ final class LinePayPasscodeVC: UIViewController {
     }()
 
     lazy var numericPadView: PasscodeNumericPadView = {
-        let config = PasscodeNumericPadView.Config(isShowCancel: true)
+        let config = PasscodeNumericPadView.Config.lineTheme
         let v = PasscodeNumericPadView.instance(with: config)
         view.addSubview(v)
         v.snp.makeConstraints { make in
@@ -94,10 +94,18 @@ final class LinePayPasscodeVC: UIViewController {
         return v
     }()
 
-    var vm: PasscodeViewModel!
-    init() {
+    var vm: PasscodeViewModelType!
+    init(style: Style) {
         super.init(nibName: nil, bundle: nil)
         modalPresentationStyle = .fullScreen
+        switch style {
+        case .auth:
+            vm = PasscodeAuthViewModel()
+        case .setup:
+            vm = PasscodeSetupViewModel()
+        default:
+            break
+        }
     }
 
     @available(*, unavailable)
@@ -109,7 +117,6 @@ final class LinePayPasscodeVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = Colors.Line.main
 
-        vm = PasscodeViewModel(type: .auth(correctCode: ["1", "2", "3", "4", "5", "6"]))
         bindViewModel()
     }
 
@@ -164,6 +171,13 @@ final class LinePayPasscodeVC: UIViewController {
             .bind(to: biometryBtn.rx.title(for: .normal))
             .disposed(by: disposeBag)
 
+        if numericPadView.cancelButton != nil {
+            vm.isCancelHidden
+                .bind(to: numericPadView.cancelButton!.rx.isHidden)
+                .disposed(by: disposeBag)
+
+        }
+        
         biometryBtn.rx.tap
             .bind(to: vm.useBiometry)
             .disposed(by: disposeBag)

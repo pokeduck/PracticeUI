@@ -1,50 +1,16 @@
 //
-//  PasscodeViewModel.swift
+//  PasscodeAuthViewModel.swift
 //  PracticeUI
 //
-//  Created by BenKu on 2020/12/11.
+//  Created by BenKu on 2020/12/15.
 //  Copyright © 2020 pokeduck. All rights reserved.
 //
 
 import RxCocoa
-import RxRelay
 import RxSwift
 
-enum PasscodeStyle {
-    case auth(correctCode: [String])
-
-    case setup
-
-    case change(oldCode: [String])
-}
-
-protocol PasscodeViewModelInput {
-    var addNumber: PublishRelay<String> { get }
-    var deleteNumber: PublishRelay<Void> { get }
-    var useBiometry: PublishRelay<Void> { get }
-}
-
-protocol PasscodeViewModelOutput {
-    var didFailed: PublishSignal<Void> { get }
-    var didSucceed: PublishSignal<Void> { get }
-    var didChangedState: PublishSignal<PasscodeViewModel.ChangeState> { get }
-    var removeSign: PublishSignal<PasscodeIndex> { get }
-    var cleanSigns: PublishSignal<Void> { get }
-    var addSign: PublishSignal<PasscodeIndex> { get }
-
-    var title: BehaviorDriver<String> { get }
-    var detail: BehaviorDriver<String> { get }
-
-    var isHUDShow: BehaviorDriver<Bool> { get }
-
-    var isBiometryHidden: BehaviorRelay<Bool> { get }
-    var biometryLocalizeText: BehaviorRelay<String> { get }
-}
-
-typealias PasscodeViewModelType = PasscodeViewModelInput & PasscodeViewModelOutput
-typealias PasscodeIndex = Int
-
-final class PasscodeViewModel: PasscodeViewModelType {
+class PasscodeAuthViewModel: PasscodeViewModelType {
+    
     // Input
     let addNumber = PublishRelay<String>()
 
@@ -55,8 +21,6 @@ final class PasscodeViewModel: PasscodeViewModelType {
     // Output
     let didSucceed = PublishSignal<Void>()
 
-    let didChangedState = PublishSignal<PasscodeViewModel.ChangeState>()
-
     let removeSign = PublishSignal<PasscodeIndex>()
 
     let cleanSigns = PublishSignal<Void>()
@@ -65,41 +29,26 @@ final class PasscodeViewModel: PasscodeViewModelType {
 
     let didFailed = PublishSignal<Void>()
 
-    let title = BehaviorDriver<String>(value: "")
+    let title = BehaviorDriver<String>(value: "請輸入密碼")
     let detail = BehaviorDriver<String>(value: "")
     let isHUDShow = BehaviorDriver<Bool>(value: false)
+    var isCancelHidden = BehaviorRelay<Bool>(value: true)
 
     let biometryLocalizeText = BehaviorRelay<String>(value: "")
     let isBiometryHidden = BehaviorRelay<Bool>(value: true)
 
+    
+    private let maxLength = 6
+    private var currentSigns: [String] = []
     private var errorCount = 0
 
     private let mockStorage = PasscodeStorageMock()
     private let exectionQueue = ConcurrentDispatchQueueScheduler(qos: .default)
     private let disposeBag = DisposeBag()
     private let biometry = Biometry()
-    let type: PasscodeStyle
-    var originCodes: [String]?
-    enum ChangeState {
-        case verify
-        case success
-        case notMatch
-    }
 
-    private let maxLength = 6
-    private var currentSigns: [String] = []
-
-    init(type: PasscodeStyle) {
-        self.type = type
+    init() {
         bind()
-        switch type {
-        case .auth:
-            title.accept("請輸入密碼")
-        case .setup:
-            break
-        case .change:
-            break
-        }
     }
 
     deinit {
@@ -112,15 +61,8 @@ final class PasscodeViewModel: PasscodeViewModelType {
             .subscribe { [weak self] event in
                 guard let self = self else { return }
                 guard let value = event.element else { return }
+                self.addAuthenticationCodes(value)
 
-                switch self.type {
-                case let .auth(correctCode):
-                    self.addAuthenticationCodes(value, correctCodes: correctCode)
-                case .setup:
-                    self.didChangedState.accept(.verify)
-                case let .change(oldCode):
-                    print(oldCode)
-                }
             }.disposed(by: disposeBag)
 
         deleteNumber.subscribe { [weak self] _ in
@@ -173,32 +115,13 @@ final class PasscodeViewModel: PasscodeViewModelType {
         biometryLocalizeText.accept(biometry.biometryName)
     }
 
-    private func addAuthenticationCodes(_ sign: String, correctCodes: [String]) {
+    private func addAuthenticationCodes(_ sign: String) {
         currentSigns.append(sign)
         addSign.accept(currentSigns.count - 1)
 
-        if currentSigns.count >= correctCodes.count {
+        if currentSigns.count >= maxLength {
             isHUDShow.accept(true)
             mockStorage.authCodes.accept(currentSigns)
-//            return
-//            sleep(1)
-//            if currentSigns == correctCodes {
-//                currentSigns.removeAll()
-//                //cleanSigns.accept(())
-//                detail.accept("驗證成功")
-//                sleep(1)
-//                didSucceed.accept(())
-//
-//            } else {
-//
-//                currentSigns.removeAll()
-//                detail.accept("密碼錯誤")
-//                didFailed.accept(())
-//                cleanSigns.accept(())
-//
-//            }
-//            isHUDShow.accept(false)
-
         } else {
             if errorCount > 0 {
                 detail.accept("請輸入目前密碼。")

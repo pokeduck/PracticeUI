@@ -41,13 +41,15 @@
 		F18AB126258773620020EF79 /* UserDefaults+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB125258773620020EF79 /* UserDefaults+Key.swift */; };
 		F18AB1282587B1CE0020EF79 /* Biometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB1272587B1CE0020EF79 /* Biometry.swift */; };
 		F18AB12A2587C19C0020EF79 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB1292587C19C0020EF79 /* UIViewController+Rx.swift */; };
+		F18AB12C2587E7700020EF79 /* PasscodeAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB12B2587E7700020EF79 /* PasscodeAuthViewModel.swift */; };
+		F18AB12E2587EE490020EF79 /* PasscodeSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB12D2587EE490020EF79 /* PasscodeSetupViewModel.swift */; };
 		F1C27EE9257E77BC003196E2 /* LineColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EE8257E77BC003196E2 /* LineColors.swift */; };
 		F1C27EEB257E8BF0003196E2 /* PasscodeNumericButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EEA257E8BF0003196E2 /* PasscodeNumericButton.swift */; };
 		F1C27EED257F8518003196E2 /* PasscodeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EEC257F8518003196E2 /* PasscodeConfiguration.swift */; };
 		F1C27EEF257FB6A2003196E2 /* PasscodeNumericPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EEE257FB6A2003196E2 /* PasscodeNumericPadView.swift */; };
 		F1C27EF1257FB6C3003196E2 /* PasscodeNumericPadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1C27EF0257FB6C3003196E2 /* PasscodeNumericPadView.xib */; };
 		F1C27EF3257FBA90003196E2 /* UINib+VIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EF2257FBA90003196E2 /* UINib+VIew.swift */; };
-		F1C27EF525827E82003196E2 /* PasscodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EF425827E81003196E2 /* PasscodeViewModel.swift */; };
+		F1C27EF525827E82003196E2 /* PasscodeViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EF425827E81003196E2 /* PasscodeViewModelType.swift */; };
 		FD031B60BDF59D3D93C7BAB9 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96D042278E788449D5038D08 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -107,13 +109,15 @@
 		F18AB125258773620020EF79 /* UserDefaults+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Key.swift"; sourceTree = "<group>"; };
 		F18AB1272587B1CE0020EF79 /* Biometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometry.swift; sourceTree = "<group>"; };
 		F18AB1292587C19C0020EF79 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		F18AB12B2587E7700020EF79 /* PasscodeAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeAuthViewModel.swift; sourceTree = "<group>"; };
+		F18AB12D2587EE490020EF79 /* PasscodeSetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeSetupViewModel.swift; sourceTree = "<group>"; };
 		F1C27EE8257E77BC003196E2 /* LineColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineColors.swift; sourceTree = "<group>"; };
 		F1C27EEA257E8BF0003196E2 /* PasscodeNumericButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeNumericButton.swift; sourceTree = "<group>"; };
 		F1C27EEC257F8518003196E2 /* PasscodeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeConfiguration.swift; sourceTree = "<group>"; };
 		F1C27EEE257FB6A2003196E2 /* PasscodeNumericPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeNumericPadView.swift; sourceTree = "<group>"; };
 		F1C27EF0257FB6C3003196E2 /* PasscodeNumericPadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasscodeNumericPadView.xib; sourceTree = "<group>"; };
 		F1C27EF2257FBA90003196E2 /* UINib+VIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+VIew.swift"; sourceTree = "<group>"; };
-		F1C27EF425827E81003196E2 /* PasscodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewModel.swift; sourceTree = "<group>"; };
+		F1C27EF425827E81003196E2 /* PasscodeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewModelType.swift; sourceTree = "<group>"; };
 		FAD8BC920D212104E582F452 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,20 +219,30 @@
 			isa = PBXGroup;
 			children = (
 				F1518B6C257BE87D008A8560 /* LinePayHomeVC.swift */,
-				F1518B6F257BE977008A8560 /* LinePayPasscodeVC.swift */,
-				F18AB11F2586A2650020EF79 /* PasscodeSignsView.swift */,
+				F18AB12F2587F5FB0020EF79 /* Passcode */,
 				F1C27EE8257E77BC003196E2 /* LineColors.swift */,
-				F1C27EEA257E8BF0003196E2 /* PasscodeNumericButton.swift */,
-				F1C27EEC257F8518003196E2 /* PasscodeConfiguration.swift */,
-				F1C27EEE257FB6A2003196E2 /* PasscodeNumericPadView.swift */,
-				F1C27EF425827E81003196E2 /* PasscodeViewModel.swift */,
-				F18AB1272587B1CE0020EF79 /* Biometry.swift */,
-				F18AB123258770510020EF79 /* PasscodeStorageMock.swift */,
 				F18AB11D25869BA20020EF79 /* PublishSignal.swift */,
 				F18AB12125873D600020EF79 /* BehaviorDriver.swift */,
-				F1C27EF0257FB6C3003196E2 /* PasscodeNumericPadView.xib */,
 			);
 			path = LinePay;
+			sourceTree = "<group>";
+		};
+		F18AB12F2587F5FB0020EF79 /* Passcode */ = {
+			isa = PBXGroup;
+			children = (
+				F1518B6F257BE977008A8560 /* LinePayPasscodeVC.swift */,
+				F18AB11F2586A2650020EF79 /* PasscodeSignsView.swift */,
+				F1C27EEA257E8BF0003196E2 /* PasscodeNumericButton.swift */,
+				F1C27EEC257F8518003196E2 /* PasscodeConfiguration.swift */,
+				F1C27EF425827E81003196E2 /* PasscodeViewModelType.swift */,
+				F18AB12B2587E7700020EF79 /* PasscodeAuthViewModel.swift */,
+				F18AB12D2587EE490020EF79 /* PasscodeSetupViewModel.swift */,
+				F18AB1272587B1CE0020EF79 /* Biometry.swift */,
+				F18AB123258770510020EF79 /* PasscodeStorageMock.swift */,
+				F1C27EEE257FB6A2003196E2 /* PasscodeNumericPadView.swift */,
+				F1C27EF0257FB6C3003196E2 /* PasscodeNumericPadView.xib */,
+			);
+			path = Passcode;
 			sourceTree = "<group>";
 		};
 		F79B1728F09B51AEA01FBE84 /* PracticeUI */ = {
@@ -375,15 +389,17 @@
 				F18AB12A2587C19C0020EF79 /* UIViewController+Rx.swift in Sources */,
 				F18AB11E25869BA20020EF79 /* PublishSignal.swift in Sources */,
 				F1518B6A257BD889008A8560 /* UIView+Gradient.swift in Sources */,
-				F1C27EF525827E82003196E2 /* PasscodeViewModel.swift in Sources */,
+				F1C27EF525827E82003196E2 /* PasscodeViewModelType.swift in Sources */,
 				AD92E0C7F3BF02838A75B534 /* HomeTableViewController.swift in Sources */,
 				F18AB124258770510020EF79 /* PasscodeStorageMock.swift in Sources */,
 				F1518B70257BE977008A8560 /* LinePayPasscodeVC.swift in Sources */,
 				F18AB12225873D600020EF79 /* BehaviorDriver.swift in Sources */,
+				F18AB12C2587E7700020EF79 /* PasscodeAuthViewModel.swift in Sources */,
 				77DBC850964B6E7FF9EAFF99 /* SceneDelegate.swift in Sources */,
 				F1C27EE9257E77BC003196E2 /* LineColors.swift in Sources */,
 				0A61FD7AEF799E111ED0F7A2 /* ViewController.swift in Sources */,
 				F1C27EEB257E8BF0003196E2 /* PasscodeNumericButton.swift in Sources */,
+				F18AB12E2587EE490020EF79 /* PasscodeSetupViewModel.swift in Sources */,
 				F1518B65257B7359008A8560 /* HomeTableCell.swift in Sources */,
 				F1C27EED257F8518003196E2 /* PasscodeConfiguration.swift in Sources */,
 				F18AB126258773620020EF79 /* UserDefaults+Key.swift in Sources */,

@@ -9,12 +9,12 @@
 import Foundation
 import RxRelay
 import RxSwift
-fileprivate let mockDelayTime = DispatchTimeInterval.seconds(2)
+private let mockDelayTime = DispatchTimeInterval.seconds(2)
 class PasscodeStorageMock {
     private let disposeBag = DisposeBag()
     // input
     let authCodes = PublishRelay<[String]>()
-
+    let newCodes = PublishRelay<[String]>()
     // output
     let authError = PublishRelay<Void>()
     let authSucceed = PublishRelay<Void>()
@@ -40,7 +40,9 @@ class PasscodeStorageMock {
             return newCodes
         }
     }
-
+    private func saveNewCode(_ codes:[String]) {
+        userDefault[.passcode] = codes
+    }
     private func bind() {
         authCodes.delay(mockDelayTime, scheduler: exectionQueue).subscribe(onNext: { [weak self] codes in
             guard let self = self else { return }
@@ -51,6 +53,14 @@ class PasscodeStorageMock {
             }
 
         }).disposed(by: disposeBag)
+        
+        newCodes.delay(mockDelayTime, scheduler: exectionQueue).subscribe { [weak self] (event) in
+            guard let codes = event.element,
+                let `self` = self else { return }
+            self.saveNewCode(codes)
+            self.authSucceed.accept(())
+            
+        }.disposed(by: disposeBag)
     }
 }
 
