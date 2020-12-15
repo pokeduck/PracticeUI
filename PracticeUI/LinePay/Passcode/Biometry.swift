@@ -7,6 +7,9 @@
 //
 
 import LocalAuthentication
+import RxCocoa
+import RxSwift
+
 class Biometry {
     private let context = LAContext()
     var isAvaiable: Bool {
@@ -24,6 +27,44 @@ class Biometry {
         default:
             return ""
         }
+    }
+
+    func enable() {
+        UserDefaults.standard[.biometryEnable] = true
+    }
+
+    func disable() {
+        UserDefaults.standard[.biometryEnable] = false
+    }
+
+    func isEnable() -> Bool {
+        if !isAvaiable { return false }
+        let isEnable = UserDefaults.standard.bool(forKey: .biometryEnable)
+        return isEnable
+    }
+
+    func auth() -> Signal<Result<Bool, Error>> {
+        let obserable: Observable<Result<Bool, Error>>
+            = Observable.create { [weak self] (observer) -> Disposable in
+                guard let self = self else {
+                    observer.onCompleted()
+                    return Disposables.create()
+                }
+
+                if !self.isAvaiable {
+                    observer.onCompleted()
+                }
+                self.context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "使用 \(self.biometryName)") { result, error in
+
+                    if error != nil {
+                        observer.onNext(.failure(error!))
+                    } else {
+                        observer.onNext(.success(result))
+                    }
+                }
+                return Disposables.create()
+            }
+        return obserable.asSignal(onErrorJustReturn: .success(false))
     }
 
     func auth(resultHandler: @escaping (_ result: Result<Bool, Error>) -> Void) {

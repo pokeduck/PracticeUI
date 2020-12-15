@@ -9,16 +9,21 @@
 import Foundation
 import RxRelay
 import RxSwift
-private let mockDelayTime = DispatchTimeInterval.seconds(2)
+private let mockDelayTime = DispatchTimeInterval.milliseconds(300)
 class PasscodeStorageMock {
+    static func hasBeenSetup() -> Bool {
+        UserDefaults.standard.stringArray(forKey: .passcode) != nil
+    }
+
     private let disposeBag = DisposeBag()
     // input
     let authCodes = PublishRelay<[String]>()
-    let newCodes = PublishRelay<[String]>()
+    let saveCodes = PublishRelay<[String]>()
     // output
+    let saveSucceed = PublishRelay<Void>()
     let authError = PublishRelay<Void>()
     let authSucceed = PublishRelay<Void>()
-    let exectionQueue = ConcurrentDispatchQueueScheduler(qos: .default)
+    private let exectionQueue = ConcurrentDispatchQueueScheduler(qos: .default)
 
     private var userDefault: UserDefaults { UserDefaults.standard }
 
@@ -56,11 +61,11 @@ class PasscodeStorageMock {
 
         }).disposed(by: disposeBag)
 
-        newCodes.delay(mockDelayTime, scheduler: exectionQueue).subscribe { [weak self] event in
+        saveCodes.delay(mockDelayTime, scheduler: exectionQueue).subscribe { [weak self] event in
             guard let codes = event.element,
                   let self = self else { return }
             self.saveNewCode(codes)
-            self.authSucceed.accept(())
+            self.saveSucceed.accept(())
 
         }.disposed(by: disposeBag)
     }
@@ -68,4 +73,5 @@ class PasscodeStorageMock {
 
 extension UserDefaults.Key {
     static let passcode: UserDefaults.Key = "line.passcode.key"
+    static let biometryEnable: UserDefaults.Key = "line.passcode.biometry.enable.key"
 }

@@ -46,8 +46,6 @@ class PasscodeSetupViewModel: PasscodeViewModelType {
     private var currentSigns: [String] = []
     private var newSigns: [String] = []
 
-    private var errorCount = 0
-
     private let mockStorage = PasscodeStorageMock()
     private let exectionQueue = ConcurrentDispatchQueueScheduler(qos: .default)
     private let disposeBag = DisposeBag()
@@ -79,12 +77,12 @@ class PasscodeSetupViewModel: PasscodeViewModelType {
             self.removeSign.accept(lastIndex)
         }.disposed(by: disposeBag)
 
-        mockStorage.authSucceed
+        mockStorage.saveSucceed
             .delay(.seconds(1), scheduler: exectionQueue)
             .bind(to: didSucceed.publish)
             .disposed(by: disposeBag)
 
-        mockStorage.authSucceed
+        mockStorage.saveSucceed
             .subscribe { [weak self] _ in
                 guard let self = self else { return }
                 self.title.accept("設定完成")
@@ -109,7 +107,7 @@ class PasscodeSetupViewModel: PasscodeViewModelType {
             case .step2:
                 isHUDShow.accept(true)
                 if newSigns == currentSigns {
-                    mockStorage.newCodes.accept(newSigns)
+                    mockStorage.saveCodes.accept(newSigns)
                 } else {
                     title.accept("第二次輸入錯誤")
                     newSigns.removeAll()

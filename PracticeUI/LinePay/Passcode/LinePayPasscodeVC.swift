@@ -103,8 +103,8 @@ final class LinePayPasscodeVC: UIViewController {
             vm = PasscodeAuthViewModel()
         case .setup:
             vm = PasscodeSetupViewModel()
-        default:
-            break
+        case .change:
+            vm = PasscodeChangeViewModel()
         }
     }
 

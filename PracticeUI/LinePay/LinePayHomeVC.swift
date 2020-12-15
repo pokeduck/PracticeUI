@@ -31,6 +31,16 @@ class LinePayHomeVC: UIViewController {
         return btn
     }()
 
+    lazy var enableBiometrySwitch: UISwitch = {
+        let sw = UISwitch()
+        view.addSubview(sw)
+        sw.snp.makeConstraints { make in
+            make.centerY.equalToSuperview().multipliedBy(0.5)
+            make.centerX.equalToSuperview()
+        }
+        return sw
+    }()
+
     lazy var signsView: PasscodeSignsView = {
         let v = PasscodeSignsView()
         view.addSubview(v)
@@ -43,15 +53,20 @@ class LinePayHomeVC: UIViewController {
         return v
     }()
 
+    private let biometry = Biometry()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Colors.Line.main
 
         // _ = signsView
         testBtn.rx.tap.asSignal().emit(onNext: { [weak self] _ in
-            self?.present(LinePayPasscodeVC(style: .auth), animated: true)
+            self?.present(LinePayPasscodeVC(style: .change), animated: true)
         }).disposed(by: disposeBag)
-        present(LinePayPasscodeVC(style: .setup), animated: false, completion: nil)
+        if PasscodeStorageMock.hasBeenSetup() {
+            present(LinePayPasscodeVC(style: .auth), animated: false, completion: nil)
+        } else {
+            present(LinePayPasscodeVC(style: .setup), animated: false, completion: nil)
+        }
         return
 
         let pad = PasscodeNumericPadView.instance(with: .lineTheme)
@@ -93,6 +108,17 @@ class LinePayHomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
+
+        enableBiometrySwitch.isOn = biometry.isEnable()
+
+        enableBiometrySwitch.rx.value.subscribe { [weak self] event in
+            guard let enable = event.element else { return }
+            if enable {
+                self?.biometry.enable()
+            } else {
+                self?.biometry.disable()
+            }
+        }.disposed(by: disposeBag)
     }
 
     /*
