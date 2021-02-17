@@ -42,6 +42,7 @@ class HomeTableViewController: UIViewController {
 
         let data = Observable.just([
             PageSection(name: "Section A", contents: [
+                Page(name: "Shaped Tab Bar", type: .tabbar, color: [.random, .random]),
                 Page(name: "Line Pay", type: .line,
                      color: [.random, .random]),
                 Page(name: "Uber", type: .uber,
@@ -49,8 +50,7 @@ class HomeTableViewController: UIViewController {
                 Page(name: "Pinkoi", type: .pinkoi,
                      color: [.random, .random]),
                 Page(name: "Google Photo", type: .google,
-                     color: [.random, .random]),
-                Page(name: "Shaped Tab Bar", type: .tabbar, color: [.random, .random])
+                     color: [.random, .random])
             ]),
         ])
 
@@ -88,7 +88,7 @@ class HomeTableViewController: UIViewController {
             case .pinkoi:
                 break
             case .tabbar:
-                self?.navigationController?.pushViewController(MainTabBarController())
+                self?.navigationController?.pushViewController(TestDelegateTabController())
             }
         }, onError: { error in
             print(error.localizedDescription)
