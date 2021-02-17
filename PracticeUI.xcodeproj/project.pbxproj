@@ -8,163 +8,194 @@
 
 /* Begin PBXBuildFile section */
 		002683274E5D2D6E7D5DC77D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD8BC920D212104E582F452 /* Assets.xcassets */; };
-		0A4246C6665CF6A5ACA67322 /* RxBlocking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6081092A5647627D8D37574 /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		01B2E4E920FE705B1B1A100C /* PasscodeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6275E2A950BF90DC7D5FA /* PasscodeConfiguration.swift */; };
 		0A61FD7AEF799E111ED0F7A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C369AEAF53C1F377492A29 /* ViewController.swift */; };
-		1AFB2ABB7FB9399D84DF6BBA /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED337A6507E63E7C607BE222 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0A6E3E99E4D2DC94637087AF /* step2_wrong2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 6053B179D8F679956CD701D3 /* step2_wrong2.PNG */; };
+		0B75704934318F0C8CAB02EF /* PasscodeViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF2B5E3B00AD876EDBA02AA /* PasscodeViewModelType.swift */; };
+		0C0BF31C0BB91AE6D72CA3D3 /* passcude_input.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8FB0139F42227360AB2EB7AC /* passcude_input.jpeg */; };
+		0D73702CD99787D3B440CD4A /* PasscodeNumericPadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE656E5A3EBF0EFBEF29D8D7 /* PasscodeNumericPadView.xib */; };
+		10D625CB81E855BBA3ACB732 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6E3DB6125ECCB19894F27 /* UIView+Gradient.swift */; };
+		18F6D0DBFA328830EED48A09 /* PasscodeSignsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B632EC6DB6C57CBF3A7C083 /* PasscodeSignsView.swift */; };
 		1F1EDEE51AADD872F627331C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E66D74E286257E139E0ECB /* LaunchScreen.storyboard */; };
-		2177E00C06FCE701575F7F7C /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23790544C0D69BF2A937466A /* RxDataSources.framework */; };
-		27E5472930146DEB086582CE /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6093C4CEB15580972294B8DB /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4A4B54746BC7F0620D67CFFA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D042278E788449D5038D08 /* RxSwift.framework */; };
+		230A7F5F80B87CEA8EB3DC58 /* LinePayPasscodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCFA3162D52A7A38035D189 /* LinePayPasscodeVC.swift */; };
+		351061B7833E0A8499B75EE6 /* BehaviorDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717DB2C1366EFBEC3DAF6A66 /* BehaviorDriver.swift */; };
+		3B15C9908FE16F5B417D2877 /* passcode.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 55FCB55D77840802C3649955 /* passcode.PNG */; };
+		40BB2ED41D966B83D3E92939 /* PublishSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF32EF2C222EC8A974DE108 /* PublishSignal.swift */; };
+		4D589B4AF9D27CF203AB2617 /* step2_wrong.PNG in Resources */ = {isa = PBXBuildFile; fileRef = F7D62828C1E120383B5C79C3 /* step2_wrong.PNG */; };
 		50534037060F3E7AEE1B2413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C233B446B375E3CA4A890 /* AppDelegate.swift */; };
-		64C249FAFE05DBF55B5EE6E9 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6164CEC5A2E072E9643D9523 /* Differentiator.framework */; };
-		64E21EE8E23E007601F071AB /* RxDataSources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23790544C0D69BF2A937466A /* RxDataSources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6DD80CF73C96F06790CDA3D8 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6093C4CEB15580972294B8DB /* RxRelay.framework */; };
+		69B594243D6BA5FCB61E56C4 /* turn_on_touchid_step1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 163B6EEC7317C065DCBB1F3A /* turn_on_touchid_step1.PNG */; };
+		709910C1FA8C2E3209A624D5 /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A21F0BB0B403D8C40E3BCAA /* HomeTableCell.swift */; };
+		740A907F166BA7353D3AA42C /* step3_success.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 4AAA02FF176D3A3648DA4534 /* step3_success.PNG */; };
+		778B53237A343D2AF52C7353 /* step1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 0025BFB5E9668CCF17CF2C33 /* step1.PNG */; };
 		77DBC850964B6E7FF9EAFF99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384CD28F301A5DBD5EE631B /* SceneDelegate.swift */; };
-		82270BA8DAE5496E9BA10B31 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AACD700D92CF602DE21E91B5 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		78B915FA3EBD2A4037DFA866 /* PasscodeSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556E7636C04AE2F5E91171DD /* PasscodeSetupViewModel.swift */; };
+		7990113BCAA77412845CC301 /* PasscodeAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BF8A69D65E2A4EED5E9363 /* PasscodeAuthViewModel.swift */; };
+		A6C850C419B383537B18FB34 /* PasscodeNumericButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A43240A3C16D73964EC011C /* PasscodeNumericButton.swift */; };
+		A7B69D98025214FC7FF64CE6 /* step3_last.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5C03D92C060C0B8B099B7A71 /* step3_last.PNG */; };
+		A908021B80C9F561DB1AFDA0 /* LineColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99859D79B633D91B570AEB50 /* LineColors.swift */; };
 		AD92E0C7F3BF02838A75B534 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC4750323F774972FFBBA58 /* HomeTableViewController.swift */; };
 		AF4544305CC3AE38C1C89FCF /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D9812D98CC26C058E64654 /* BaseNavController.swift */; };
-		AF7F1C8AE2093AE1473CFB07 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACD700D92CF602DE21E91B5 /* SnapKit.framework */; };
 		B1D18FCE128C456E212931F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A7B1861F623DD3F51A1896 /* Main.storyboard */; };
-		B2F017A4B0DFE7E1E1ECE7E8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED337A6507E63E7C607BE222 /* RxCocoa.framework */; };
-		D7820A830F73EC91733D7B69 /* Differentiator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6164CEC5A2E072E9643D9523 /* Differentiator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E0EFA32896A7A45D67630DE3 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6081092A5647627D8D37574 /* RxBlocking.framework */; };
-		E66E4B0866157DD9E4C0FC0E /* Pods_PracticeUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF927BC079496F4E925D830D /* Pods_PracticeUI.framework */; };
-		F1518B65257B7359008A8560 /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1518B63257B7359008A8560 /* HomeTableCell.swift */; };
-		F1518B68257BD4B6008A8560 /* SnapKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1518B67257BD4B6008A8560 /* SnapKitExtensions.swift */; };
-		F1518B6A257BD889008A8560 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1518B69257BD889008A8560 /* UIView+Gradient.swift */; };
-		F1518B6D257BE87D008A8560 /* LinePayHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1518B6C257BE87D008A8560 /* LinePayHomeVC.swift */; };
-		F1518B70257BE977008A8560 /* LinePayPasscodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1518B6F257BE977008A8560 /* LinePayPasscodeVC.swift */; };
-		F18AB11E25869BA20020EF79 /* PublishSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB11D25869BA20020EF79 /* PublishSignal.swift */; };
-		F18AB1202586A2650020EF79 /* PasscodeSignsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB11F2586A2650020EF79 /* PasscodeSignsView.swift */; };
-		F18AB12225873D600020EF79 /* BehaviorDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB12125873D600020EF79 /* BehaviorDriver.swift */; };
-		F18AB124258770510020EF79 /* PasscodeStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB123258770510020EF79 /* PasscodeStorageMock.swift */; };
-		F18AB126258773620020EF79 /* UserDefaults+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB125258773620020EF79 /* UserDefaults+Key.swift */; };
-		F18AB1282587B1CE0020EF79 /* Biometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB1272587B1CE0020EF79 /* Biometry.swift */; };
-		F18AB12A2587C19C0020EF79 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB1292587C19C0020EF79 /* UIViewController+Rx.swift */; };
-		F18AB12C2587E7700020EF79 /* PasscodeAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB12B2587E7700020EF79 /* PasscodeAuthViewModel.swift */; };
-		F18AB12E2587EE490020EF79 /* PasscodeSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB12D2587EE490020EF79 /* PasscodeSetupViewModel.swift */; };
-		F18AB1312588941F0020EF79 /* PasscodeChangeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB1302588941F0020EF79 /* PasscodeChangeViewModel.swift */; };
-		F1C27EE9257E77BC003196E2 /* LineColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EE8257E77BC003196E2 /* LineColors.swift */; };
-		F1C27EEB257E8BF0003196E2 /* PasscodeNumericButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EEA257E8BF0003196E2 /* PasscodeNumericButton.swift */; };
-		F1C27EED257F8518003196E2 /* PasscodeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EEC257F8518003196E2 /* PasscodeConfiguration.swift */; };
-		F1C27EEF257FB6A2003196E2 /* PasscodeNumericPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EEE257FB6A2003196E2 /* PasscodeNumericPadView.swift */; };
-		F1C27EF1257FB6C3003196E2 /* PasscodeNumericPadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1C27EF0257FB6C3003196E2 /* PasscodeNumericPadView.xib */; };
-		F1C27EF3257FBA90003196E2 /* UINib+VIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EF2257FBA90003196E2 /* UINib+VIew.swift */; };
-		F1C27EF525827E82003196E2 /* PasscodeViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C27EF425827E81003196E2 /* PasscodeViewModelType.swift */; };
-		FD031B60BDF59D3D93C7BAB9 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96D042278E788449D5038D08 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B74D628EB5D798264DC8877B /* launch.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 0829932EF3AD7620F74DC4E0 /* launch.PNG */; };
+		B8EFD226CF07BF2F159A0D10 /* PasscodeNumericPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84F565EEFFCC513ABAE6BA /* PasscodeNumericPadView.swift */; };
+		BDDDEED49821EE4AAEA48BA0 /* UINib+VIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65842E25742B15F78CA6EDCE /* UINib+VIew.swift */; };
+		C30FEDD4C16B05A71D80B212 /* turn_on_touchid_step2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 1F6CA9F3DF53AFC78BEBF459 /* turn_on_touchid_step2.PNG */; };
+		C608C4FBDD188C21165E9DF3 /* SnapKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC04D2382174AB1752BC4FD /* SnapKitExtensions.swift */; };
+		C694BDC713BDE21A20BE3599 /* Biometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A823A9F0B6F2478527DAEB4 /* Biometry.swift */; };
+		CCFA9BDEA4BDDD4CBBF2FB43 /* PasscodeChangeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8776D3C81EF053BFB7E1EF6 /* PasscodeChangeViewModel.swift */; };
+		D7F8A6513433A445C124A958 /* LinePayHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE54F9824C7BF97EAFD9D1D /* LinePayHomeVC.swift */; };
+		DC502E7227DA7DD4FE824AAB /* turn_on_touchid.PNG in Resources */ = {isa = PBXBuildFile; fileRef = D3FC8E06AA31DD5B08ADB07B /* turn_on_touchid.PNG */; };
+		DEDE50DEEDB37242E8069297 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EF4FBA2787D4600F7E7929 /* UIViewController+Rx.swift */; };
+		E1521F8BB8CD1E0D8220EECA /* Pods_PracticeUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93321054ABFEACE2F9DE0A3C /* Pods_PracticeUI.framework */; };
+		E388DC066AFD0EC578A73637 /* step3.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 0F55589E9875A4A6690B32C8 /* step3.PNG */; };
+		EA2280D22ECC57685E949DF8 /* step2_tips.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E92451BF01E8A229D23E5BD0 /* step2_tips.PNG */; };
+		ED4C4C4DCB8EF2F81138A040 /* PasscodeStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EFE3346306EC9E3A2EC31F /* PasscodeStorageMock.swift */; };
+		EF2321AE5562B23684AE98E2 /* step2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 89217A18EA0827F54DDFB2AA /* step2.PNG */; };
+		F7C0A205E2651B3F187CA29B /* UserDefaults+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBB4413BB3BD120719C2844 /* UserDefaults+Key.swift */; };
+		FBB285F11D179098F43C5578 /* passcode_button_press.PNG in Resources */ = {isa = PBXBuildFile; fileRef = BCF1699A09962EB67585902F /* passcode_button_press.PNG */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		CE1759B8B1E29843DF761FA6 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				FD031B60BDF59D3D93C7BAB9 /* RxSwift.framework in Embed Frameworks */,
-				1AFB2ABB7FB9399D84DF6BBA /* RxCocoa.framework in Embed Frameworks */,
-				0A4246C6665CF6A5ACA67322 /* RxBlocking.framework in Embed Frameworks */,
-				27E5472930146DEB086582CE /* RxRelay.framework in Embed Frameworks */,
-				D7820A830F73EC91733D7B69 /* Differentiator.framework in Embed Frameworks */,
-				64E21EE8E23E007601F071AB /* RxDataSources.framework in Embed Frameworks */,
-				82270BA8DAE5496E9BA10B31 /* SnapKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		13037A9929F0E86D11309591 /* PracticeUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		23790544C0D69BF2A937466A /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Frameworks/RxDataSources.framework; sourceTree = "<group>"; };
+		0025BFB5E9668CCF17CF2C33 /* step1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step1.PNG; sourceTree = "<group>"; };
+		0829932EF3AD7620F74DC4E0 /* launch.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.PNG; sourceTree = "<group>"; };
+		0F55589E9875A4A6690B32C8 /* step3.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step3.PNG; sourceTree = "<group>"; };
+		13037A9929F0E86D11309591 /* PracticeUI.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PracticeUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		163B6EEC7317C065DCBB1F3A /* turn_on_touchid_step1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turn_on_touchid_step1.PNG; sourceTree = "<group>"; };
+		1F6CA9F3DF53AFC78BEBF459 /* turn_on_touchid_step2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turn_on_touchid_step2.PNG; sourceTree = "<group>"; };
 		24F2BD27B8A2BB8EB6FE8BEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30D9812D98CC26C058E64654 /* BaseNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
+		4AAA02FF176D3A3648DA4534 /* step3_success.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step3_success.PNG; sourceTree = "<group>"; };
+		556E7636C04AE2F5E91171DD /* PasscodeSetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeSetupViewModel.swift; sourceTree = "<group>"; };
+		55FCB55D77840802C3649955 /* passcode.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = passcode.PNG; sourceTree = "<group>"; };
+		5C03D92C060C0B8B099B7A71 /* step3_last.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step3_last.PNG; sourceTree = "<group>"; };
 		5C79DC9BDC97945B69B218CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6093C4CEB15580972294B8DB /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Frameworks/RxRelay.framework; sourceTree = "<group>"; };
-		6164CEC5A2E072E9643D9523 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Frameworks/Differentiator.framework; sourceTree = "<group>"; };
+		6053B179D8F679956CD701D3 /* step2_wrong2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step2_wrong2.PNG; sourceTree = "<group>"; };
+		65842E25742B15F78CA6EDCE /* UINib+VIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+VIew.swift"; sourceTree = "<group>"; };
+		717DB2C1366EFBEC3DAF6A66 /* BehaviorDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviorDriver.swift; sourceTree = "<group>"; };
+		7B632EC6DB6C57CBF3A7C083 /* PasscodeSignsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeSignsView.swift; sourceTree = "<group>"; };
+		7CF2B5E3B00AD876EDBA02AA /* PasscodeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewModelType.swift; sourceTree = "<group>"; };
 		7D8C98D66D96E1BAB978B116 /* staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = staging.xcconfig; sourceTree = "<group>"; };
-		7E23894808593B075B171475 /* Pods-PracticeUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeUI.release.xcconfig"; path = "Target Support Files/Pods-PracticeUI/Pods-PracticeUI.release.xcconfig"; sourceTree = "<group>"; };
-		96D042278E788449D5038D08 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Frameworks/RxSwift.framework; sourceTree = "<group>"; };
-		A6081092A5647627D8D37574 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Frameworks/RxBlocking.framework; sourceTree = "<group>"; };
+		82EF4FBA2787D4600F7E7929 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		89217A18EA0827F54DDFB2AA /* step2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step2.PNG; sourceTree = "<group>"; };
+		8A21F0BB0B403D8C40E3BCAA /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
+		8A823A9F0B6F2478527DAEB4 /* Biometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometry.swift; sourceTree = "<group>"; };
+		8DC04D2382174AB1752BC4FD /* SnapKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapKitExtensions.swift; sourceTree = "<group>"; };
+		8FB0139F42227360AB2EB7AC /* passcude_input.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = passcude_input.jpeg; sourceTree = "<group>"; };
+		8FCFA3162D52A7A38035D189 /* LinePayPasscodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePayPasscodeVC.swift; sourceTree = "<group>"; };
+		93321054ABFEACE2F9DE0A3C /* Pods_PracticeUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99859D79B633D91B570AEB50 /* LineColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineColors.swift; sourceTree = "<group>"; };
+		9A43240A3C16D73964EC011C /* PasscodeNumericButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeNumericButton.swift; sourceTree = "<group>"; };
+		9AD6E3DB6125ECCB19894F27 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		A78E26E956F9DE72F948D912 /* Pods-PracticeUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeUI.release.xcconfig"; path = "Target Support Files/Pods-PracticeUI/Pods-PracticeUI.release.xcconfig"; sourceTree = "<group>"; };
 		A8C369AEAF53C1F377492A29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AACD700D92CF602DE21E91B5 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Frameworks/SnapKit.framework; sourceTree = "<group>"; };
+		AED6275E2A950BF90DC7D5FA /* PasscodeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeConfiguration.swift; sourceTree = "<group>"; };
+		B3BF8A69D65E2A4EED5E9363 /* PasscodeAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeAuthViewModel.swift; sourceTree = "<group>"; };
+		B57CEB181A9CAAB6D4328600 /* Pods-PracticeUI.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeUI.staging.xcconfig"; path = "Target Support Files/Pods-PracticeUI/Pods-PracticeUI.staging.xcconfig"; sourceTree = "<group>"; };
 		B602094E70CF6E1CA2D0A9BE /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
 		B84B2C044AE70428E84F85A9 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
 		BBC4750323F774972FFBBA58 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
-		BF60DF6298C7F8AF7D1ADE6C /* Pods-PracticeUI.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeUI.staging.xcconfig"; path = "Target Support Files/Pods-PracticeUI/Pods-PracticeUI.staging.xcconfig"; sourceTree = "<group>"; };
-		BF927BC079496F4E925D830D /* Pods_PracticeUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF1699A09962EB67585902F /* passcode_button_press.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = passcode_button_press.PNG; sourceTree = "<group>"; };
+		BFBB4413BB3BD120719C2844 /* UserDefaults+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Key.swift"; sourceTree = "<group>"; };
+		C8776D3C81EF053BFB7E1EF6 /* PasscodeChangeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeChangeViewModel.swift; sourceTree = "<group>"; };
+		D3FC8E06AA31DD5B08ADB07B /* turn_on_touchid.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turn_on_touchid.PNG; sourceTree = "<group>"; };
 		DB34B102A895914299968338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E27C233B446B375E3CA4A890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E2BAF3AEA2BDAD0E116EE205 /* Pods-PracticeUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeUI.debug.xcconfig"; path = "Target Support Files/Pods-PracticeUI/Pods-PracticeUI.debug.xcconfig"; sourceTree = "<group>"; };
 		E384CD28F301A5DBD5EE631B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E80D6BB9540A980E42A8AAC5 /* Pods-PracticeUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeUI.debug.xcconfig"; path = "Target Support Files/Pods-PracticeUI/Pods-PracticeUI.debug.xcconfig"; sourceTree = "<group>"; };
-		ED337A6507E63E7C607BE222 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Frameworks/RxCocoa.framework; sourceTree = "<group>"; };
-		F1518B63257B7359008A8560 /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
-		F1518B67257BD4B6008A8560 /* SnapKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapKitExtensions.swift; sourceTree = "<group>"; };
-		F1518B69257BD889008A8560 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
-		F1518B6C257BE87D008A8560 /* LinePayHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePayHomeVC.swift; sourceTree = "<group>"; };
-		F1518B6F257BE977008A8560 /* LinePayPasscodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePayPasscodeVC.swift; sourceTree = "<group>"; };
-		F18AB11D25869BA20020EF79 /* PublishSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishSignal.swift; sourceTree = "<group>"; };
-		F18AB11F2586A2650020EF79 /* PasscodeSignsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeSignsView.swift; sourceTree = "<group>"; };
-		F18AB12125873D600020EF79 /* BehaviorDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviorDriver.swift; sourceTree = "<group>"; };
-		F18AB123258770510020EF79 /* PasscodeStorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeStorageMock.swift; sourceTree = "<group>"; };
-		F18AB125258773620020EF79 /* UserDefaults+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Key.swift"; sourceTree = "<group>"; };
-		F18AB1272587B1CE0020EF79 /* Biometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometry.swift; sourceTree = "<group>"; };
-		F18AB1292587C19C0020EF79 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
-		F18AB12B2587E7700020EF79 /* PasscodeAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeAuthViewModel.swift; sourceTree = "<group>"; };
-		F18AB12D2587EE490020EF79 /* PasscodeSetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeSetupViewModel.swift; sourceTree = "<group>"; };
-		F18AB1302588941F0020EF79 /* PasscodeChangeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeChangeViewModel.swift; sourceTree = "<group>"; };
-		F1C27EE8257E77BC003196E2 /* LineColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineColors.swift; sourceTree = "<group>"; };
-		F1C27EEA257E8BF0003196E2 /* PasscodeNumericButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeNumericButton.swift; sourceTree = "<group>"; };
-		F1C27EEC257F8518003196E2 /* PasscodeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeConfiguration.swift; sourceTree = "<group>"; };
-		F1C27EEE257FB6A2003196E2 /* PasscodeNumericPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeNumericPadView.swift; sourceTree = "<group>"; };
-		F1C27EF0257FB6C3003196E2 /* PasscodeNumericPadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasscodeNumericPadView.xib; sourceTree = "<group>"; };
-		F1C27EF2257FBA90003196E2 /* UINib+VIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+VIew.swift"; sourceTree = "<group>"; };
-		F1C27EF425827E81003196E2 /* PasscodeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewModelType.swift; sourceTree = "<group>"; };
+		E92451BF01E8A229D23E5BD0 /* step2_tips.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step2_tips.PNG; sourceTree = "<group>"; };
+		EBE54F9824C7BF97EAFD9D1D /* LinePayHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePayHomeVC.swift; sourceTree = "<group>"; };
+		F7D62828C1E120383B5C79C3 /* step2_wrong.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step2_wrong.PNG; sourceTree = "<group>"; };
+		F7EFE3346306EC9E3A2EC31F /* PasscodeStorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeStorageMock.swift; sourceTree = "<group>"; };
 		FAD8BC920D212104E582F452 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC84F565EEFFCC513ABAE6BA /* PasscodeNumericPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeNumericPadView.swift; sourceTree = "<group>"; };
+		FCF32EF2C222EC8A974DE108 /* PublishSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishSignal.swift; sourceTree = "<group>"; };
+		FE656E5A3EBF0EFBEF29D8D7 /* PasscodeNumericPadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasscodeNumericPadView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1C0C238A0B6D3DA87F1C6B67 /* Frameworks */ = {
+		9217DF223BC9C3C3825D7F6E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A4B54746BC7F0620D67CFFA /* RxSwift.framework in Frameworks */,
-				B2F017A4B0DFE7E1E1ECE7E8 /* RxCocoa.framework in Frameworks */,
-				E0EFA32896A7A45D67630DE3 /* RxBlocking.framework in Frameworks */,
-				6DD80CF73C96F06790CDA3D8 /* RxRelay.framework in Frameworks */,
-				64C249FAFE05DBF55B5EE6E9 /* Differentiator.framework in Frameworks */,
-				2177E00C06FCE701575F7F7C /* RxDataSources.framework in Frameworks */,
-				AF7F1C8AE2093AE1473CFB07 /* SnapKit.framework in Frameworks */,
-				E66E4B0866157DD9E4C0FC0E /* Pods_PracticeUI.framework in Frameworks */,
+				E1521F8BB8CD1E0D8220EECA /* Pods_PracticeUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C7943EEA058B1CF1EF2124A /* change */ = {
+			isa = PBXGroup;
+			children = (
+				0025BFB5E9668CCF17CF2C33 /* step1.PNG */,
+				E92451BF01E8A229D23E5BD0 /* step2_tips.PNG */,
+				F7D62828C1E120383B5C79C3 /* step2_wrong.PNG */,
+				6053B179D8F679956CD701D3 /* step2_wrong2.PNG */,
+				89217A18EA0827F54DDFB2AA /* step2.PNG */,
+				5C03D92C060C0B8B099B7A71 /* step3_last.PNG */,
+				4AAA02FF176D3A3648DA4534 /* step3_success.PNG */,
+				0F55589E9875A4A6690B32C8 /* step3.PNG */,
+			);
+			path = change;
+			sourceTree = "<group>";
+		};
+		321F92C113E0A08194BC2E21 /* launch */ = {
+			isa = PBXGroup;
+			children = (
+				0829932EF3AD7620F74DC4E0 /* launch.PNG */,
+				BCF1699A09962EB67585902F /* passcode_button_press.PNG */,
+				55FCB55D77840802C3649955 /* passcode.PNG */,
+				8FB0139F42227360AB2EB7AC /* passcude_input.jpeg */,
+				D3FC8E06AA31DD5B08ADB07B /* turn_on_touchid.PNG */,
+			);
+			path = launch;
+			sourceTree = "<group>";
+		};
+		3A1574FB61E08127F1DF268A /* Passcode */ = {
+			isa = PBXGroup;
+			children = (
+				8A823A9F0B6F2478527DAEB4 /* Biometry.swift */,
+				8FCFA3162D52A7A38035D189 /* LinePayPasscodeVC.swift */,
+				B3BF8A69D65E2A4EED5E9363 /* PasscodeAuthViewModel.swift */,
+				C8776D3C81EF053BFB7E1EF6 /* PasscodeChangeViewModel.swift */,
+				AED6275E2A950BF90DC7D5FA /* PasscodeConfiguration.swift */,
+				9A43240A3C16D73964EC011C /* PasscodeNumericButton.swift */,
+				FC84F565EEFFCC513ABAE6BA /* PasscodeNumericPadView.swift */,
+				FE656E5A3EBF0EFBEF29D8D7 /* PasscodeNumericPadView.xib */,
+				556E7636C04AE2F5E91171DD /* PasscodeSetupViewModel.swift */,
+				7B632EC6DB6C57CBF3A7C083 /* PasscodeSignsView.swift */,
+				F7EFE3346306EC9E3A2EC31F /* PasscodeStorageMock.swift */,
+				7CF2B5E3B00AD876EDBA02AA /* PasscodeViewModelType.swift */,
+			);
+			path = Passcode;
+			sourceTree = "<group>";
+		};
 		3DB79B4A198FDFACEC354F2F /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				30D9812D98CC26C058E64654 /* BaseNavController.swift */,
+				8A21F0BB0B403D8C40E3BCAA /* HomeTableCell.swift */,
 				BBC4750323F774972FFBBA58 /* HomeTableViewController.swift */,
-				F1518B63257B7359008A8560 /* HomeTableCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		509F3C5F1FF7500D86B144A0 /* Frameworks */ = {
+		496F0A506DA029FC7BF874C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6164CEC5A2E072E9643D9523 /* Differentiator.framework */,
-				A6081092A5647627D8D37574 /* RxBlocking.framework */,
-				ED337A6507E63E7C607BE222 /* RxCocoa.framework */,
-				23790544C0D69BF2A937466A /* RxDataSources.framework */,
-				6093C4CEB15580972294B8DB /* RxRelay.framework */,
-				96D042278E788449D5038D08 /* RxSwift.framework */,
-				AACD700D92CF602DE21E91B5 /* SnapKit.framework */,
-				BF927BC079496F4E925D830D /* Pods_PracticeUI.framework */,
+				93321054ABFEACE2F9DE0A3C /* Pods_PracticeUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79A035C5F9D071DE57558C79 /* passcode */ = {
+			isa = PBXGroup;
+			children = (
+				0C7943EEA058B1CF1EF2124A /* change */,
+				321F92C113E0A08194BC2E21 /* launch */,
+				7A888D5DFF559D9D0245ACEA /* turn_on_touchid */,
+			);
+			path = passcode;
 			sourceTree = "<group>";
 		};
 		7A2AFC2498F420D4965DA802 /* Products */ = {
@@ -175,23 +206,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		84C61957160FF9393117DF37 /* Pods */ = {
+		7A888D5DFF559D9D0245ACEA /* turn_on_touchid */ = {
 			isa = PBXGroup;
 			children = (
-				E80D6BB9540A980E42A8AAC5 /* Pods-PracticeUI.debug.xcconfig */,
-				7E23894808593B075B171475 /* Pods-PracticeUI.release.xcconfig */,
-				BF60DF6298C7F8AF7D1ADE6C /* Pods-PracticeUI.staging.xcconfig */,
+				163B6EEC7317C065DCBB1F3A /* turn_on_touchid_step1.PNG */,
+				1F6CA9F3DF53AFC78BEBF459 /* turn_on_touchid_step2.PNG */,
 			);
-			path = Pods;
+			path = turn_on_touchid;
 			sourceTree = "<group>";
 		};
 		A30701C2AF278632FB377EB4 = {
 			isa = PBXGroup;
 			children = (
 				F79B1728F09B51AEA01FBE84 /* PracticeUI */,
-				509F3C5F1FF7500D86B144A0 /* Frameworks */,
 				7A2AFC2498F420D4965DA802 /* Products */,
-				84C61957160FF9393117DF37 /* Pods */,
+				F861D1335072AC4B955D1614 /* Pods */,
+				496F0A506DA029FC7BF874C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,47 +235,37 @@
 			path = configs;
 			sourceTree = "<group>";
 		};
-		F1518B6B257BDE0F008A8560 /* Extensions */ = {
+		CFAE89FC5E1A09ECB23FBF8C /* LinePay */ = {
 			isa = PBXGroup;
 			children = (
-				F1518B67257BD4B6008A8560 /* SnapKitExtensions.swift */,
-				F1518B69257BD889008A8560 /* UIView+Gradient.swift */,
-				F1C27EF2257FBA90003196E2 /* UINib+VIew.swift */,
-				F18AB125258773620020EF79 /* UserDefaults+Key.swift */,
-				F18AB1292587C19C0020EF79 /* UIViewController+Rx.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		F1518B6E257BE947008A8560 /* LinePay */ = {
-			isa = PBXGroup;
-			children = (
-				F1518B6C257BE87D008A8560 /* LinePayHomeVC.swift */,
-				F18AB12F2587F5FB0020EF79 /* Passcode */,
-				F1C27EE8257E77BC003196E2 /* LineColors.swift */,
-				F18AB11D25869BA20020EF79 /* PublishSignal.swift */,
-				F18AB12125873D600020EF79 /* BehaviorDriver.swift */,
+				717DB2C1366EFBEC3DAF6A66 /* BehaviorDriver.swift */,
+				99859D79B633D91B570AEB50 /* LineColors.swift */,
+				EBE54F9824C7BF97EAFD9D1D /* LinePayHomeVC.swift */,
+				FCF32EF2C222EC8A974DE108 /* PublishSignal.swift */,
+				3A1574FB61E08127F1DF268A /* Passcode */,
+				DA119874890D7E3A5A5E7F19 /* UI Samples */,
 			);
 			path = LinePay;
 			sourceTree = "<group>";
 		};
-		F18AB12F2587F5FB0020EF79 /* Passcode */ = {
+		D8BC751B4BC6DCAA39E7FB11 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F1518B6F257BE977008A8560 /* LinePayPasscodeVC.swift */,
-				F18AB11F2586A2650020EF79 /* PasscodeSignsView.swift */,
-				F1C27EEA257E8BF0003196E2 /* PasscodeNumericButton.swift */,
-				F1C27EEC257F8518003196E2 /* PasscodeConfiguration.swift */,
-				F1C27EF425827E81003196E2 /* PasscodeViewModelType.swift */,
-				F18AB12B2587E7700020EF79 /* PasscodeAuthViewModel.swift */,
-				F18AB12D2587EE490020EF79 /* PasscodeSetupViewModel.swift */,
-				F18AB1302588941F0020EF79 /* PasscodeChangeViewModel.swift */,
-				F18AB1272587B1CE0020EF79 /* Biometry.swift */,
-				F18AB123258770510020EF79 /* PasscodeStorageMock.swift */,
-				F1C27EEE257FB6A2003196E2 /* PasscodeNumericPadView.swift */,
-				F1C27EF0257FB6C3003196E2 /* PasscodeNumericPadView.xib */,
+				8DC04D2382174AB1752BC4FD /* SnapKitExtensions.swift */,
+				65842E25742B15F78CA6EDCE /* UINib+VIew.swift */,
+				9AD6E3DB6125ECCB19894F27 /* UIView+Gradient.swift */,
+				82EF4FBA2787D4600F7E7929 /* UIViewController+Rx.swift */,
+				BFBB4413BB3BD120719C2844 /* UserDefaults+Key.swift */,
 			);
-			path = Passcode;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DA119874890D7E3A5A5E7F19 /* UI Samples */ = {
+			isa = PBXGroup;
+			children = (
+				79A035C5F9D071DE57558C79 /* passcode */,
+			);
+			path = "UI Samples";
 			sourceTree = "<group>";
 		};
 		F79B1728F09B51AEA01FBE84 /* PracticeUI */ = {
@@ -258,12 +278,22 @@
 				A8A7B1861F623DD3F51A1896 /* Main.storyboard */,
 				E384CD28F301A5DBD5EE631B /* SceneDelegate.swift */,
 				A8C369AEAF53C1F377492A29 /* ViewController.swift */,
-				F1518B6E257BE947008A8560 /* LinePay */,
-				F1518B6B257BDE0F008A8560 /* Extensions */,
 				B9CD62298AAAD69EF695078E /* configs */,
+				D8BC751B4BC6DCAA39E7FB11 /* Extensions */,
 				3DB79B4A198FDFACEC354F2F /* Home */,
+				CFAE89FC5E1A09ECB23FBF8C /* LinePay */,
 			);
 			path = PracticeUI;
+			sourceTree = "<group>";
+		};
+		F861D1335072AC4B955D1614 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2BAF3AEA2BDAD0E116EE205 /* Pods-PracticeUI.debug.xcconfig */,
+				A78E26E956F9DE72F948D912 /* Pods-PracticeUI.release.xcconfig */,
+				B57CEB181A9CAAB6D4328600 /* Pods-PracticeUI.staging.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,12 +303,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F90DE4485B58097AAFD06570 /* Build configuration list for PBXNativeTarget "PracticeUI" */;
 			buildPhases = (
-				F42EFA3333C0F4E7FFC222B5 /* [CP] Check Pods Manifest.lock */,
+				C157E871592E378F6CDFBF53 /* [CP] Check Pods Manifest.lock */,
 				487F8CC5ED8B11467BA587F2 /* Sources */,
 				1EF1F9DF7D9A65DB808D2011 /* Resources */,
-				1C0C238A0B6D3DA87F1C6B67 /* Frameworks */,
-				CE1759B8B1E29843DF761FA6 /* Embed Frameworks */,
-				767F19E700DF992FFA179890 /* [CP] Embed Pods Frameworks */,
+				9217DF223BC9C3C3825D7F6E /* Frameworks */,
+				88113914857F2E999A759344 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,7 +325,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1200;
-				ORGANIZATIONNAME = pokeduck;
 				TargetAttributes = {
 					AE94757D2A671652CE7A56EF = {
 						DevelopmentTeam = dev.team;
@@ -327,17 +355,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1C27EF1257FB6C3003196E2 /* PasscodeNumericPadView.xib in Resources */,
 				002683274E5D2D6E7D5DC77D /* Assets.xcassets in Resources */,
 				1F1EDEE51AADD872F627331C /* LaunchScreen.storyboard in Resources */,
 				B1D18FCE128C456E212931F9 /* Main.storyboard in Resources */,
+				0D73702CD99787D3B440CD4A /* PasscodeNumericPadView.xib in Resources */,
+				B74D628EB5D798264DC8877B /* launch.PNG in Resources */,
+				3B15C9908FE16F5B417D2877 /* passcode.PNG in Resources */,
+				FBB285F11D179098F43C5578 /* passcode_button_press.PNG in Resources */,
+				0C0BF31C0BB91AE6D72CA3D3 /* passcude_input.jpeg in Resources */,
+				778B53237A343D2AF52C7353 /* step1.PNG in Resources */,
+				69B594243D6BA5FCB61E56C4 /* turn_on_touchid_step1.PNG in Resources */,
+				EF2321AE5562B23684AE98E2 /* step2.PNG in Resources */,
+				C30FEDD4C16B05A71D80B212 /* turn_on_touchid_step2.PNG in Resources */,
+				EA2280D22ECC57685E949DF8 /* step2_tips.PNG in Resources */,
+				4D589B4AF9D27CF203AB2617 /* step2_wrong.PNG in Resources */,
+				0A6E3E99E4D2DC94637087AF /* step2_wrong2.PNG in Resources */,
+				E388DC066AFD0EC578A73637 /* step3.PNG in Resources */,
+				A7B69D98025214FC7FF64CE6 /* step3_last.PNG in Resources */,
+				740A907F166BA7353D3AA42C /* step3_success.PNG in Resources */,
+				DC502E7227DA7DD4FE824AAB /* turn_on_touchid.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		767F19E700DF992FFA179890 /* [CP] Embed Pods Frameworks */ = {
+		88113914857F2E999A759344 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -354,7 +397,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PracticeUI/Pods-PracticeUI-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F42EFA3333C0F4E7FFC222B5 /* [CP] Check Pods Manifest.lock */ = {
+		C157E871592E378F6CDFBF53 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -383,32 +426,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1C27EF3257FBA90003196E2 /* UINib+VIew.swift in Sources */,
-				F18AB1202586A2650020EF79 /* PasscodeSignsView.swift in Sources */,
-				F18AB1282587B1CE0020EF79 /* Biometry.swift in Sources */,
 				50534037060F3E7AEE1B2413 /* AppDelegate.swift in Sources */,
-				F1518B6D257BE87D008A8560 /* LinePayHomeVC.swift in Sources */,
 				AF4544305CC3AE38C1C89FCF /* BaseNavController.swift in Sources */,
-				F18AB12A2587C19C0020EF79 /* UIViewController+Rx.swift in Sources */,
-				F18AB11E25869BA20020EF79 /* PublishSignal.swift in Sources */,
-				F1518B6A257BD889008A8560 /* UIView+Gradient.swift in Sources */,
-				F1C27EF525827E82003196E2 /* PasscodeViewModelType.swift in Sources */,
+				351061B7833E0A8499B75EE6 /* BehaviorDriver.swift in Sources */,
+				C694BDC713BDE21A20BE3599 /* Biometry.swift in Sources */,
+				709910C1FA8C2E3209A624D5 /* HomeTableCell.swift in Sources */,
 				AD92E0C7F3BF02838A75B534 /* HomeTableViewController.swift in Sources */,
-				F18AB124258770510020EF79 /* PasscodeStorageMock.swift in Sources */,
-				F1518B70257BE977008A8560 /* LinePayPasscodeVC.swift in Sources */,
-				F18AB12225873D600020EF79 /* BehaviorDriver.swift in Sources */,
-				F18AB1312588941F0020EF79 /* PasscodeChangeViewModel.swift in Sources */,
-				F18AB12C2587E7700020EF79 /* PasscodeAuthViewModel.swift in Sources */,
+				A908021B80C9F561DB1AFDA0 /* LineColors.swift in Sources */,
+				D7F8A6513433A445C124A958 /* LinePayHomeVC.swift in Sources */,
+				230A7F5F80B87CEA8EB3DC58 /* LinePayPasscodeVC.swift in Sources */,
+				7990113BCAA77412845CC301 /* PasscodeAuthViewModel.swift in Sources */,
+				CCFA9BDEA4BDDD4CBBF2FB43 /* PasscodeChangeViewModel.swift in Sources */,
+				01B2E4E920FE705B1B1A100C /* PasscodeConfiguration.swift in Sources */,
+				A6C850C419B383537B18FB34 /* PasscodeNumericButton.swift in Sources */,
+				B8EFD226CF07BF2F159A0D10 /* PasscodeNumericPadView.swift in Sources */,
+				78B915FA3EBD2A4037DFA866 /* PasscodeSetupViewModel.swift in Sources */,
+				18F6D0DBFA328830EED48A09 /* PasscodeSignsView.swift in Sources */,
+				ED4C4C4DCB8EF2F81138A040 /* PasscodeStorageMock.swift in Sources */,
+				0B75704934318F0C8CAB02EF /* PasscodeViewModelType.swift in Sources */,
+				40BB2ED41D966B83D3E92939 /* PublishSignal.swift in Sources */,
 				77DBC850964B6E7FF9EAFF99 /* SceneDelegate.swift in Sources */,
-				F1C27EE9257E77BC003196E2 /* LineColors.swift in Sources */,
+				C608C4FBDD188C21165E9DF3 /* SnapKitExtensions.swift in Sources */,
+				BDDDEED49821EE4AAEA48BA0 /* UINib+VIew.swift in Sources */,
+				10D625CB81E855BBA3ACB732 /* UIView+Gradient.swift in Sources */,
+				DEDE50DEEDB37242E8069297 /* UIViewController+Rx.swift in Sources */,
+				F7C0A205E2651B3F187CA29B /* UserDefaults+Key.swift in Sources */,
 				0A61FD7AEF799E111ED0F7A2 /* ViewController.swift in Sources */,
-				F1C27EEB257E8BF0003196E2 /* PasscodeNumericButton.swift in Sources */,
-				F18AB12E2587EE490020EF79 /* PasscodeSetupViewModel.swift in Sources */,
-				F1518B65257B7359008A8560 /* HomeTableCell.swift in Sources */,
-				F1C27EED257F8518003196E2 /* PasscodeConfiguration.swift in Sources */,
-				F18AB126258773620020EF79 /* UserDefaults+Key.swift in Sources */,
-				F1C27EEF257FB6A2003196E2 /* PasscodeNumericPadView.swift in Sources */,
-				F1518B68257BD4B6008A8560 /* SnapKitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,24 +479,18 @@
 /* Begin XCBuildConfiguration section */
 		1BCF6932DEA9111D037CE478 /* DEBUG */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E80D6BB9540A980E42A8AAC5 /* Pods-PracticeUI.debug.xcconfig */;
+			baseConfigurationReference = E2BAF3AEA2BDAD0E116EE205 /* Pods-PracticeUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development: Ping-Wei Liao (672CU72RPV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CUSTOM_BUILD_SETTING = debug.idv.pokeduck;
-				DEVELOPMENT_TEAM = A5H9K77XGD;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"Frameworks\"",
-				);
 				INFOPLIST_FILE = PracticeUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.com.begonia.dev.fubon01;
-				PROVISIONING_PROFILE_SPECIFIER = FUBON_DEV;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.idv.pokeduck.PracticeUI;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -500,7 +537,7 @@
 				DEVELOPMENT_TEAM = dev.team;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = $SRCROOT/Frameworks;
+				FRAMEWORK_SEARCH_PATHS = Frameworks/;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -510,7 +547,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -523,22 +559,18 @@
 		};
 		2F7995AA4CB627DD2DE94E3D /* STAGING */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF60DF6298C7F8AF7D1ADE6C /* Pods-PracticeUI.staging.xcconfig */;
+			baseConfigurationReference = B57CEB181A9CAAB6D4328600 /* Pods-PracticeUI.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CUSTOM_BUILD_SETTING = staging.idv.pokeduck;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"Frameworks\"",
-				);
 				INFOPLIST_FILE = PracticeUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.idv.pokeduck.PracticeUI;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -585,7 +617,7 @@
 				DEVELOPMENT_TEAM = dev.team;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = $SRCROOT/Frameworks;
+				FRAMEWORK_SEARCH_PATHS = Frameworks/;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -601,7 +633,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -654,7 +685,7 @@
 				DEVELOPMENT_TEAM = dev.team;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = $SRCROOT/Frameworks;
+				FRAMEWORK_SEARCH_PATHS = Frameworks/;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -664,7 +695,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -677,15 +707,11 @@
 		};
 		BEBFD188ED0B4046FEC430FF /* RELEASE */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E23894808593B075B171475 /* Pods-PracticeUI.release.xcconfig */;
+			baseConfigurationReference = A78E26E956F9DE72F948D912 /* Pods-PracticeUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CUSTOM_BUILD_SETTING = release.idv.pokeduck;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"Frameworks\"",
-				);
 				INFOPLIST_FILE = PracticeUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

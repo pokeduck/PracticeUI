@@ -12,7 +12,7 @@ settings:
   CODE_SIGN_IDENTITY: sign.identity
   DEVELOPMENT_TEAM: dev.team
   FRAMEWORK_SEARCH_PATHS: Frameworks/
-  #CODE_SIGN_ENTITLEMENTS: 
+  #CODE_SIGN_ENTITLEMENTS:
   #FRAMEWORK_SEARCH_PATHS: Frameworks
 options:
   createIntermediateGroups: true
@@ -28,30 +28,29 @@ targets:
     type: application
     platform: iOS
     deploymentTarget: "11.0"
-    dependencies:
-      #- carthage: RxSwift
-        #CARTHAGE_BUILD_PATH: Frameworks
-      - framework: Frameworks/RxSwift.framework
-      - framework: Frameworks/RxCocoa.framework
-      - framework: Frameworks/RxBlocking.framework
-      - framework: Frameworks/RxRelay.framework
-      # - framework: Frameworks/RxTest.framework
-      - framework: Frameworks/Differentiator.framework
-      - framework: Frameworks/RxDataSources.framework
-      - framework: Frameworks/SnapKit.framework
+    # dependencies:
+    #- carthage: RxSwift
+    #CARTHAGE_BUILD_PATH: Frameworks
+    # - framework: Frameworks/RxSwift.framework
+    # - framework: Frameworks/RxCocoa.framework
+    # - framework: Frameworks/RxBlocking.framework
+    # - framework: Frameworks/RxRelay.framework
+    # - framework: Frameworks/RxTest.framework
+    # - framework: Frameworks/Differentiator.framework
+    # - framework: Frameworks/RxDataSources.framework
+    # - framework: Frameworks/SnapKit.framework
 
     #configFiles:
     #  DEBUG: PracticeUI/configs/debug.xcconfig
     # STAGING: PracticeUI/configs/staging.xcconfig
     #  RELEASE: PracticeUI/configs/release.xcconfig
     settings:
-        configs:
-          DEBUG:
-            CUSTOM_BUILD_SETTING: debug.idv.pokeduck
-          STAGING:
-            CUSTOM_BUILD_SETTING: staging.idv.pokeduck
-          RELEASE:
-            CUSTOM_BUILD_SETTING: release.idv.pokeduck
-    sources: 
+      configs:
+        DEBUG:
+          CUSTOM_BUILD_SETTING: debug.idv.pokeduck
+        STAGING:
+          CUSTOM_BUILD_SETTING: staging.idv.pokeduck
+        RELEASE:
+          CUSTOM_BUILD_SETTING: release.idv.pokeduck
+    sources:
       - path: PracticeUI
-
