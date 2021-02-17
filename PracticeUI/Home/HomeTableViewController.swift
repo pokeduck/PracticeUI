@@ -50,6 +50,7 @@ class HomeTableViewController: UIViewController {
                      color: [.random, .random]),
                 Page(name: "Google Photo", type: .google,
                      color: [.random, .random]),
+                Page(name: "Shaped Tab Bar", type: .tabbar, color: [.random, .random])
             ]),
         ])
 
@@ -86,6 +87,8 @@ class HomeTableViewController: UIViewController {
                 break
             case .pinkoi:
                 break
+            case .tabbar:
+                self?.navigationController?.pushViewController(MainTabBarController())
             }
         }, onError: { error in
             print(error.localizedDescription)
@@ -116,6 +119,7 @@ struct Page {
         case uber
         case google
         case pinkoi
+        case tabbar
     }
 
     let name: String
