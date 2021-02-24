@@ -35,6 +35,7 @@ final class TestContentPageViewController: UIViewController {
 //        view.sendSubviewToBack(titleL)
         titleL.superview?.bringSubviewToFront(titleL)
         // Do any additional setup after loading the view.
+        view.backgroundColor = .random
     }
     
 

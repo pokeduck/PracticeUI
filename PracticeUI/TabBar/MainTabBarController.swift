@@ -5,13 +5,13 @@
 // Copyright © 2021 Alien. All rights reserved.
 //
 
-import UIKit
+import ESTabBarController_swift
 
-class MainTabBarController: UITabBarController {
+class MainTabBarController: ESTabBarController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        object_setClass(self.tabBar, ConvexTabBar.self)
+        //object_setClass(self.tabBar, ConvexTabBar.self)
     }
     
     required init?(coder: NSCoder) {
@@ -27,21 +27,64 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        let vc0 = TestContentPageViewController(content: "0")
-        let item0 = UITabBarItem(tabBarSystemItem: .downloads, tag: 0)
-        vc0.tabBarItem = item0
+        if let tabBar = tabBar as? ESTabBar {
+            tabBar.itemCustomPositioning = .fillIncludeSeparator
+        }
+        let v1 = TestContentPageViewController(content: "1")
+        let v2 = TestContentPageViewController(content: "2")
+        let v3 = TestContentPageViewController(content: "3")
+        let v4 = TestContentPageViewController(content: "4")
+        let v5 = TestContentPageViewController(content: "5")
         
-        let vc1 = TestContentPageViewController(content: "1")
-        let item1 = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
-        vc1.tabBarItem = item1
+        v1.tabBarItem = ESTabBarItem.init(ExampleBasicContentView(), title: "home", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))
+        v2.tabBarItem = ESTabBarItem.init(ExampleBasicContentView(), title: "find", image: UIImage(named: "find"), selectedImage: UIImage(named: "find_1"))
+        v3.tabBarItem = ESTabBarItem.init(ExampleIrregularityContentView(), title: "photo", image: UIImage(named: "photo_verybig"), selectedImage: UIImage(named: "photo_verybig"))
+        v4.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: "favor", image: UIImage(named: "favor"), selectedImage: UIImage(named: "favor_1"))
+        v5.tabBarItem = ESTabBarItem.init(ESTabBarItemContentView(), title: "me", image: UIImage(named: "me"), selectedImage: UIImage(named: "me_1"))
         
-        let vc2 = TestContentPageViewController(content: "2")
-        let item2 = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
-        vc2.tabBarItem = item2
+        viewControllers = [v1, v2, v3, v4, v5]
         
-        viewControllers = [vc0, vc1, vc2]
+        
+        title = "Example"
+        
+        
+//        let vc0 = TestContentPageViewController(content: "0")
+//        let item0 = UITabBarItem(tabBarSystemItem: .downloads, tag: 0)
+//        vc0.tabBarItem = item0
+//
+//        let vc1 = TestContentPageViewController(content: "1")
+//        let item1 = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+//        vc1.tabBarItem = item1
+//
+//        let vc2 = TestContentPageViewController(content: "2")
+//        let item2 = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
+//        vc2.tabBarItem = item2
+//
+//        let vc3 = TestContentPageViewController(content: "3")
+//        let item3 = UITabBarItem(tabBarSystemItem: .favorites, tag: 3)
+//        vc3.tabBarItem = item3
+//
+//        let vc4 = TestContentPageViewController(content: "4")
+//        let item4 = UITabBarItem(tabBarSystemItem: .favorites, tag: 4)
+//        vc4.tabBarItem = item4
+//
+//        viewControllers = [vc0, vc1, vc2, vc3, vc4]
+//
+//        delegate = self
+//
+//
+        
+        let tabBar = { () -> ConvexTabBar in
+            let tabBar = ConvexTabBar()
+            tabBar.delegate = self
             
-        delegate = self
+//            tabBar.delegate = superclass
+//            tabBar.delegate = super
+//            tabBar.customDelegate = super
+//            tabBar.tabBarController = super
+            return tabBar
+        }()
+        self.setValue(tabBar, forKey: "tabBar")
     }
     
 

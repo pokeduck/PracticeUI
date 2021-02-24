@@ -10,5 +10,6 @@ target 'PracticeUI' do
   pod 'SwifterSwift/Foundation'
   pod 'SwifterSwift/UIKit'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/wowansm/Chameleon', :branch => 'swift5'
-
+  pod "ESTabBarController-swift"
+  pod 'pop'
 end

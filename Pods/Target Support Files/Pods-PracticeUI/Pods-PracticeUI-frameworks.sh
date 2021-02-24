@@ -177,32 +177,38 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "DEBUG" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/pop/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "RELEASE" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/pop/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "STAGING" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/pop/pop.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

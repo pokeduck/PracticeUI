@@ -42,6 +42,7 @@ class HomeTableViewController: UIViewController {
 
         let data = Observable.just([
             PageSection(name: "Section A", contents: [
+                Page(name: "Barcode", type: .barcode, color: [.random,.random]),
                 Page(name: "Shaped Tab Bar", type: .tabbar, color: [.random, .random]),
                 Page(name: "Line Pay", type: .line,
                      color: [.random, .random]),
@@ -79,6 +80,8 @@ class HomeTableViewController: UIViewController {
             .disposed(by: disposeBag)
         tv.rx.modelSelected(Page.self).subscribe(onNext: { [weak self] page in
             switch page.type {
+            case .barcode:
+                self?.navigationController?.pushViewController(BarcodeVC())
             case .line:
                 self?.navigationController?.pushViewController(LinePayHomeVC(), animated: true)
             case .uber:
@@ -88,7 +91,7 @@ class HomeTableViewController: UIViewController {
             case .pinkoi:
                 break
             case .tabbar:
-                self?.navigationController?.pushViewController(TestDelegateTabController())
+                self?.navigationController?.pushViewController(MainTabBarController())
             }
         }, onError: { error in
             print(error.localizedDescription)
@@ -120,6 +123,7 @@ struct Page {
         case google
         case pinkoi
         case tabbar
+        case barcode
     }
 
     let name: String

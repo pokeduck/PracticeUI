@@ -45,6 +45,14 @@
 		D7F8A6513433A445C124A958 /* LinePayHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE54F9824C7BF97EAFD9D1D /* LinePayHomeVC.swift */; };
 		DC502E7227DA7DD4FE824AAB /* turn_on_touchid.PNG in Resources */ = {isa = PBXBuildFile; fileRef = D3FC8E06AA31DD5B08ADB07B /* turn_on_touchid.PNG */; };
 		DEDE50DEEDB37242E8069297 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EF4FBA2787D4600F7E7929 /* UIViewController+Rx.swift */; };
+		E00172B525DE4F3200B8C380 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00172B425DE4F3200B8C380 /* ExampleBasicContentView.swift */; };
+		E00172B625DE4F3200B8C380 /* ExampleIrregularityContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00172B325DE4F3200B8C380 /* ExampleIrregularityContentView.swift */; };
+		E00172B825DE4F3200B8C380 /* ExampleBackgroundContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00172B025DE4F3200B8C380 /* ExampleBackgroundContentView.swift */; };
+		E00172B925DE4F3200B8C380 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00172B125DE4F3200B8C380 /* ExampleBouncesContentView.swift */; };
+		E0031A4B25E62A8A00BFFDF0 /* BarcodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0031A4A25E62A8A00BFFDF0 /* BarcodeVC.swift */; };
+		E0031A4F25E64BD600BFFDF0 /* DebugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0031A4E25E64BD600BFFDF0 /* DebugLog.swift */; };
+		E0031A5225E6508F00BFFDF0 /* BarcodeTypeSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0031A5125E6508F00BFFDF0 /* BarcodeTypeSettingVC.swift */; };
+		E0031A5525E6582C00BFFDF0 /* BarcodeSettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0031A5425E6582C00BFFDF0 /* BarcodeSettingStore.swift */; };
 		E038C12525DD0FE1006E93E5 /* ConvexTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038C12425DD0FE1006E93E5 /* ConvexTabBar.swift */; };
 		E038C12925DD1055006E93E5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038C12825DD1055006E93E5 /* MainTabBarController.swift */; };
 		E038C13025DD16C3006E93E5 /* TestContentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038C12F25DD16C3006E93E5 /* TestContentPageViewController.swift */; };
@@ -63,7 +71,7 @@
 		0025BFB5E9668CCF17CF2C33 /* step1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step1.PNG; sourceTree = "<group>"; };
 		0829932EF3AD7620F74DC4E0 /* launch.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.PNG; sourceTree = "<group>"; };
 		0F55589E9875A4A6690B32C8 /* step3.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step3.PNG; sourceTree = "<group>"; };
-		13037A9929F0E86D11309591 /* PracticeUI.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PracticeUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13037A9929F0E86D11309591 /* PracticeUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		163B6EEC7317C065DCBB1F3A /* turn_on_touchid_step1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turn_on_touchid_step1.PNG; sourceTree = "<group>"; };
 		1F6CA9F3DF53AFC78BEBF459 /* turn_on_touchid_step2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turn_on_touchid_step2.PNG; sourceTree = "<group>"; };
 		24F2BD27B8A2BB8EB6FE8BEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +111,15 @@
 		C8776D3C81EF053BFB7E1EF6 /* PasscodeChangeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeChangeViewModel.swift; sourceTree = "<group>"; };
 		D3FC8E06AA31DD5B08ADB07B /* turn_on_touchid.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turn_on_touchid.PNG; sourceTree = "<group>"; };
 		DB34B102A895914299968338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E00172AA25DE4AF200B8C380 /* ExampleHighlightableContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleHighlightableContentView.swift; sourceTree = "<group>"; };
+		E00172B025DE4F3200B8C380 /* ExampleBackgroundContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleBackgroundContentView.swift; sourceTree = "<group>"; };
+		E00172B125DE4F3200B8C380 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
+		E00172B325DE4F3200B8C380 /* ExampleIrregularityContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityContentView.swift; sourceTree = "<group>"; };
+		E00172B425DE4F3200B8C380 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
+		E0031A4A25E62A8A00BFFDF0 /* BarcodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeVC.swift; sourceTree = "<group>"; };
+		E0031A4E25E64BD600BFFDF0 /* DebugLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLog.swift; sourceTree = "<group>"; };
+		E0031A5125E6508F00BFFDF0 /* BarcodeTypeSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeTypeSettingVC.swift; sourceTree = "<group>"; };
+		E0031A5425E6582C00BFFDF0 /* BarcodeSettingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeSettingStore.swift; sourceTree = "<group>"; };
 		E038C12425DD0FE1006E93E5 /* ConvexTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvexTabBar.swift; sourceTree = "<group>"; };
 		E038C12825DD1055006E93E5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E038C12F25DD16C3006E93E5 /* TestContentPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestContentPageViewController.swift; sourceTree = "<group>"; };
@@ -277,11 +294,34 @@
 			path = "UI Samples";
 			sourceTree = "<group>";
 		};
+		E00172BC25DE4F5700B8C380 /* CustomContent */ = {
+			isa = PBXGroup;
+			children = (
+				E00172AA25DE4AF200B8C380 /* ExampleHighlightableContentView.swift */,
+				E00172B325DE4F3200B8C380 /* ExampleIrregularityContentView.swift */,
+				E00172B025DE4F3200B8C380 /* ExampleBackgroundContentView.swift */,
+				E00172B425DE4F3200B8C380 /* ExampleBasicContentView.swift */,
+				E00172B125DE4F3200B8C380 /* ExampleBouncesContentView.swift */,
+			);
+			path = CustomContent;
+			sourceTree = "<group>";
+		};
+		E0031A5725E66A3100BFFDF0 /* Barcode */ = {
+			isa = PBXGroup;
+			children = (
+				E0031A4A25E62A8A00BFFDF0 /* BarcodeVC.swift */,
+				E0031A5125E6508F00BFFDF0 /* BarcodeTypeSettingVC.swift */,
+				E0031A5425E6582C00BFFDF0 /* BarcodeSettingStore.swift */,
+			);
+			path = Barcode;
+			sourceTree = "<group>";
+		};
 		E0FBFA4C25DD200100A32F54 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				E038C12425DD0FE1006E93E5 /* ConvexTabBar.swift */,
 				E038C12825DD1055006E93E5 /* MainTabBarController.swift */,
+				E00172BC25DE4F5700B8C380 /* CustomContent */,
 				E0FBFA4F25DD279A00A32F54 /* TestDelegateTabController.swift */,
 				E0FBFA5025DD279A00A32F54 /* TestDelegateTabController.xib */,
 				E038C12F25DD16C3006E93E5 /* TestContentPageViewController.swift */,
@@ -299,6 +339,8 @@
 				A8A7B1861F623DD3F51A1896 /* Main.storyboard */,
 				E384CD28F301A5DBD5EE631B /* SceneDelegate.swift */,
 				A8C369AEAF53C1F377492A29 /* ViewController.swift */,
+				E0031A4E25E64BD600BFFDF0 /* DebugLog.swift */,
+				E0031A5725E66A3100BFFDF0 /* Barcode */,
 				E0FBFA4C25DD200100A32F54 /* TabBar */,
 				B9CD62298AAAD69EF695078E /* configs */,
 				D8BC751B4BC6DCAA39E7FB11 /* Extensions */,
@@ -455,26 +497,34 @@
 				C694BDC713BDE21A20BE3599 /* Biometry.swift in Sources */,
 				709910C1FA8C2E3209A624D5 /* HomeTableCell.swift in Sources */,
 				E038C12525DD0FE1006E93E5 /* ConvexTabBar.swift in Sources */,
+				E0031A5225E6508F00BFFDF0 /* BarcodeTypeSettingVC.swift in Sources */,
 				AD92E0C7F3BF02838A75B534 /* HomeTableViewController.swift in Sources */,
 				A908021B80C9F561DB1AFDA0 /* LineColors.swift in Sources */,
 				D7F8A6513433A445C124A958 /* LinePayHomeVC.swift in Sources */,
 				230A7F5F80B87CEA8EB3DC58 /* LinePayPasscodeVC.swift in Sources */,
 				E038C12925DD1055006E93E5 /* MainTabBarController.swift in Sources */,
+				E00172B625DE4F3200B8C380 /* ExampleIrregularityContentView.swift in Sources */,
 				7990113BCAA77412845CC301 /* PasscodeAuthViewModel.swift in Sources */,
+				E0031A4B25E62A8A00BFFDF0 /* BarcodeVC.swift in Sources */,
 				CCFA9BDEA4BDDD4CBBF2FB43 /* PasscodeChangeViewModel.swift in Sources */,
 				E038C13025DD16C3006E93E5 /* TestContentPageViewController.swift in Sources */,
 				01B2E4E920FE705B1B1A100C /* PasscodeConfiguration.swift in Sources */,
 				A6C850C419B383537B18FB34 /* PasscodeNumericButton.swift in Sources */,
 				B8EFD226CF07BF2F159A0D10 /* PasscodeNumericPadView.swift in Sources */,
 				78B915FA3EBD2A4037DFA866 /* PasscodeSetupViewModel.swift in Sources */,
+				E0031A5525E6582C00BFFDF0 /* BarcodeSettingStore.swift in Sources */,
 				18F6D0DBFA328830EED48A09 /* PasscodeSignsView.swift in Sources */,
 				ED4C4C4DCB8EF2F81138A040 /* PasscodeStorageMock.swift in Sources */,
 				0B75704934318F0C8CAB02EF /* PasscodeViewModelType.swift in Sources */,
 				40BB2ED41D966B83D3E92939 /* PublishSignal.swift in Sources */,
 				C608C4FBDD188C21165E9DF3 /* SnapKitExtensions.swift in Sources */,
 				E0FBFA5125DD279A00A32F54 /* TestDelegateTabController.swift in Sources */,
+				E00172B825DE4F3200B8C380 /* ExampleBackgroundContentView.swift in Sources */,
+				E00172B925DE4F3200B8C380 /* ExampleBouncesContentView.swift in Sources */,
 				BDDDEED49821EE4AAEA48BA0 /* UINib+VIew.swift in Sources */,
 				10D625CB81E855BBA3ACB732 /* UIView+Gradient.swift in Sources */,
+				E0031A4F25E64BD600BFFDF0 /* DebugLog.swift in Sources */,
+				E00172B525DE4F3200B8C380 /* ExampleBasicContentView.swift in Sources */,
 				DEDE50DEEDB37242E8069297 /* UIViewController+Rx.swift in Sources */,
 				F7C0A205E2651B3F187CA29B /* UserDefaults+Key.swift in Sources */,
 				0A61FD7AEF799E111ED0F7A2 /* ViewController.swift in Sources */,
@@ -510,13 +560,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CUSTOM_BUILD_SETTING = debug.idv.pokeduck;
+				DEVELOPMENT_TEAM = V9WLWW5XKJ;
 				INFOPLIST_FILE = PracticeUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.idv.pokeduck.PracticeUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.begonia.dev.02;
+				PROVISIONING_PROFILE_SPECIFIER = FGStagingDev;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

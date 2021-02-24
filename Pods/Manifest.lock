@@ -3,6 +3,8 @@ PODS:
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - Differentiator (5.0.0)
+  - ESTabBarController-swift (2.8.0)
+  - pop (1.0.12)
   - RxCocoa (6.1.0):
     - RxRelay (= 6.1.0)
     - RxSwift (= 6.1.0)
@@ -19,6 +21,8 @@ PODS:
 
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/wowansm/Chameleon`, branch `swift5`)
+  - ESTabBarController-swift
+  - pop
   - RxDataSources (~> 5.0)
   - SnapKit (~> 5.0.0)
   - SwifterSwift/Foundation
@@ -27,6 +31,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Differentiator
+    - ESTabBarController-swift
+    - pop
     - RxCocoa
     - RxDataSources
     - RxRelay
@@ -47,6 +53,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
@@ -54,6 +62,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
 
-PODFILE CHECKSUM: 1078795c2827ae53633c6dc949a0872fc6cedcd0
+PODFILE CHECKSUM: f10ba66d95657fa3b859e4ff65b99cc3a0bc608a
 
 COCOAPODS: 1.10.0
