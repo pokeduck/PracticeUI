@@ -12,4 +12,6 @@ target 'PracticeUI' do
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/wowansm/Chameleon', :branch => 'swift5'
   pod "ESTabBarController-swift"
   pod 'pop'
+  pod 'Localize-Swift', '~> 3.2'
+
 end
