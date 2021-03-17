@@ -13,18 +13,7 @@ class LocalizationDemoVC: UIViewController {
 //        NSLog(@"%@: %@", language, NSLocalizedStringFromTableInBundle(@"Testing", @"Localizable", bundle, nil));
 //    }
     override func viewDidLoad() {
-        let category = UIApplication.shared.preferredContentSizeCategory
-        NotificationCenter.default.addObserver(forName: UIContentSizeCategory.didChangeNotification, object: nil, queue: .main) { (notification) in
-            guard let userInfo = notification.userInfo else { return }
-            if let sizeVal = userInfo[UIContentSizeCategory.newValueUserInfoKey] as? UIContentSizeCategory {
-                print(sizeVal)
-            }
-            
-        }
-        print("Size category: \(category.rawValue)")
-        print("Label Size: \(UIFont.labelFontSize)")
-        print("Button Size: \(UIFont.buttonFontSize)")
-        print("Small Size: \(UIFont.smallSystemFontSize)")
+        
         let localPath = Bundle.main.path(forResource: "Localizable", ofType: "strings")
         let localDict = NSDictionary(contentsOfFile: localPath!)
         print(localDict)

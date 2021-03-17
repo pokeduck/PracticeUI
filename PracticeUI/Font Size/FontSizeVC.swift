@@ -24,5 +24,7 @@ class FontSizeVC: UIViewController {
         label.snp.makeConstraints { (make) in
             make.centerX.centerY.equalToSuperview()
         }
+        
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
 }
