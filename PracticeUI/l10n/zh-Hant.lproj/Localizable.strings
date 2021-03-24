@@ -1,10 +1,5 @@
-/* 
-  Localization.strings
-  PracticeUI
-
-  Created by 伯爵奶茶全糖去冰 on 2021/3/17.
-  Copyright © 2021 Alien. All rights reserved.
-*/
-
+"back" = "返回";
 "hello" = "哩賀";
 "setting" = "設定";
+/* share */
+"share" = "分享";

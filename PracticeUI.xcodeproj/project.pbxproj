@@ -141,6 +141,7 @@
 		E077A7492601F1630058739E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E077A74A2601F1640058739E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E077A768260203090058739E /* LocalizeSettingTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeSettingTableVC.swift; sourceTree = "<group>"; };
+		E0A395E626088BFC000189F7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E0FBFA4F25DD279A00A32F54 /* TestDelegateTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDelegateTabController.swift; sourceTree = "<group>"; };
 		E0FBFA5025DD279A00A32F54 /* TestDelegateTabController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestDelegateTabController.xib; sourceTree = "<group>"; };
 		E27C233B446B375E3CA4A890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -449,6 +450,7 @@
 				de,
 				fr,
 				"fr-CA",
+				es,
 			);
 			mainGroup = A30701C2AF278632FB377EB4;
 			productRefGroup = 7A2AFC2498F420D4965DA802 /* Products */;
@@ -596,6 +598,7 @@
 				E077A7492601F1630058739E /* ja */,
 				E077A74A2601F1640058739E /* de */,
 				E0091E9526020971005AA433 /* fr-CA */,
+				E0A395E626088BFC000189F7 /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

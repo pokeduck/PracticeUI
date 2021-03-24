@@ -26,7 +26,6 @@ class MainTabBarController: ESTabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
         if let tabBar = tabBar as? ESTabBar {
             tabBar.itemCustomPositioning = .fillIncludeSeparator
         }
