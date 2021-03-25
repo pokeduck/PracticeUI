@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BDTabBarContainerView: UIView {
+class BDTabBarItemContentView: UIView {
 
     var title: String?
     
@@ -15,4 +15,13 @@ class BDTabBarContainerView: UIView {
     
     var selectedImage: UIImage?
 
+    
+    func updateLayout() {
+        
+        
+    }
+    
+    func updateDisplay() {
+        
+    }
 }

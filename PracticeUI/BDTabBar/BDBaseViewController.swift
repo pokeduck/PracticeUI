@@ -11,7 +11,7 @@ class BDBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarController
+        view.backgroundColor = .random
         // Do any additional setup after loading the view.
     }
     
@@ -28,8 +28,19 @@ class BDBaseViewController: UIViewController {
 
 }
 extension BDBaseViewController {
-    var bdTabBarController: BDTabBarController {
-        
+    var bdTabBarItem: BDTabBarItem? {
+        return tabBarItem as? BDTabBarItem
+    }
+    
+    var bdTabBarController: BDTabBarController? {
+        var currentVC = self as UIViewController
+        while let currentParent = currentVC.parent {
+            if let bdParent = parent as? BDTabBarController {
+                return bdParent
+            }
+            currentVC = currentParent
+        }
+        return nil
     }
 }
  

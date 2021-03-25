@@ -93,6 +93,8 @@ class HomeTableViewController: UIViewController {
             case .pinkoi:
                 break
             case .tabbar:
+                let vc1 = BDTabBarController()
+                
                 self?.navigationController?.pushViewController(MainTabBarController())
             case .locale:
                 self?.navigationController?.pushViewController(LocalizationDemoVC())

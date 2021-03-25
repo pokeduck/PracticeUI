@@ -60,9 +60,10 @@
 		E038C13025DD16C3006E93E5 /* TestContentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038C12F25DD16C3006E93E5 /* TestContentPageViewController.swift */; };
 		E06C2D0A260B48B3009E8570 /* BDTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06C2D09260B48B3009E8570 /* BDTabBarController.swift */; };
 		E06C2D0D260B4F19009E8570 /* BDTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06C2D0C260B4F19009E8570 /* BDTabBar.swift */; };
-		E06C2D10260B4F38009E8570 /* BDTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06C2D0F260B4F38009E8570 /* BDTabBarContainerView.swift */; };
+		E06C2D10260B4F38009E8570 /* BDTabBarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06C2D0F260B4F38009E8570 /* BDTabBarItemContentView.swift */; };
 		E06C2D14260B519E009E8570 /* BDTabBarItemContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06C2D13260B519E009E8570 /* BDTabBarItemContainer.swift */; };
 		E06C2D19260B54F9009E8570 /* BDBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06C2D18260B54F9009E8570 /* BDBaseViewController.swift */; };
+		E06C2D1E260C7FFD009E8570 /* BDTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06C2D1D260C7FFD009E8570 /* BDTabBarItem.swift */; };
 		E077A7392601F04C0058739E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E077A7382601F04C0058739E /* Main.storyboard */; };
 		E077A73C2601F0560058739E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E077A73B2601F0560058739E /* LaunchScreen.storyboard */; };
 		E077A7422601F15D0058739E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E077A7442601F15D0058739E /* Localizable.strings */; };
@@ -139,9 +140,10 @@
 		E038C12F25DD16C3006E93E5 /* TestContentPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestContentPageViewController.swift; sourceTree = "<group>"; };
 		E06C2D09260B48B3009E8570 /* BDTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDTabBarController.swift; sourceTree = "<group>"; };
 		E06C2D0C260B4F19009E8570 /* BDTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDTabBar.swift; sourceTree = "<group>"; };
-		E06C2D0F260B4F38009E8570 /* BDTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDTabBarContainerView.swift; sourceTree = "<group>"; };
+		E06C2D0F260B4F38009E8570 /* BDTabBarItemContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDTabBarItemContentView.swift; sourceTree = "<group>"; };
 		E06C2D13260B519E009E8570 /* BDTabBarItemContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDTabBarItemContainer.swift; sourceTree = "<group>"; };
 		E06C2D18260B54F9009E8570 /* BDBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDBaseViewController.swift; sourceTree = "<group>"; };
+		E06C2D1D260C7FFD009E8570 /* BDTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDTabBarItem.swift; sourceTree = "<group>"; };
 		E077A7382601F04C0058739E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E077A73B2601F0560058739E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E077A7432601F15D0058739E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -360,10 +362,11 @@
 			isa = PBXGroup;
 			children = (
 				E06C2D09260B48B3009E8570 /* BDTabBarController.swift */,
+				E06C2D1D260C7FFD009E8570 /* BDTabBarItem.swift */,
 				E06C2D18260B54F9009E8570 /* BDBaseViewController.swift */,
 				E06C2D0C260B4F19009E8570 /* BDTabBar.swift */,
 				E06C2D13260B519E009E8570 /* BDTabBarItemContainer.swift */,
-				E06C2D0F260B4F38009E8570 /* BDTabBarContainerView.swift */,
+				E06C2D0F260B4F38009E8570 /* BDTabBarItemContentView.swift */,
 			);
 			path = BDTabBar;
 			sourceTree = "<group>";
@@ -593,7 +596,7 @@
 				18F6D0DBFA328830EED48A09 /* PasscodeSignsView.swift in Sources */,
 				E06C2D14260B519E009E8570 /* BDTabBarItemContainer.swift in Sources */,
 				ED4C4C4DCB8EF2F81138A040 /* PasscodeStorageMock.swift in Sources */,
-				E06C2D10260B4F38009E8570 /* BDTabBarContainerView.swift in Sources */,
+				E06C2D10260B4F38009E8570 /* BDTabBarItemContentView.swift in Sources */,
 				0B75704934318F0C8CAB02EF /* PasscodeViewModelType.swift in Sources */,
 				40BB2ED41D966B83D3E92939 /* PublishSignal.swift in Sources */,
 				C608C4FBDD188C21165E9DF3 /* SnapKitExtensions.swift in Sources */,
@@ -609,6 +612,7 @@
 				DEDE50DEEDB37242E8069297 /* UIViewController+Rx.swift in Sources */,
 				F7C0A205E2651B3F187CA29B /* UserDefaults+Key.swift in Sources */,
 				0A61FD7AEF799E111ED0F7A2 /* ViewController.swift in Sources */,
+				E06C2D1E260C7FFD009E8570 /* BDTabBarItem.swift in Sources */,
 				E06C2D19260B54F9009E8570 /* BDBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
