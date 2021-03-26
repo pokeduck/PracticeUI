@@ -15,6 +15,8 @@ class BDTabBar: UIView {
 
     weak var delegate: BDTabBarDelegate?
     
+    weak var selectedItem: BDTabBarItem?
+    
     private(set) var containers: [BDTabBarItemContainer] = []
     
     var items: [BDTabBarItem]? {

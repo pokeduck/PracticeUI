@@ -42,6 +42,7 @@ class HomeTableViewController: UIViewController {
 
         let data = Observable.just([
             PageSection(name: "Section A", contents: [
+                Page(name: "TabBar", type: .tabbar, color: [.random,.random]),
                 Page(name: "Font Size", type: .font, color: [.random,.random]),
                 Page(name: "Locale", type: .locale, color: [.random,.random]),
                 Page(name: "Barcode", type: .barcode, color: [.random,.random]),
@@ -93,9 +94,22 @@ class HomeTableViewController: UIViewController {
             case .pinkoi:
                 break
             case .tabbar:
-                let vc1 = BDTabBarController()
+                let tab = BDTabBarController()
+                let vc1 = BDBaseViewController()
+                let vc2 = BDBaseViewController()
+                let vc3 = BDBaseViewController()
                 
-                self?.navigationController?.pushViewController(MainTabBarController())
+                let vcItem1 = BDTabBarItem()
+                let vcItem2 = BDTabBarItem()
+                let vcItem3 = BDTabBarItem()
+                
+                vc1.tabBarItem = vcItem1
+                vc2.tabBarItem = vcItem2
+                vc3.tabBarItem = vcItem3
+                
+                tab.setViewControllers(vcs: [vc1,vc2,vc3])
+                
+                self?.navigationController?.pushViewController(tab)
             case .locale:
                 self?.navigationController?.pushViewController(LocalizationDemoVC())
             case .font:
