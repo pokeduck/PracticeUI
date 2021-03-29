@@ -6,7 +6,7 @@
 //  Copyright © 2020 pokeduck. All rights reserved.
 //
 
-import ChameleonFramework
+//import ChameleonFramework
 import RxCocoa
 import RxSwift
 import UIKit
@@ -189,7 +189,7 @@ class PasscodeSignView: UIView {
         self.style = style
         switch style {
         case .empty:
-            backgroundColor = UIColor(hexString: "#010803", withAlpha: 0.1)
+            backgroundColor = UIColor(hexString: "#010803", transparency: 0.1)
         case .highlight:
             backgroundColor = .white
         }
@@ -209,7 +209,7 @@ class PasscodeSignView: UIView {
         super.draw(rect)
         switch style {
         case .empty:
-            backgroundColor = UIColor(hexString: "#010803", withAlpha: 0.1)
+            backgroundColor = UIColor(hexString: "#010803", transparency: 0.1)
         case .highlight:
             backgroundColor = .white
         }

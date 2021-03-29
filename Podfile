@@ -9,7 +9,7 @@ target 'PracticeUI' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'SwifterSwift/Foundation'
   pod 'SwifterSwift/UIKit'
-  pod 'ChameleonFramework/Swift', :git => 'https://github.com/wowansm/Chameleon', :branch => 'swift5'
+#pod 'ChameleonFramework/Swift', :git => 'https://github.com/wowansm/Chameleon', :branch => 'swift5'
   pod "ESTabBarController-swift"
   pod 'pop'
   pod 'Localize-Swift', '~> 3.2'

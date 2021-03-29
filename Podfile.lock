@@ -1,7 +1,4 @@
 PODS:
-  - ChameleonFramework/Default (2.1.0)
-  - ChameleonFramework/Swift (2.1.0):
-    - ChameleonFramework/Default
   - Differentiator (5.0.0)
   - ESTabBarController-swift (2.8.0)
   - Localize-Swift (3.2.0):
@@ -26,7 +23,6 @@ PODS:
   - SwifterSwift/UIKit (5.2.0)
 
 DEPENDENCIES:
-  - ChameleonFramework/Swift (from `https://github.com/wowansm/Chameleon`, branch `swift5`)
   - ESTabBarController-swift
   - Localize-Swift (~> 3.2)
   - pop
@@ -48,18 +44,7 @@ SPEC REPOS:
     - SnapKit
     - SwifterSwift
 
-EXTERNAL SOURCES:
-  ChameleonFramework:
-    :branch: swift5
-    :git: https://github.com/wowansm/Chameleon
-
-CHECKOUT OPTIONS:
-  ChameleonFramework:
-    :commit: 96d52c36a45847fff60bcff7a58fec1e4bd7390b
-    :git: https://github.com/wowansm/Chameleon
-
 SPEC CHECKSUMS:
-  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
   Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
@@ -71,6 +56,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
 
-PODFILE CHECKSUM: 122710875c453a335ea1db7552873f0f3d256ce8
+PODFILE CHECKSUM: 2f9759d4f87b46fb24cdd7b09961a12092a0a0a6
 
 COCOAPODS: 1.10.0
