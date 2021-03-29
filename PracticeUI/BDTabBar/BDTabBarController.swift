@@ -9,8 +9,6 @@ import UIKit
 
 
 class BDTabBarController: UIViewController {
-
-    
     
     private var selectedIndex: Int = 0
     
@@ -55,7 +53,7 @@ class BDTabBarController: UIViewController {
         // TabBar layout
         let tabH: CGFloat = UIDevice.current.hasNotch ? 120.0 : 90.0
         tabBar.frame = CGRect(x: 0, y: b.maxY - tabH, width: b.width, height: tabH)
-        
+            
         // Content Layout
         contentView.frame = CGRect(x: 0, y: 0, width: b.width, height: b.maxY - tabH )
         
@@ -105,14 +103,19 @@ class BDTabBarController: UIViewController {
         
         viewControllers = vcs
         var items: [BDTabBarItem] = []
-        vcs.forEach { (vc) in
+        vcs.forEach { [weak self](vc) in
+            guard let `self` = self else { return }
             guard let item = vc.bdTabBarItem else {
                 assertionFailure("Item 為定義")
                 return
             }
             items.append(item)
             vc.wk_setTabBarController(vc: self)
+            
         }
+        
+        tabBar.items = items
+        
         
     }
     func indexForViewController(vc: UIViewController) -> Int {
@@ -130,12 +133,19 @@ class BDTabBarController: UIViewController {
     }
 }
 
-extension BDTabBarController: BDTabBarDelegate {
-    
-}
 extension UIDevice {
     var hasNotch: Bool {
         let bottom = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
         return bottom > 0
     }
+}
+
+extension BDTabBarController : BDTabBarDelegate {
+    func tabBar(_ tabBar: BDTabBar, shouldSelected item: BDTabBarItem) -> Bool {
+        return true
+    }
+    func tabBar(_ tabBar: BDTabBar, willSelected item: BDTabBarItem) {}
+    func tabBar(_ tabBar: BDTabBar, didSelected item: BDTabBarItem) {}
+    
+    
 }
