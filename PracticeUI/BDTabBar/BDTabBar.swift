@@ -26,8 +26,11 @@ class BDTabBar: UIView {
     
     weak var delegate: BDTabBarDelegate?
     
-    weak var selectedItem: BDTabBarItem?
-    
+    weak var selectedItem: BDTabBarItem? {
+        didSet {
+            self.selectedItem?.contentView.seletct()
+        }
+    }
     private(set) var containers: [BDTabBarItemContainer] = []
     
     var items: [BDTabBarItem]? {
@@ -50,14 +53,13 @@ class BDTabBar: UIView {
             return
         }
         for (idx, item) in tabBarItems.enumerated() {
-            let container = BDTabBarItemContainer(self, tag: 1000 + idx)
+            let container = BDTabBarItemContainer(self, tag: idx)
             //container.addTarget(self, action: #selector(selectAction(_:)), for: .touchUpInside)
             addSubview(container)
             containers.append(container)
             container.addSubview(item.contentView)
         }
         
-        selectedItem?.contentView.seletct()
         //self.updateAccessibilityLabels()
         self.setNeedsLayout()
     }
@@ -77,7 +79,9 @@ class BDTabBar: UIView {
     
     override func draw(_ rect: CGRect) {
   
-        
+        layer.cornerRadius = 20
+        clipsToBounds = true
+        layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
     }
 
@@ -88,7 +92,7 @@ class BDTabBar: UIView {
         guard let container = sender as? BDTabBarItemContainer else {
             return
         }
-        let tag = container.tag - 1000
+        let tag = container.tag
         select(index: tag)
         funcLog()
     }
@@ -148,11 +152,9 @@ class BDTabBar: UIView {
             //點不同頁
             let currentItem = items?[currentIndex]
             currentItem?.contentView.deselect()
-            
-            item.contentView.seletct()
+            selectedItem = item
         }
         
-        selectedItem = item
         
         delegate?.tabBar(self, didSelected: item)
         

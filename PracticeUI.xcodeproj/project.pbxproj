@@ -69,6 +69,7 @@
 		E077A73C2601F0560058739E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E077A73B2601F0560058739E /* LaunchScreen.storyboard */; };
 		E077A7422601F15D0058739E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E077A7442601F15D0058739E /* Localizable.strings */; };
 		E077A769260203090058739E /* LocalizeSettingTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077A768260203090058739E /* LocalizeSettingTableVC.swift */; };
+		E0F5C25426133939003E5F29 /* CALayer++.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5C25326133939003E5F29 /* CALayer++.swift */; };
 		E0FBFA5125DD279A00A32F54 /* TestDelegateTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FBFA4F25DD279A00A32F54 /* TestDelegateTabController.swift */; };
 		E0FBFA5225DD279A00A32F54 /* TestDelegateTabController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0FBFA5025DD279A00A32F54 /* TestDelegateTabController.xib */; };
 		E1521F8BB8CD1E0D8220EECA /* Pods_PracticeUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93321054ABFEACE2F9DE0A3C /* Pods_PracticeUI.framework */; };
@@ -156,6 +157,7 @@
 		E077A74A2601F1640058739E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E077A768260203090058739E /* LocalizeSettingTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeSettingTableVC.swift; sourceTree = "<group>"; };
 		E0A395E626088BFC000189F7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E0F5C25326133939003E5F29 /* CALayer++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer++.swift"; sourceTree = "<group>"; };
 		E0FBFA4F25DD279A00A32F54 /* TestDelegateTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDelegateTabController.swift; sourceTree = "<group>"; };
 		E0FBFA5025DD279A00A32F54 /* TestDelegateTabController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestDelegateTabController.xib; sourceTree = "<group>"; };
 		E27C233B446B375E3CA4A890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 			children = (
 				E06C2D09260B48B3009E8570 /* BDTabBarController.swift */,
 				E065D0D1260D9313009C5883 /* UIViewController+BDTabBar.swift */,
+				E0F5C25326133939003E5F29 /* CALayer++.swift */,
 				E06C2D1D260C7FFD009E8570 /* BDTabBarItem.swift */,
 				E06C2D18260B54F9009E8570 /* BDBaseViewController.swift */,
 				E06C2D0C260B4F19009E8570 /* BDTabBar.swift */,
@@ -580,6 +583,7 @@
 				E0031A5225E6508F00BFFDF0 /* BarcodeTypeSettingVC.swift in Sources */,
 				AD92E0C7F3BF02838A75B534 /* HomeTableViewController.swift in Sources */,
 				A908021B80C9F561DB1AFDA0 /* LineColors.swift in Sources */,
+				E0F5C25426133939003E5F29 /* CALayer++.swift in Sources */,
 				D7F8A6513433A445C124A958 /* LinePayHomeVC.swift in Sources */,
 				E077A769260203090058739E /* LocalizeSettingTableVC.swift in Sources */,
 				230A7F5F80B87CEA8EB3DC58 /* LinePayPasscodeVC.swift in Sources */,

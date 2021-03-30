@@ -103,6 +103,19 @@ class HomeTableViewController: UIViewController {
                 let vcItem2 = BDTabBarItem()
                 let vcItem3 = BDTabBarItem()
                 
+                vcItem1.title = "Page1"
+                vcItem2.title = "Page2"
+                vcItem3.title = "Page3"
+                
+                vcItem1.image = UIImage.init(named: "home")
+                vcItem1.selectedImage = UIImage.init(named: "home_1")
+                vcItem2.image = UIImage.init(named: "find")
+                vcItem2.selectedImage = UIImage.init(named: "find_1")
+                vcItem3.image = UIImage.init(named: "favor")
+                vcItem3.selectedImage = UIImage.init(named: "favor_1")
+                
+                
+                
                 vc1.tabBarItem = vcItem1
                 vc2.tabBarItem = vcItem2
                 vc3.tabBarItem = vcItem3
