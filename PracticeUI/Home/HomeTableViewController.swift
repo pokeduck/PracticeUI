@@ -114,8 +114,6 @@ class HomeTableViewController: UIViewController {
                 vcItem3.image = UIImage.init(named: "favor")
                 vcItem3.selectedImage = UIImage.init(named: "favor_1")
                 
-                
-                
                 vc1.tabBarItem = vcItem1
                 vc2.tabBarItem = vcItem2
                 vc3.tabBarItem = vcItem3

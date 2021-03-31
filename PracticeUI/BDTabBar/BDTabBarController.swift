@@ -9,6 +9,8 @@ import UIKit
 
 
 class BDTabBarController: UIViewController {
+    private let tabBarHeight: CGFloat = 60.0
+    private let homeIndicatorHeight: CGFloat = 30.0
     
     private var selectedIndex: Int = 0
     
@@ -36,6 +38,9 @@ class BDTabBarController: UIViewController {
         return v
     }()
     
+    var selectedViewController: UIViewController {
+        viewControllers[selectedIndex]
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +66,7 @@ class BDTabBarController: UIViewController {
         dLog("Bounds:\(view.bounds)")
         let b = view.bounds
         // TabBar layout
-        let tabH: CGFloat = UIDevice.current.hasNotch ? 120.0 : 90.0
+        let tabH: CGFloat = tabBarHeight + (UIDevice.current.hasNotch ? homeIndicatorHeight : 0)
         
         let tabBarFrame = CGRect(x: 0, y: b.maxY - tabH, width: b.width, height: tabH)
         tabBar.frame = tabBarFrame
@@ -71,15 +76,10 @@ class BDTabBarController: UIViewController {
         contentView.frame = CGRect(x: 0, y: 0, width: b.width, height: b.maxY - tabH )
         
         
-        selectedViewController().view.frame = contentView.bounds
+        selectedViewController.view.frame = contentView.bounds
         //return CGSize(width: size.width, height: UIDevice.current.hasNotch ? 120.0 : 90.0)
 
     }
-    
-    func selectedViewController() -> UIViewController {
-        return viewControllers[selectedIndex]
-    }
-    
     
     func setSelectedIndex(index: Int) {
         if index > viewControllers.count {
@@ -105,13 +105,13 @@ class BDTabBarController: UIViewController {
         viewControllers = vcs
         var items: [BDTabBarItem] = []
         for (idx, vc) in vcs.enumerated() {
-            guard let item = vc.bdTabBarItem else {
+            guard let item = vc.wk_TabBarItem else {
                 assertionFailure("Item 為定義")
                 continue
             }
             item.tag = idx
             items.append(item)
-            vc.wk_setTabBarController(vc: self)
+            vc.wk_TabBarController = self
             item.contentView.updateDisplay()
         }
         
@@ -119,8 +119,8 @@ class BDTabBarController: UIViewController {
         
         
     }
-    func indexForViewController(vc: UIViewController) -> Int {
-        var searchedVC:UIViewController = vc
+    func index(for viewController: UIViewController) -> Int {
+        var searchedVC:UIViewController = viewController
         while let parent = searchedVC.parent,
               parent != self {
             searchedVC = parent
@@ -134,7 +134,7 @@ class BDTabBarController: UIViewController {
     }
     
     private func setCurrentViewControler(index: Int) {
-        let selectedVC = selectedViewController()
+        let selectedVC = selectedViewController
         selectedVC.willMove(toParent: nil)
         selectedVC.view.removeFromSuperview()
         selectedVC.removeFromParent()
@@ -153,8 +153,8 @@ class BDTabBarController: UIViewController {
     private func setCurrentTabBarItem(index: Int) {
         let newSelectedVC = viewControllers[index]
         tabBar.items?.forEach({ (item) in
-            if item.tag == newSelectedVC.bdTabBarItem?.tag {
-                tabBar.selectedItem = newSelectedVC.bdTabBarItem
+            if item.tag == newSelectedVC.wk_TabBarItem?.tag {
+                tabBar.selectedItem = newSelectedVC.wk_TabBarItem
             } else {
                 item.contentView.deselect()
             }

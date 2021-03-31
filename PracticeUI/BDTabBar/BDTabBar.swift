@@ -70,7 +70,6 @@ class BDTabBar: UIView {
         let w = CGFloat(roundf(Float(bounds.width) / Float(count)))
         
         let h = UIDevice.current.hasNotch ? bounds.height - 30 : bounds.height
-        print(height)
         for (idx, container) in containers.enumerated() {
             let containerFrame =  CGRect(x: w * CGFloat(idx) , y: 0, width: w, height: h)
             container.frame = containerFrame
@@ -126,7 +125,7 @@ class BDTabBar: UIView {
         if currentIndex == newIndex {
             // 點同一頁
             if let tabBarController = tabBarController {
-                let selectedVC = tabBarController.selectedViewController()
+                let selectedVC = tabBarController.selectedViewController
                 var navVC: UINavigationController?
                 if let n = selectedVC as? UINavigationController {
                     navVC = n

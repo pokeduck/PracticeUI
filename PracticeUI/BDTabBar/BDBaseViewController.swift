@@ -23,7 +23,7 @@ class BDBaseViewController: UIViewController {
         btn1.setTitle("page1", for: .normal)
         view.addSubview(btn1)
         btn1.rx.tap.bind { (_) in
-            self.bdTabBarController?.setSelectedIndex(index: 0)
+            self.wk_TabBarController?.setSelectedIndex(index: 0)
         }.disposed(by: bag)
         
         let btn2 = UIButton(frame: .zero)
@@ -32,7 +32,7 @@ class BDBaseViewController: UIViewController {
         view.addSubview(btn2)
         btn2.setTitle("page2", for: .normal)
         btn2.rx.tap.bind { (_) in
-            self.bdTabBarController?.setSelectedIndex(index: 1)
+            self.wk_TabBarController?.setSelectedIndex(index: 1)
         }.disposed(by: bag)
         
         let btn3 = UIButton(frame: .zero)
@@ -41,7 +41,7 @@ class BDBaseViewController: UIViewController {
         view.addSubview(btn3)
         btn3.setTitle("page3", for: .normal)
         btn3.rx.tap.bind { (_) in
-            self.bdTabBarController?.setSelectedIndex(index: 2)
+            self.wk_TabBarController?.setSelectedIndex(index: 2)
         }.disposed(by: bag)
         
         
@@ -60,21 +60,5 @@ class BDBaseViewController: UIViewController {
     }
 
 
-}
-extension UIViewController {
-    var bdTabBarItem: BDTabBarItem? {
-        return tabBarItem as? BDTabBarItem
-    }
-    
-    var bdTabBarController: BDTabBarController? {
-        var currentVC = self as UIViewController
-        while let currentParent = currentVC.parent {
-            if let bdParent = parent as? BDTabBarController {
-                return bdParent
-            }
-            currentVC = currentParent
-        }
-        return nil
-    }
 }
  

@@ -36,7 +36,6 @@ class BDTabBarItemContainer: UIControl {
                 let f = CGRect.init(x: subview.insets.left, y: subview.insets.top, width: bounds.size.width - subview.insets.left - subview.insets.right, height: bounds.size.height - subview.insets.top - subview.insets.bottom)
                 
                 subview.frame = f
-                print(f)
                 subview.updateLayout()
             }
         }
