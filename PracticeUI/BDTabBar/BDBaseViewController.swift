@@ -44,6 +44,25 @@ class BDBaseViewController: UIViewController {
             self.wk_TabBarController?.setSelectedIndex(index: 2)
         }.disposed(by: bag)
         
+        let btn4 = UIButton(frame: .zero)
+        btn4.frame = CGRect(x: 30, y: 400, width: 100, height: 100)
+        btn4.setTitleColor(.black, for: .normal)
+        view.addSubview(btn4)
+        btn4.setTitle("content push", for: .normal)
+        btn4.rx.tap.bind { (_) in
+            let newVC = BDBaseViewController()
+            self.navigationController?.pushViewController(newVC)
+        }.disposed(by: bag)
+        
+        let btn5 = UIButton(frame: .zero)
+        btn5.frame = CGRect(x: 30, y: 500, width: 100, height: 100)
+        btn5.setTitleColor(.black, for: .normal)
+        view.addSubview(btn5)
+        btn5.setTitle("tab push", for: .normal)
+        btn5.rx.tap.bind { (_) in
+            let newVC = BDBaseViewController()
+            self.wk_TabBarController?.navigationController?.pushViewController(newVC)
+        }.disposed(by: bag)
         
         
         // Do any additional setup after loading the view.
@@ -62,3 +81,44 @@ class BDBaseViewController: UIViewController {
 
 }
  
+class BDTableViewController: UIViewController {
+    let tv: UITableView = UITableView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addSubview(tv)
+        tv.snp.makeConstraints { (make) in
+            make.top.left.right.bottom.equalTo(view)
+        }
+        view.backgroundColor = .white
+        tv.backgroundColor = .white
+        tv.register(cellWithClass: UITableViewCell.self)
+        tv.delegate = self
+        tv.dataSource = self
+        
+    }
+}
+
+extension BDTableViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let newVC = BDBaseViewController()
+        self.navigationController?.pushViewController(newVC)
+    }
+}
+
+
+extension BDTableViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withClass: UITableViewCell.self)
+        cell.textLabel?.text = "ACJOISJD"
+        return cell
+    }
+    
+    
+}
+
+

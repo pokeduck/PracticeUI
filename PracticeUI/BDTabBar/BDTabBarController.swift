@@ -14,12 +14,13 @@ class BDTabBarController: UIViewController {
     
     private var selectedIndex: Int = 0
     
-    private var viewControllers: [BDBaseViewController] = []
+    private var viewControllers: [UIViewController] = []
     
     private(set) lazy var tabBar: BDTabBar = {
         let tab = BDTabBar()
         tab.delegate = self
         tab.backgroundColor = .green
+        tab.tabBarController = self
         return tab
     }()
     
@@ -91,7 +92,7 @@ class BDTabBarController: UIViewController {
         
     }
     
-    func setViewControllers(vcs: [BDBaseViewController]) {
+    func setViewControllers(vcs: [UIViewController]) {
         
         viewControllers.forEach { (vc) in
             vc.willMove(toParent: nil)

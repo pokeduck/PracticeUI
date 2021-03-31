@@ -95,7 +95,9 @@ class HomeTableViewController: UIViewController {
                 break
             case .tabbar:
                 let tab = BDTabBarController()
-                let vc1 = BDBaseViewController()
+                
+                let vc1 = BDTableViewController()
+                let vc1Nav = UINavigationController(rootViewController: vc1)
                 let vc2 = BDBaseViewController()
                 let vc3 = BDBaseViewController()
                 
@@ -114,11 +116,11 @@ class HomeTableViewController: UIViewController {
                 vcItem3.image = UIImage.init(named: "favor")
                 vcItem3.selectedImage = UIImage.init(named: "favor_1")
                 
-                vc1.tabBarItem = vcItem1
+                vc1Nav.tabBarItem = vcItem1
                 vc2.tabBarItem = vcItem2
                 vc3.tabBarItem = vcItem3
                 
-                tab.setViewControllers(vcs: [vc1,vc2,vc3])
+                tab.setViewControllers(vcs: [vc1Nav,vc2,vc3])
                 
                 self?.navigationController?.pushViewController(tab)
             case .locale:

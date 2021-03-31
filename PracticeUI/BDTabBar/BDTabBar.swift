@@ -141,6 +141,13 @@ class BDTabBar: UIView {
                     } else {
                         if navVC.viewControllers.count > 1 {
                             navVC.popToRootViewController(animated: true)
+                        } else if let lastVC = navVC.topViewController {
+                            for view in lastVC.view.subviews {
+                                if let scrollView = view as? UIScrollView {
+                                    scrollView.setContentOffset(CGPoint(x: 0, y: -scrollView.adjustedContentInset.top), animated: true)
+                                    break
+                                }
+                            }
                         }
                     }
                 }
