@@ -99,7 +99,7 @@ class HomeTableViewController: UIViewController {
                 let vc1 = BDTableViewController()
                 let vc1Nav = UINavigationController(rootViewController: vc1)
                 let vc2 = BDBaseViewController()
-                let vc3 = BDBaseViewController()
+                let vc3 = ShadowTableViewController()
                 
                 let vcItem1 = BDTabBarItem()
                 let vcItem2 = BDTabBarItem()
