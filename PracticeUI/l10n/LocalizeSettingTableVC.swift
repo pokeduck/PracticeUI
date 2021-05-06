@@ -5,22 +5,21 @@
 // Copyright © 2021 Alien. All rights reserved.
 //
 
-import UIKit
 import Localize_Swift
+import UIKit
 
 class LocalizeSettingTableVC: UIViewController {
-
     private var tv: UITableView!
-    
+
     private let langs: [String] = Localize.availableLanguages()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         navigationController?.setNavigationBarHidden(false, animated: false)
         tv = UITableView()
         view.addSubview(tv)
-        tv.snp.makeConstraints { (make) in
+        tv.snp.makeConstraints { make in
             make.top.left.right.bottom.equalToSuperview()
         }
         tv.register(cellWithClass: UITableViewCell.self)
@@ -28,29 +27,26 @@ class LocalizeSettingTableVC: UIViewController {
         tv.dataSource = self
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.red]
         navigationController?.navigationBar.barStyle = .default
-        
+
         func localize() {
             print("setting".localized())
             navigationItem.title = "setting".localized()
-            
         }
         localize()
-        NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: LCLLanguageChangeNotification), object: nil, queue: .main) { (_) in
+        NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: LCLLanguageChangeNotification), object: nil, queue: .main) { _ in
             localize()
         }
     }
-    
 
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // Get the new view controller using segue.destination.
+         // Pass the selected object to the new view controller.
+     }
+     */
 }
 
 extension LocalizeSettingTableVC: UITableViewDelegate {
@@ -63,12 +59,12 @@ extension LocalizeSettingTableVC: UITableViewDelegate {
 
 extension LocalizeSettingTableVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return langs.count
+        langs.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withClass: UITableViewCell.self)
-        let title = Localize.displayNameForLanguage(langs[indexPath.row],dependOnLang: true)
+        let title = Localize.displayNameForLanguage(langs[indexPath.row], dependOnLang: true)
         let currentLang = Localize.currentLanguage()
         if langs[indexPath.row] == currentLang {
             cell.accessoryType = .checkmark
@@ -79,7 +75,4 @@ extension LocalizeSettingTableVC: UITableViewDataSource {
         cell.selectionStyle = .none
         return cell
     }
-    
-    
-        
 }

@@ -8,12 +8,11 @@
 import UIKit
 
 extension UIFontDescriptor {
-    
-    private struct FontFamily {
+    private enum FontFamily {
         static var preferredFontNameRegular: String = "Montserrat-Regular"
         static var preferredFontNameBold: String = "Montserrat-Bold"
     }
-    
+
     static let fontSizeTable: [UIFont.TextStyle: [UIContentSizeCategory: CGFloat]] = [
         .headline: [
             .accessibilityExtraExtraExtraLarge: 38,
@@ -27,15 +26,15 @@ extension UIFontDescriptor {
             .large: 17,
             .medium: 16,
             .small: 15,
-            .extraSmall: 14
-        ]
+            .extraSmall: 14,
+        ],
     ]
-    
+
     final class func preferredDescriptor(textStyle: UIFont.TextStyle, styleBold: Bool = false) -> UIFontDescriptor {
         let contentSize = UIApplication.shared.preferredContentSizeCategory
-                
+
         let fontFamily = styleBold ? FontFamily.preferredFontNameBold : FontFamily.preferredFontNameRegular
-        
+
         guard let style = fontSizeTable[textStyle], let size = style[contentSize] else {
             return UIFontDescriptor(name: fontFamily, size: 16)
         }

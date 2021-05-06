@@ -45,7 +45,7 @@ class Biometry {
 
     func auth() -> Signal<Result<Bool, Error>> {
         let obserable: Observable<Result<Bool, Error>>
-            = Observable.create { [weak self] (observer) -> Disposable in
+            = Observable.create { [weak self] observer -> Disposable in
                 guard let self = self else {
                     observer.onCompleted()
                     return Disposables.create()

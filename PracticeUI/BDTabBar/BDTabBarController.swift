@@ -7,15 +7,14 @@
 
 import UIKit
 
-
 class BDTabBarController: UIViewController {
     private let tabBarHeight: CGFloat = 60.0
     private let homeIndicatorHeight: CGFloat = 30.0
-    
+
     private var selectedIndex: Int = 0
-    
+
     private var viewControllers: [UIViewController] = []
-    
+
     private(set) lazy var tabBar: BDTabBar = {
         let tab = BDTabBar()
         tab.delegate = self
@@ -23,7 +22,7 @@ class BDTabBarController: UIViewController {
         tab.tabBarController = self
         return tab
     }()
-    
+
     private(set) lazy var tabBarShadow: UIView = {
         let v = UIView()
         v.cornerRadius = 20
@@ -32,17 +31,17 @@ class BDTabBarController: UIViewController {
         v.backgroundColor = .white
         return v
     }()
-    
+
     private lazy var contentView: UIView = {
         let v = UIView()
         v.backgroundColor = .yellow
         return v
     }()
-    
+
     var selectedViewController: UIViewController {
         viewControllers[selectedIndex]
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -50,38 +49,36 @@ class BDTabBarController: UIViewController {
         view.addSubview(tabBarShadow)
         view.addSubview(tabBar)
     }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setSelectedIndex(index: selectedIndex)
         funcLog()
-        
-        
     }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         funcLog()
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         dLog("Bounds:\(view.bounds)")
         let b = view.bounds
         // TabBar layout
         let tabH: CGFloat = tabBarHeight + (UIDevice.current.hasNotch ? homeIndicatorHeight : 0)
-        
+
         let tabBarFrame = CGRect(x: 0, y: b.maxY - tabH, width: b.width, height: tabH)
         tabBar.frame = tabBarFrame
         tabBarShadow.frame = tabBarFrame
-            
-        // Content Layout
-        contentView.frame = CGRect(x: 0, y: 0, width: b.width, height: b.maxY - tabH )
-        
-        
-        selectedViewController.view.frame = contentView.bounds
-        //return CGSize(width: size.width, height: UIDevice.current.hasNotch ? 120.0 : 90.0)
 
+        // Content Layout
+        contentView.frame = CGRect(x: 0, y: 0, width: b.width, height: b.maxY - tabH)
+
+        selectedViewController.view.frame = contentView.bounds
+        // return CGSize(width: size.width, height: UIDevice.current.hasNotch ? 120.0 : 90.0)
     }
-    
+
     func setSelectedIndex(index: Int) {
         if index > viewControllers.count {
             return
@@ -89,20 +86,18 @@ class BDTabBarController: UIViewController {
         setCurrentTabBarItem(index: index)
 
         setCurrentViewControler(index: index)
-        
     }
-    
+
     func setViewControllers(vcs: [UIViewController]) {
-        
-        viewControllers.forEach { (vc) in
+        viewControllers.forEach { vc in
             vc.willMove(toParent: nil)
             vc.view.removeFromSuperview()
             vc.removeFromParent()
         }
-        
+
         assert(vcs.count < 6, "ViewController 多到爆")
         assert(vcs.count > 0, "ViewController 沒半個")
-        
+
         viewControllers = vcs
         var items: [BDTabBarItem] = []
         for (idx, vc) in vcs.enumerated() {
@@ -115,15 +110,15 @@ class BDTabBarController: UIViewController {
             vc.wk_TabBarController = self
             item.contentView.updateDisplay()
         }
-        
+
         tabBar.items = items
-        
-        
     }
+
     func index(for viewController: UIViewController) -> Int {
-        var searchedVC:UIViewController = viewController
+        var searchedVC: UIViewController = viewController
         while let parent = searchedVC.parent,
-              parent != self {
+              parent != self
+        {
             searchedVC = parent
         }
         for (idx, vc) in viewControllers.enumerated() {
@@ -133,17 +128,17 @@ class BDTabBarController: UIViewController {
         }
         return 0
     }
-    
+
     private func setCurrentViewControler(index: Int) {
         let selectedVC = selectedViewController
         selectedVC.willMove(toParent: nil)
         selectedVC.view.removeFromSuperview()
         selectedVC.removeFromParent()
-        
+
         let newSelectedVC = viewControllers[index]
         selectedIndex = index
         addChild(newSelectedVC)
-        newSelectedVC.view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        newSelectedVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         contentView.addSubview(newSelectedVC.view)
         newSelectedVC.view.frame = contentView.bounds
         newSelectedVC.didMove(toParent: self)
@@ -151,16 +146,18 @@ class BDTabBarController: UIViewController {
         view.setNeedsDisplay()
         setNeedsStatusBarAppearanceUpdate()
     }
+
     private func setCurrentTabBarItem(index: Int) {
         let newSelectedVC = viewControllers[index]
-        tabBar.items?.forEach({ (item) in
+        tabBar.items?.forEach { item in
             if item.tag == newSelectedVC.wk_TabBarItem?.tag {
                 tabBar.selectedItem = newSelectedVC.wk_TabBarItem
             } else {
                 item.contentView.deselect()
             }
-        })
+        }
     }
+
     private func bringTabBarToFront() {
         view.bringSubviewToFront(tabBarShadow)
         view.bringSubviewToFront(tabBar)
@@ -174,14 +171,13 @@ extension UIDevice {
     }
 }
 
-extension BDTabBarController : BDTabBarDelegate {
+extension BDTabBarController: BDTabBarDelegate {
     func tabBar(_ tabBar: BDTabBar, shouldSelected item: BDTabBarItem) -> Bool {
-        return true
+        true
     }
+
     func tabBar(_ tabBar: BDTabBar, willSelected item: BDTabBarItem) {}
     func tabBar(_ tabBar: BDTabBar, didSelected item: BDTabBarItem) {
         setCurrentViewControler(index: item.tag)
     }
-    
-    
 }

@@ -12,7 +12,7 @@ extension Localize {
         if !dependOnLang {
             return displayNameForLanguage(language)
         }
-        let locale : NSLocale = NSLocale(localeIdentifier: language)
+        let locale = NSLocale(localeIdentifier: language)
         if let displayName = locale.displayName(forKey: NSLocale.Key.identifier, value: language) {
             return displayName
         }

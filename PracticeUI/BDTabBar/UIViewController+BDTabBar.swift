@@ -5,8 +5,8 @@
 // Copyright © 2021 Alien. All rights reserved.
 //
 
-import UIKit
 import ObjectiveC.runtime
+import UIKit
 private var kWKTabBarController = "key.wk.tabbar"
 extension UIViewController {
     var wk_TabBarController: BDTabBarController? {
@@ -15,13 +15,14 @@ extension UIViewController {
         }
         get {
             let tabBar = objc_getAssociatedObject(self, &kWKTabBarController)
-            if tabBar == nil && parent != nil {
+            if tabBar == nil, parent != nil {
                 return parent?.wk_TabBarController
             }
             return tabBar as? BDTabBarController
         }
     }
+
     var wk_TabBarItem: BDTabBarItem? {
-        return tabBarItem as? BDTabBarItem
+        tabBarItem as? BDTabBarItem
     }
 }

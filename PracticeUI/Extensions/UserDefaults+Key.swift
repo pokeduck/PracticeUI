@@ -24,7 +24,7 @@ public extension UserDefaults {
     }
 
     func register(defaults: [Key: Any]) {
-        let mapped = Dictionary(uniqueKeysWithValues: defaults.map { (key, value) -> (String, Any) in
+        let mapped = Dictionary(uniqueKeysWithValues: defaults.map { key, value -> (String, Any) in
             if let color = value as? SystemColor {
                 return (key.rawValue, NSKeyedArchiver.archivedData(withRootObject: color))
             } else if let url = value as? URL {

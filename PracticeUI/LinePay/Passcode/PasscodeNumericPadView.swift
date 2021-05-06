@@ -42,10 +42,10 @@ class PasscodeNumericPadView: UIView {
 
     struct ColorSets {
         let backgroundColor = UIColor.clear
-        let buttonTextNormalColor: UIColor = UIColor.white
-        let buttonTextHighlightedColor: UIColor = UIColor.FlatUI.asbestos
-        let buttonBgNormalColor: UIColor = UIColor.FlatUI.emerald
-        let buttonBgHighlightedColor: UIColor = UIColor.FlatUI.nephritis
+        let buttonTextNormalColor = UIColor.white
+        let buttonTextHighlightedColor = UIColor.FlatUI.asbestos
+        let buttonBgNormalColor = UIColor.FlatUI.emerald
+        let buttonBgHighlightedColor = UIColor.FlatUI.nephritis
     }
 
     struct Config {

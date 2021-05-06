@@ -29,7 +29,7 @@ extension UIView {
         layer.insertSublayer(gradientLayer, at: 0)
     }
 
-    fileprivate func bgGradientLayer() -> CAGradientLayer? {
+    private func bgGradientLayer() -> CAGradientLayer? {
         let layers = layer.sublayers?.filter { $0.name == UIView.kBgGradientLayerName }
         return layers?.first?.model() as? CAGradientLayer
     }
