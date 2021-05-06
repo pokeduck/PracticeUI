@@ -42,19 +42,66 @@ class HomeTableViewController: UIViewController {
 
         let data = Observable.just([
             PageSection(name: "Section A", contents: [
-                Page(name: "TabBar", type: .tabbar, color: [.random,.random]),
-                Page(name: "Font Size", type: .font, color: [.random,.random]),
-                Page(name: "Locale", type: .locale, color: [.random,.random]),
-                Page(name: "Barcode", type: .barcode, color: [.random,.random]),
-                Page(name: "Shaped Tab Bar", type: .tabbar, color: [.random, .random]),
-                Page(name: "Line Pay", type: .line,
-                     color: [.random, .random]),
-                Page(name: "Uber", type: .uber,
-                     color: [.random, .random]),
-                Page(name: "Pinkoi", type: .pinkoi,
-                     color: [.random, .random]),
-                Page(name: "Google Photo", type: .google,
-                     color: [.random, .random])
+                Page(name: "Cutom Transition",pressEvent: {
+                    self.navigationController?.pushViewController(CustomTransitionVC())
+                }),
+                Page(name: "TabBar", pressEvent: {
+                    let tab = BDTabBarController()
+                    
+                    let vc1 = BDTableViewController()
+                    let vc1Nav = UINavigationController(rootViewController: vc1)
+                    let vc2 = BDBaseViewController()
+                    let vc3 = ShadowTableViewController()
+                    
+                    let vcItem1 = BDTabBarItem()
+                    let vcItem2 = BDTabBarItem()
+                    let vcItem3 = BDTabBarItem()
+                    
+                    vcItem1.title = "Page1"
+                    vcItem2.title = "Page2"
+                    vcItem3.title = "Page3"
+                    
+                    vcItem1.image = UIImage.init(named: "home")
+                    vcItem1.selectedImage = UIImage.init(named: "home_1")
+                    vcItem2.image = UIImage.init(named: "find")
+                    vcItem2.selectedImage = UIImage.init(named: "find_1")
+                    vcItem3.image = UIImage.init(named: "favor")
+                    vcItem3.selectedImage = UIImage.init(named: "favor_1")
+                    
+                    vc1Nav.tabBarItem = vcItem1
+                    vc2.tabBarItem = vcItem2
+                    vc3.tabBarItem = vcItem3
+                    
+                    tab.setViewControllers(vcs: [vc1Nav,vc2,vc3])
+                    
+                    self.navigationController?.pushViewController(tab)
+                }),
+                Page(name: "Font Size", pressEvent: {
+                    self.navigationController?.pushViewController(FontSizeVC())
+
+                }),
+                Page(name: "Locale", pressEvent: {
+                    self.navigationController?.pushViewController(LocalizationDemoVC())
+
+                }),
+                Page(name: "Barcode", pressEvent: {
+                    self.navigationController?.pushViewController(BarcodeVC())
+                }),
+                Page(name: "Shaped Tab Bar", pressEvent: {
+                    
+                }),
+                Page(name: "Line Pay", pressEvent: {
+                    self.navigationController?.pushViewController(LinePayHomeVC(), animated: true)
+                     }),
+                Page(name: "Uber", pressEvent: {
+                        
+                     }),
+                Page(name: "Pinkoi", pressEvent: {
+                        
+                     }),
+                Page(name: "Google Photo", pressEvent: {
+                        
+                     })
             ]),
         ])
 
@@ -81,56 +128,8 @@ class HomeTableViewController: UIViewController {
 
         data.bind(to: tv.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
-        tv.rx.modelSelected(Page.self).subscribe(onNext: { [weak self] page in
-            switch page.type {
-            case .barcode:
-                self?.navigationController?.pushViewController(BarcodeVC())
-            case .line:
-                self?.navigationController?.pushViewController(LinePayHomeVC(), animated: true)
-            case .uber:
-                break
-            case .google:
-                break
-            case .pinkoi:
-                break
-            case .tabbar:
-                let tab = BDTabBarController()
-                
-                let vc1 = BDTableViewController()
-                let vc1Nav = UINavigationController(rootViewController: vc1)
-                let vc2 = BDBaseViewController()
-                let vc3 = ShadowTableViewController()
-                
-                let vcItem1 = BDTabBarItem()
-                let vcItem2 = BDTabBarItem()
-                let vcItem3 = BDTabBarItem()
-                
-                vcItem1.title = "Page1"
-                vcItem2.title = "Page2"
-                vcItem3.title = "Page3"
-                
-                vcItem1.image = UIImage.init(named: "home")
-                vcItem1.selectedImage = UIImage.init(named: "home_1")
-                vcItem2.image = UIImage.init(named: "find")
-                vcItem2.selectedImage = UIImage.init(named: "find_1")
-                vcItem3.image = UIImage.init(named: "favor")
-                vcItem3.selectedImage = UIImage.init(named: "favor_1")
-                
-                vc1Nav.tabBarItem = vcItem1
-                vc2.tabBarItem = vcItem2
-                vc3.tabBarItem = vcItem3
-                
-                tab.setViewControllers(vcs: [vc1Nav,vc2,vc3])
-                
-                self?.navigationController?.pushViewController(tab)
-            case .locale:
-                self?.navigationController?.pushViewController(LocalizationDemoVC())
-            case .font:
-                self?.navigationController?.pushViewController(FontSizeVC())
-
-            }
-
-                
+        tv.rx.modelSelected(Page.self).subscribe(onNext: { page in
+            page.pressEvent?()
         }, onError: { error in
             print(error.localizedDescription)
         }, onCompleted: {
@@ -148,28 +147,32 @@ extension HomeTableViewController: UITableViewDelegate {
         UITableView.automaticDimension
     }
 }
-
+protocol CellExecution:SectionModelType {
+    func didSelect()
+}
 struct PageSection {
     var name: String
     var contents: [Page]
 }
 
 struct Page {
-    enum `Type` {
-        case line
-        case uber
-        case google
-        case pinkoi
-        case tabbar
-        case barcode
-        case locale
-        case font
-    }
+//    enum `Type` {
+//        case line
+//        case uber
+//        case google
+//        case pinkoi
+//        case tabbar
+//        case barcode
+//        case locale
+//        case font
+//    }
 
     let name: String
-    let type: Type
-    let color: [UIColor]
+//    let type: Type
+    let color: [UIColor] = [.random,.random]
+    let pressEvent: (() -> ())?
 }
+
 
 extension PageSection: SectionModelType {
     var items: [Page] {

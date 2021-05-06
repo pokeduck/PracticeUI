@@ -69,6 +69,7 @@
 		E077A73C2601F0560058739E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E077A73B2601F0560058739E /* LaunchScreen.storyboard */; };
 		E077A7422601F15D0058739E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E077A7442601F15D0058739E /* Localizable.strings */; };
 		E077A769260203090058739E /* LocalizeSettingTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077A768260203090058739E /* LocalizeSettingTableVC.swift */; };
+		E0D4846A263901D300415673 /* CustomTransitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D48469263901D300415673 /* CustomTransitionVC.swift */; };
 		E0F5C25426133939003E5F29 /* CALayer++.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5C25326133939003E5F29 /* CALayer++.swift */; };
 		E0F5C2582615D430003E5F29 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5C2572615D430003E5F29 /* CustomNavigationController.swift */; };
 		E0F5C25B2615DD85003E5F29 /* ShadowTopViewBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5C25A2615DD85003E5F29 /* ShadowTopViewBaseVC.swift */; };
@@ -160,6 +161,7 @@
 		E077A74A2601F1640058739E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E077A768260203090058739E /* LocalizeSettingTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeSettingTableVC.swift; sourceTree = "<group>"; };
 		E0A395E626088BFC000189F7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E0D48469263901D300415673 /* CustomTransitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionVC.swift; sourceTree = "<group>"; };
 		E0F5C25326133939003E5F29 /* CALayer++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer++.swift"; sourceTree = "<group>"; };
 		E0F5C2572615D430003E5F29 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		E0F5C25A2615DD85003E5F29 /* ShadowTopViewBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowTopViewBaseVC.swift; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 				E077A73B2601F0560058739E /* LaunchScreen.storyboard */,
 				A8C369AEAF53C1F377492A29 /* ViewController.swift */,
 				E0031A4E25E64BD600BFFDF0 /* DebugLog.swift */,
+				E0D48469263901D300415673 /* CustomTransitionVC.swift */,
 				E0F5C2602615E1DD003E5F29 /* ShadowNavigationBar */,
 				E06C2D1B260B581E009E8570 /* BDTabBar */,
 				E077A7582601F2D30058739E /* Font Size */,
@@ -617,6 +620,7 @@
 				E065D0D2260D9313009C5883 /* UIViewController+BDTabBar.swift in Sources */,
 				01B2E4E920FE705B1B1A100C /* PasscodeConfiguration.swift in Sources */,
 				A6C850C419B383537B18FB34 /* PasscodeNumericButton.swift in Sources */,
+				E0D4846A263901D300415673 /* CustomTransitionVC.swift in Sources */,
 				E06C2D0A260B48B3009E8570 /* BDTabBarController.swift in Sources */,
 				B8EFD226CF07BF2F159A0D10 /* PasscodeNumericPadView.swift in Sources */,
 				78B915FA3EBD2A4037DFA866 /* PasscodeSetupViewModel.swift in Sources */,
