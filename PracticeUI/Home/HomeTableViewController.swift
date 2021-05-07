@@ -10,6 +10,7 @@ import RxDataSources
 import RxSwift
 import SnapKit
 import SwifterSwift
+import Hero
 
 class HomeTableViewController: UIViewController {
     private let disposeBag = DisposeBag()
@@ -42,7 +43,16 @@ class HomeTableViewController: UIViewController {
 
         let data = Observable.just([
             PageSection(name: "Section A", contents: [
-                Page(name: "Cutom Transition", pressEvent: {}),
+                Page(name: "Cutom Transition", pressEvent: {
+                    let newVC = CustomTransitionVC()
+                    newVC.hero.isEnabled = true
+                    self.hero.isEnabled = true
+                    newVC.view.heroID = "0"
+                    
+                    //newVC.hero.modalAnimationType = .pageIn(direction: .down)
+                    self.present(newVC, animated: true, completion: nil)
+                    //self.navigationController?.pushViewController(newVC)
+                }),
                 Page(name: "TabBar", pressEvent: {
                     let tab = BDTabBarController()
 
@@ -97,6 +107,7 @@ class HomeTableViewController: UIViewController {
 
         let dataSource = RxTableViewSectionedReloadDataSource<PageSection>(configureCell: { dataSource, tableView, indexPath, page -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withClass: HomeTableCell.self, for: indexPath)
+            cell.heroID = "\(indexPath.row)"
             // cell.titleLabel.text = page.name
             // cell.bgView.applyGradient(colors: page.color)
             cell.nameLabel.text = page.name

@@ -13,6 +13,7 @@ target 'PracticeUI' do
   pod "ESTabBarController-swift"
   pod 'pop'
   pod 'Localize-Swift', '~> 3.2'
+  pod 'Hero'
   #pod 'SDWebImage'
 
 

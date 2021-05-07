@@ -1,6 +1,7 @@
 PODS:
   - Differentiator (5.0.0)
   - ESTabBarController-swift (2.8.0)
+  - Hero (1.6.1)
   - Localize-Swift (3.2.0):
     - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
     - Localize-Swift/UIKit (= 3.2.0)
@@ -24,6 +25,7 @@ PODS:
 
 DEPENDENCIES:
   - ESTabBarController-swift
+  - Hero
   - Localize-Swift (~> 3.2)
   - pop
   - RxDataSources (~> 5.0)
@@ -35,6 +37,7 @@ SPEC REPOS:
   trunk:
     - Differentiator
     - ESTabBarController-swift
+    - Hero
     - Localize-Swift
     - pop
     - RxCocoa
@@ -47,6 +50,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
+  Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
   Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
@@ -56,6 +60,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
 
-PODFILE CHECKSUM: e11b63343aa89b7ff1c4f0ec25014e0e1f263c86
+PODFILE CHECKSUM: 4800ba2e35e7d53764f1a1f24be26580f0daf34f
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
