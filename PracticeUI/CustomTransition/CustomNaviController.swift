@@ -22,14 +22,14 @@ extension CustomNaviController: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         var result: UIViewControllerAnimatedTransitioning?
         if let detail = toVC as? CustomTransitionContentDetailVC,
-           operation == .push {
+           operation == .push
+        {
             result = ContentDetailPushTtransition(delegate: fromVC, toVC: detail)
         } else {
-             result = nil
+            result = nil
         }
-        
+
         currentAnimationTransition = result
         return result
-        
     }
 }

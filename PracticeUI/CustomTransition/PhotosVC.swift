@@ -7,14 +7,13 @@
 
 import UIKit
 class PhotosVC: UIViewController {
-    
     var colors = [UIColor]()
-    
-    lazy var cv : UICollectionView = {
+
+    lazy var cv: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         let v = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         view.addSubview(v)
-        v.snp.makeConstraints { (make) in
+        v.snp.makeConstraints { make in
             make.top.bottom.left.right.equalToSuperview()
         }
         v.delegate = self
@@ -22,18 +21,15 @@ class PhotosVC: UIViewController {
         v.register(cellWithClass: PhotoCell.self)
         return v
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        colors = (0...10000).map { _ in UIColor.random }
-        
+        colors = (0 ... 10000).map { _ in UIColor.random }
+
         cv.reloadData()
         cv.setContentOffset(CGPoint(x: 0, y: cv.contentSize.height), animated: true)
     }
-    
-    
-    
 }
 
 extension PhotosVC: UICollectionViewDelegate {
@@ -47,9 +43,9 @@ extension PhotosVC: UICollectionViewDelegate {
 
 extension PhotosVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return colors.count
+        colors.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withClass: PhotoCell.self, for: indexPath)
         cell.backgroundColor = .white
@@ -57,8 +53,6 @@ extension PhotosVC: UICollectionViewDataSource {
         cell.backgroundColor = color
         return cell
     }
-    
-    
 }
 
 extension PhotosVC: UICollectionViewDelegateFlowLayout {
@@ -68,11 +62,9 @@ extension PhotosVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
-fileprivate func randomPlcaholder(with text: String) -> String {
-    //https://via.placeholder.com/150/0CC000/FFFFCC/?text=IPaddress.net
+private func randomPlcaholder(with text: String) -> String {
+    // https://via.placeholder.com/150/0CC000/FFFFCC/?text=IPaddress.net
     let txtColor = UIColor.random.hexString.dropFirst(1)
     let bgColor = UIColor.random.hexString.dropFirst(1)
     return "https://via.placeholder.com/999/\(bgColor)/\(txtColor)/?text=\(text)"
 }
-
-

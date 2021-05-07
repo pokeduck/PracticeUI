@@ -7,57 +7,53 @@
 
 import UIKit
 
-protocol ContentDetailPushTtransitionAnimatorDelegate : AnyObject {
+protocol ContentDetailPushTtransitionAnimatorDelegate: AnyObject {
     func transitionWillStart()
-    
+
     func transitionDidEnd()
-    
+
     func referenceColor() -> UIColor?
-    
+
     func cellFrame() -> CGRect?
 }
 
 class ContentDetailPushTtransition: NSObject, UIViewControllerAnimatedTransitioning {
-    
     fileprivate let fromDelegate: ContentDetailPushTtransitionAnimatorDelegate
-    
+
     fileprivate let contentVC: CustomTransitionContentDetailVC
-    
+
     fileprivate let transitionColorView: UIView = {
         let v = UIView()
         return v
     }()
-    
+
     init?(delegate: Any, toVC: CustomTransitionContentDetailVC) {
         guard let d = delegate as? ContentDetailPushTtransitionAnimatorDelegate else { return nil }
-        self.fromDelegate = d
-        self.contentVC = toVC
+        fromDelegate = d
+        contentVC = toVC
     }
-    
+
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.3
+        0.3
     }
+
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        
-        
         let toView = transitionContext.view(forKey: .to)
         let fromView = transitionContext.view(forKey: .from)
-        
+
         let containerView = transitionContext.containerView
         toView?.alpha = 0
-        
+
         [fromView, toView]
             .compactMap { $0 }
             .forEach { containerView.addSubview($0) }
-        
-        let transitionColor = fromDelegate.referenceColor()  ?? .white
-        
+
+        let transitionColor = fromDelegate.referenceColor() ?? .white
+
         transitionColorView.backgroundColor = transitionColor
         containerView.addSubview(transitionColorView)
-        
-        // ToDo: defaultOffscreenFrameForPresentation
+
+        // TODO: defaultOffscreenFrameForPresentation
         transitionColorView.frame = fromDelegate.cellFrame() ?? .zero
-        
-        
     }
 }

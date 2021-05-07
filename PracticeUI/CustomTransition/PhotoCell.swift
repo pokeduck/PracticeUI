@@ -7,6 +7,4 @@
 
 import UIKit
 
-class PhotoCell: UICollectionViewCell {
-    
-}
+class PhotoCell: UICollectionViewCell {}
