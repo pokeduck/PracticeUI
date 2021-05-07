@@ -44,14 +44,9 @@ class HomeTableViewController: UIViewController {
         let data = Observable.just([
             PageSection(name: "Section A", contents: [
                 Page(name: "Cutom Transition", pressEvent: {
-                    let newVC = CustomTransitionVC()
-                    newVC.hero.isEnabled = true
-                    self.hero.isEnabled = true
-                    newVC.view.heroID = "0"
-                    
-                    //newVC.hero.modalAnimationType = .pageIn(direction: .down)
+                    let newVC = CustomNaviController()
+                    newVC.modalPresentationStyle = .fullScreen
                     self.present(newVC, animated: true, completion: nil)
-                    //self.navigationController?.pushViewController(newVC)
                 }),
                 Page(name: "TabBar", pressEvent: {
                     let tab = BDTabBarController()
