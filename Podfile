@@ -15,6 +15,7 @@ target 'PracticeUI' do
   pod 'Localize-Swift', '~> 3.2'
   pod 'Hero'
   #pod 'SDWebImage'
+  pod 'R.swift'
 
 
 end

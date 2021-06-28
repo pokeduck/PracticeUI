@@ -9,6 +9,9 @@ PODS:
   - Localize-Swift/UIKit (3.2.0):
     - Localize-Swift/LocalizeSwiftCore
   - pop (1.0.12)
+  - R.swift (5.4.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
   - RxCocoa (6.1.0):
     - RxRelay (= 6.1.0)
     - RxSwift (= 6.1.0)
@@ -28,6 +31,7 @@ DEPENDENCIES:
   - Hero
   - Localize-Swift (~> 3.2)
   - pop
+  - R.swift
   - RxDataSources (~> 5.0)
   - SnapKit (~> 5.0.0)
   - SwifterSwift/Foundation
@@ -40,6 +44,8 @@ SPEC REPOS:
     - Hero
     - Localize-Swift
     - pop
+    - R.swift
+    - R.swift.Library
     - RxCocoa
     - RxDataSources
     - RxRelay
@@ -53,6 +59,8 @@ SPEC CHECKSUMS:
   Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
   Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
@@ -60,6 +68,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
 
-PODFILE CHECKSUM: 4800ba2e35e7d53764f1a1f24be26580f0daf34f
+PODFILE CHECKSUM: 80f59cb92a2eab883375087f40fead85deea4d97
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.9.3

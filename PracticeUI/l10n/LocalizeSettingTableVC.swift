@@ -29,7 +29,7 @@ class LocalizeSettingTableVC: UIViewController {
         navigationController?.navigationBar.barStyle = .default
 
         func localize() {
-            print("setting".localized())
+            print(R.string.localizable.setting.key.localized())
             navigationItem.title = "setting".localized()
         }
         localize()

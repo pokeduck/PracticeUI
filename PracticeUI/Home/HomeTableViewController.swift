@@ -118,7 +118,7 @@ class HomeTableViewController: UIViewController {
             false
         }, sectionIndexTitles: { dataSource -> [String]? in
             nil
-        }) { (dataSource, Str, index) -> Int in
+        }) { dataSource, Str, index -> Int in
             1
         }
 

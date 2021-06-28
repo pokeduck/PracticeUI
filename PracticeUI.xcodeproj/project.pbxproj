@@ -33,6 +33,7 @@
 		A908021B80C9F561DB1AFDA0 /* LineColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99859D79B633D91B570AEB50 /* LineColors.swift */; };
 		AD92E0C7F3BF02838A75B534 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC4750323F774972FFBBA58 /* HomeTableViewController.swift */; };
 		AF4544305CC3AE38C1C89FCF /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D9812D98CC26C058E64654 /* BaseNavController.swift */; };
+		B05577A6268A523100FEEB48 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05577A5268A523100FEEB48 /* R.generated.swift */; };
 		B74D628EB5D798264DC8877B /* launch.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 0829932EF3AD7620F74DC4E0 /* launch.PNG */; };
 		B8EFD226CF07BF2F159A0D10 /* PasscodeNumericPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84F565EEFFCC513ABAE6BA /* PasscodeNumericPadView.swift */; };
 		BDDDEED49821EE4AAEA48BA0 /* UINib+VIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65842E25742B15F78CA6EDCE /* UINib+VIew.swift */; };
@@ -121,6 +122,7 @@
 		A78E26E956F9DE72F948D912 /* Pods-PracticeUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeUI.release.xcconfig"; path = "Target Support Files/Pods-PracticeUI/Pods-PracticeUI.release.xcconfig"; sourceTree = "<group>"; };
 		A8C369AEAF53C1F377492A29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AED6275E2A950BF90DC7D5FA /* PasscodeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeConfiguration.swift; sourceTree = "<group>"; };
+		B05577A5268A523100FEEB48 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		B3BF8A69D65E2A4EED5E9363 /* PasscodeAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeAuthViewModel.swift; sourceTree = "<group>"; };
 		B57CEB181A9CAAB6D4328600 /* Pods-PracticeUI.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeUI.staging.xcconfig"; path = "Target Support Files/Pods-PracticeUI/Pods-PracticeUI.staging.xcconfig"; sourceTree = "<group>"; };
 		B602094E70CF6E1CA2D0A9BE /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 				DB34B102A895914299968338 /* Info.plist */,
 				E384CD28F301A5DBD5EE631B /* SceneDelegate.swift */,
 				E077A7382601F04C0058739E /* Main.storyboard */,
+				B05577A5268A523100FEEB48 /* R.generated.swift */,
 				E077A73B2601F0560058739E /* LaunchScreen.storyboard */,
 				A8C369AEAF53C1F377492A29 /* ViewController.swift */,
 				E0031A4E25E64BD600BFFDF0 /* DebugLog.swift */,
@@ -481,6 +484,7 @@
 			buildConfigurationList = F90DE4485B58097AAFD06570 /* Build configuration list for PBXNativeTarget "PracticeUI" */;
 			buildPhases = (
 				C157E871592E378F6CDFBF53 /* [CP] Check Pods Manifest.lock */,
+				B05577A4268A502100FEEB48 /* ShellScript */,
 				E0FBAC202645553B00F2958A /* ShellScript */,
 				487F8CC5ED8B11467BA587F2 /* Sources */,
 				1EF1F9DF7D9A65DB808D2011 /* Resources */,
@@ -584,6 +588,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PracticeUI/Pods-PracticeUI-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B05577A4268A502100FEEB48 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		C157E871592E378F6CDFBF53 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -621,7 +644,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftformat >/dev/null; then\nswiftformat ./PracticeUI/\nelse\necho \"warning: SwiftFormat not installed.\"\nfi\n";
+			shellScript = "#if which swiftformat >/dev/null; then\n#swiftformat ./PracticeUI/\n#else\n#echo \"warning: SwiftFormat not installed.\"\n#fi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -669,6 +692,7 @@
 				E06C2D14260B519E009E8570 /* BDTabBarItemContainer.swift in Sources */,
 				ED4C4C4DCB8EF2F81138A040 /* PasscodeStorageMock.swift in Sources */,
 				E06C2D10260B4F38009E8570 /* BDTabBarItemContentView.swift in Sources */,
+				B05577A6268A523100FEEB48 /* R.generated.swift in Sources */,
 				0B75704934318F0C8CAB02EF /* PasscodeViewModelType.swift in Sources */,
 				40BB2ED41D966B83D3E92939 /* PublishSignal.swift in Sources */,
 				C608C4FBDD188C21165E9DF3 /* SnapKitExtensions.swift in Sources */,
