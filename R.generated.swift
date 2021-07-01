@@ -657,8 +657,8 @@ struct R: Rswift.Validatable {
       static let hello = Rswift.StringResource(key: "hello", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant", "fr", "ko", "ja", "de", "fr-CA", "es"], comment: nil)
       /// en translation: Setting
       ///
-      /// Locales: en, zh-Hant, fr, ko, ja, de, fr-CA, es
-      static let setting = Rswift.StringResource(key: "setting", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant", "fr", "ko", "ja", "de", "fr-CA", "es"], comment: nil)
+      /// Locales: en, zh-Hant, ko, ja, de, fr-CA, es
+      static let setting = Rswift.StringResource(key: "setting", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hant", "ko", "ja", "de", "fr-CA", "es"], comment: nil)
       /// en translation: Share
       ///
       /// Locales: en, zh-Hant, fr, ko, ja, de, fr-CA, es
@@ -685,7 +685,7 @@ struct R: Rswift.Validatable {
 
       /// en translation: Setting
       ///
-      /// Locales: en, zh-Hant, fr, ko, ja, de, fr-CA, es
+      /// Locales: en, zh-Hant, ko, ja, de, fr-CA, es
       static func setting(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("setting", bundle: hostingBundle, comment: "")

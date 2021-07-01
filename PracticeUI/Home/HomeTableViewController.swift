@@ -43,6 +43,9 @@ class HomeTableViewController: UIViewController {
 
         let data = Observable.just([
             PageSection(name: "Section A", contents: [
+                Page(name: "Drag Collection", pressEvent: { [weak self] in
+                    self?.navigationController?.pushViewController(DragCollectionVC())
+                }),
                 Page(name: "Cutom Transition", pressEvent: {
                     let newVC = CustomNaviController()
                     newVC.modalPresentationStyle = .fullScreen

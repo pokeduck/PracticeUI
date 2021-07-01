@@ -34,6 +34,7 @@
 		AD92E0C7F3BF02838A75B534 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC4750323F774972FFBBA58 /* HomeTableViewController.swift */; };
 		AF4544305CC3AE38C1C89FCF /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D9812D98CC26C058E64654 /* BaseNavController.swift */; };
 		B05577A6268A523100FEEB48 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05577A5268A523100FEEB48 /* R.generated.swift */; };
+		B0B0FC61268E0AAF00E41C8E /* DragCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0FC60268E0AAF00E41C8E /* DragCollectionVC.swift */; };
 		B74D628EB5D798264DC8877B /* launch.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 0829932EF3AD7620F74DC4E0 /* launch.PNG */; };
 		B8EFD226CF07BF2F159A0D10 /* PasscodeNumericPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84F565EEFFCC513ABAE6BA /* PasscodeNumericPadView.swift */; };
 		BDDDEED49821EE4AAEA48BA0 /* UINib+VIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65842E25742B15F78CA6EDCE /* UINib+VIew.swift */; };
@@ -123,6 +124,7 @@
 		A8C369AEAF53C1F377492A29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AED6275E2A950BF90DC7D5FA /* PasscodeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeConfiguration.swift; sourceTree = "<group>"; };
 		B05577A5268A523100FEEB48 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		B0B0FC60268E0AAF00E41C8E /* DragCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragCollectionVC.swift; sourceTree = "<group>"; };
 		B3BF8A69D65E2A4EED5E9363 /* PasscodeAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeAuthViewModel.swift; sourceTree = "<group>"; };
 		B57CEB181A9CAAB6D4328600 /* Pods-PracticeUI.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeUI.staging.xcconfig"; path = "Target Support Files/Pods-PracticeUI/Pods-PracticeUI.staging.xcconfig"; sourceTree = "<group>"; };
 		B602094E70CF6E1CA2D0A9BE /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 				E077A73B2601F0560058739E /* LaunchScreen.storyboard */,
 				A8C369AEAF53C1F377492A29 /* ViewController.swift */,
 				E0031A4E25E64BD600BFFDF0 /* DebugLog.swift */,
+				B0B0FC60268E0AAF00E41C8E /* DragCollectionVC.swift */,
 				E0FBAC1B26453A1D00F2958A /* CustomTransition */,
 				E0F5C2602615E1DD003E5F29 /* ShadowNavigationBar */,
 				E06C2D1B260B581E009E8570 /* BDTabBar */,
@@ -689,6 +692,7 @@
 				78B915FA3EBD2A4037DFA866 /* PasscodeSetupViewModel.swift in Sources */,
 				E0031A5525E6582C00BFFDF0 /* BarcodeSettingStore.swift in Sources */,
 				18F6D0DBFA328830EED48A09 /* PasscodeSignsView.swift in Sources */,
+				B0B0FC61268E0AAF00E41C8E /* DragCollectionVC.swift in Sources */,
 				E06C2D14260B519E009E8570 /* BDTabBarItemContainer.swift in Sources */,
 				ED4C4C4DCB8EF2F81138A040 /* PasscodeStorageMock.swift in Sources */,
 				E06C2D10260B4F38009E8570 /* BDTabBarItemContentView.swift in Sources */,

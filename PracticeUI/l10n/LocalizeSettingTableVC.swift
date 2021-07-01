@@ -30,7 +30,8 @@ class LocalizeSettingTableVC: UIViewController {
 
         func localize() {
             print(R.string.localizable.setting.key.localized())
-            navigationItem.title = "setting".localized()
+
+            navigationItem.title = R.string.localizable.setting.key.localized()
         }
         localize()
         NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: LCLLanguageChangeNotification), object: nil, queue: .main) { _ in
